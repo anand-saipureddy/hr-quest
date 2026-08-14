@@ -1,13 +1,393 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
 <title>HR Quest</title>
 <style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;
-       background:#FAF7F2;color:#1B3A2F;
-       font:400 18px/1.6 ui-serif,Georgia,serif;text-align:center;padding:2rem}
-  b{display:block;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
-    color:#C1440E;font-family:ui-sans-serif,system-ui,sans-serif;margin-bottom:1rem}
+:root{
+  --brand:oklch(0.28 0.055 165);
+  --brand-ink:oklch(0.97 0.012 165);
+  --brand-ink-dim:oklch(0.80 0.02 165);
+  --bg:oklch(0.975 0.005 165);
+  --surface:oklch(0.995 0.003 165);
+  --ink:oklch(0.24 0.028 165);
+  --ink-muted:oklch(0.44 0.02 165);
+  --line:oklch(0.90 0.008 165);
+  --indigo:oklch(0.45 0.13 265);
+  --indigo-wash:oklch(0.95 0.02 265);
+  --action:oklch(0.51 0.185 32);
+  --action-deep:oklch(0.45 0.17 32);
+
+  --font-display:ui-serif,Georgia,"Times New Roman",serif;
+  --font-ui:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px;
+  --r:10px;
+  --dur-fast:120ms; --dur:200ms; --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 1rem/1.6 var(--font-ui);
+  overflow-wrap:break-word;
+}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.2;text-wrap:balance;margin:0}
+a{color:var(--indigo)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--action);outline-offset:2px;border-radius:4px}
+.wrap{max-width:42rem;margin:0 auto;padding-inline:var(--s4)}
+@media (min-width:60rem){.wrap{max-width:48rem}}
+
+/* ---------- masthead: the one brand surface ---------- */
+.mast{background:var(--brand);color:var(--brand-ink);padding-block:var(--s7) var(--s6)}
+.mast h1{
+  font-size:clamp(2.25rem,7vw,3.25rem);letter-spacing:-0.02em;color:var(--brand-ink);
+}
+.mast p{margin:var(--s3) 0 0;color:var(--brand-ink-dim);max-width:34ch;font-size:1.0625rem}
+.counts{
+  display:flex;flex-wrap:wrap;gap:var(--s5);margin-top:var(--s6);
+  padding-top:var(--s5);border-top:1px solid oklch(0.40 0.04 165);
+}
+.count b{
+  display:block;font:600 1.75rem/1 var(--font-display);
+  font-variant-numeric:tabular-nums;color:var(--brand-ink)
+}
+.count span{display:block;margin-top:var(--s1);font-size:.8125rem;color:var(--brand-ink-dim)}
+
+/* ---------- the single next action ---------- */
+.next{margin-top:var(--s6)}
+.next small{display:block;font-size:.8125rem;color:var(--brand-ink-dim);margin-bottom:var(--s2)}
+.cta{
+  display:inline-flex;align-items:center;min-height:48px;padding:var(--s3) var(--s5);
+  background:var(--action);color:#fff;border:0;border-radius:var(--r);
+  font-weight:600;text-decoration:none;cursor:pointer;
+  transition:background var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);
+}
+.cta:hover{background:var(--action-deep)}
+.cta:active{transform:scale(.98)}
+
+/* ---------- tabs ---------- */
+.tabs{
+  display:flex;gap:var(--s2);position:sticky;top:0;z-index:10;
+  background:var(--bg);border-bottom:1px solid var(--line);
+  padding-top:var(--s4);margin-bottom:var(--s6)
+}
+.tabs button{
+  flex:1;min-height:48px;padding:0 var(--s2);background:none;border:0;
+  border-bottom:2px solid transparent;margin-bottom:-1px;
+  color:var(--ink-muted);font-weight:500;cursor:pointer;
+  transition:color var(--dur-fast) var(--ease)
+}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--action);font-weight:600}
+@media (min-width:40rem){.tabs button{flex:none;padding-inline:var(--s5)}}
+[role="tabpanel"][hidden]{display:none}
+
+section{margin-bottom:var(--s7)}
+section > h2{font-size:1.375rem;margin-bottom:var(--s2)}
+.lede{color:var(--ink-muted);margin:0 0 var(--s5);max-width:65ch}
+
+/* ---------- job rows ---------- */
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.row{
+  display:flex;gap:var(--s4);align-items:flex-start;justify-content:space-between;
+  padding:var(--s4) 0;border-bottom:1px solid var(--line)
+}
+.row-main{min-width:0;flex:1}
+.row h3{font-family:var(--font-ui);font-size:1rem;font-weight:600;line-height:1.35}
+.row h3 a{color:var(--ink);text-decoration:none}
+.row h3 a:hover{text-decoration:underline;text-underline-offset:2px}
+.row .co{margin:var(--s1) 0 0;font-size:.9375rem;color:var(--ink)}
+.row .meta{margin:var(--s2) 0 0;font-size:.8125rem;color:var(--ink-muted)}
+.chip{
+  display:inline-block;margin-top:var(--s2);padding:2px var(--s2);border-radius:99px;
+  font-size:.75rem;font-weight:600;
+  color:var(--indigo);background:var(--indigo-wash);border:1px solid var(--indigo)
+}
+.chip.solid{background:var(--indigo);color:#fff}
+.mark{
+  min-height:44px;min-width:44px;padding:0 var(--s3);flex:none;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  color:var(--ink-muted);font-size:.8125rem;font-weight:600;cursor:pointer;
+  transition:border-color var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)
+}
+.mark:hover{border-color:var(--indigo);color:var(--indigo)}
+
+details{border-top:1px solid var(--line);margin-top:var(--s5)}
+summary{
+  min-height:48px;display:flex;align-items:center;cursor:pointer;
+  font-weight:600;color:var(--ink-muted)
+}
+summary:hover{color:var(--ink)}
+
+/* ---------- skills ---------- */
+.track{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:var(--s5)}
+.track > h3{font-size:1.125rem}
+.drill{padding-top:var(--s5);margin-top:var(--s5);border-top:1px solid var(--line)}
+.drill p.q{margin:0 0 var(--s4);font-weight:500}
+.opts{display:grid;gap:var(--s2)}
+.opt{
+  display:block;width:100%;min-height:48px;padding:var(--s3) var(--s4);text-align:left;
+  background:var(--bg);border:1px solid var(--line);border-radius:var(--r);
+  cursor:pointer;transition:border-color var(--dur-fast) var(--ease),background var(--dur) var(--ease)
+}
+.opt:hover:not(:disabled){border-color:var(--ink-muted)}
+.opt:disabled{cursor:default}
+.opt[data-state="right"]{border-color:var(--brand);background:oklch(0.94 0.02 165);font-weight:600}
+.opt[data-state="wrong"]{border-color:var(--ink-muted);background:var(--bg);text-decoration:line-through}
+.verdict{margin:var(--s4) 0 0;font-size:.9375rem;color:var(--ink-muted)}
+.verdict b{color:var(--ink);font-family:var(--font-ui)}
+.build{margin-top:var(--s5);padding-top:var(--s5);border-top:1px solid var(--line)}
+.build ol{margin:var(--s4) 0 0;padding-left:1.25rem;color:var(--ink)}
+.build li{margin-bottom:var(--s2)}
+.locked{color:var(--ink-muted);font-size:.9375rem;margin:var(--s4) 0 0}
+
+.quiet{color:var(--ink-muted)}
+footer{border-top:1px solid var(--line);padding-block:var(--s6) var(--s8);margin-top:var(--s7)}
+footer p{margin:var(--s4) 0 0;font-size:.8125rem;color:var(--ink-muted);max-width:60ch}
+.ghost{
+  display:inline-flex;align-items:center;min-height:48px;padding:0 var(--s5);
+  background:none;border:1px solid var(--ink-muted);border-radius:var(--r);
+  color:var(--ink);font-weight:600;text-decoration:none;cursor:pointer
+}
+.ghost:hover{border-color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}
+}
 </style>
-<div><b>Coming soon</b>Setting things up.</div>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <h1>HR Quest</h1>
+    <p>Chennai HR openings, refreshed every morning. And the software skills they screen for.</p>
+    <div class="counts" id="counts"></div>
+    <div class="next">
+      <small>Next</small>
+      <button class="cta" id="cta" type="button"></button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-jobs"   aria-controls="panel-jobs"   aria-selected="true">Jobs</button>
+    <button role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1">Skills</button>
+    <button role="tab" id="tab-study"  aria-controls="panel-study"  aria-selected="false" tabindex="-1">Study</button>
+  </div>
+
+  <div role="tabpanel" id="panel-jobs" aria-labelledby="tab-jobs" tabindex="0"></div>
+  <div role="tabpanel" id="panel-skills" aria-labelledby="tab-skills" tabindex="0" hidden></div>
+  <div role="tabpanel" id="panel-study" aria-labelledby="tab-study" tabindex="0" hidden></div>
+
+  <footer>
+    <a class="ghost" id="share" href="#" target="_blank" rel="noopener">Send my progress</a>
+    <p id="storage-note">Everything you do here stays on this device. Nothing is sent anywhere unless you tap the button above.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = {"builtAt":"2026-08-14","whatsapp":"918367670080","newCap":10,"jobs":[{"id":"3abd00d9d6","url":"https://internshala.com/job/detail/human-resource-generalist-job-in-chennai-at-belief-systems1785332596","company":"Belief Systems","title":"Human Resource Generalist","location":"Chennai","src":"internshala","fit":100,"firstSeen":"2026-08-14","isNew":true},{"id":"9fc1a07094","url":"https://internshala.com/job/detail/fresher-hr-office-operations-executive-job-in-chennai-at-polyview-private-limited1785212844","company":"Polyview Private Limited","title":"HR & Office Operations Executive","location":"Chennai","src":"internshala","fit":100,"firstSeen":"2026-08-14","isNew":true},{"id":"a7f1f50d6e","url":"https://in.indeed.com/viewjob?jk=8f6c2a7ed7826e2d","company":"Sri Kauvery Medical Care (India) Pvt Ltd","title":"HR Executive (Generalist)","location":"Chennai, Tamil Nadu","src":"indeed","fit":100,"firstSeen":"2026-08-14","isNew":true},{"id":"95a5b927d9","url":"https://internshala.com/job/detail/fresher-human-resources-hr-trainee-job-in-chennai-at-stellar-talent-hr-consultancy1786524215","company":"Stellar Talent HR Consultancy","title":"Human Resources (HR) Trainee","location":"Chennai","src":"internshala","fit":100,"firstSeen":"2026-08-14","isNew":true},{"id":"93a54dfcfc","url":"https://in.indeed.com/viewjob?jk=7e3dd3a8996ae623","company":"The closing Gap","title":"HR Executive (Generalist)","location":"Chennai, Tamil Nadu","src":"indeed","fit":100,"firstSeen":"2026-08-14","isNew":true},{"id":"a03c8490f7","url":"https://in.linkedin.com/jobs/view/hr-executive-at-bot-vfx-4434601651","company":"BOT VFX","title":"HR - Executive","location":"Chennai, Tamil Nadu, India","src":"linkedin","fit":95,"firstSeen":"2026-08-14","isNew":true},{"id":"6baf70a5d9","url":"https://in.linkedin.com/jobs/view/executive-talent-partner-at-cognizant-4422050575","company":"Cognizant","title":"Executive - Talent Partner","location":"Chennai, Tamil Nadu, India","src":"linkedin","fit":95,"firstSeen":"2026-08-14","isNew":true},{"id":"74c08a36e6","url":"https://in.indeed.com/viewjob?jk=4df4a94854bc7c0a","company":"Mactech Engineers Pvt Ltd","title":"HR & Payroll Executive","location":"Chennai, Tamil Nadu","src":"indeed","fit":95,"firstSeen":"2026-08-14","isNew":true},{"id":"69aaa652bd","url":"https://in.indeed.com/viewjob?jk=3c38ee55d4339a4b","company":"Traveltime Mobility India Private Limited","title":"HR Executive","location":"Vyasarpadi, Chennai, Tamil Nadu","src":"indeed","fit":95,"firstSeen":"2026-08-14","isNew":true},{"id":"1c32e06cc2","url":"https://in.indeed.com/viewjob?jk=aca4ea2d07e018b1","company":"Vedita Ventures","title":"HR & Accounts Executive","location":"Vepery, Chennai, Tamil Nadu","src":"indeed","fit":95,"firstSeen":"2026-08-14","isNew":true},{"id":"14e19b4d63","url":"https://internshala.com/job/detail/human-resources-hr-executive-job-in-multiple-locations-at-gateway-software-solutions1784202734","company":"Gateway Software Solutions","title":"Human Resources (HR) Executive","location":"Multiple Locations","src":"internshala","fit":88,"firstSeen":"2026-08-14","isNew":true},{"id":"4ca049b734","url":"https://internshala.com/job/detail/fresher-human-resources-hr-associate-job-in-multiple-locations-at-pencil-bitz1786426685","company":"Pencil Bitz","title":"Human Resources (HR) Associate","location":"Multiple Locations","src":"internshala","fit":88,"firstSeen":"2026-08-14","isNew":true},{"id":"c026ae794b","url":"https://in.indeed.com/viewjob?jk=29a72b1e99eff9f6","company":"DBaaS Software Private Limited","title":"HR Specialist (recruiter & policies) - Remote","location":"Chennai, Tamil Nadu","src":"indeed","fit":70,"firstSeen":"2026-08-14","isNew":true},{"id":"3e293dbc68","url":"https://in.indeed.com/viewjob?jk=d2b0e8af6fb00a5c","company":"Genpact India Pvt. Ltd.","title":"Specialist - HRO - Payroll & Benefits 4A","location":"Chennai, Tamil Nadu","src":"indeed","fit":70,"firstSeen":"2026-08-14","isNew":true},{"id":"d16bbb438b","url":"https://in.linkedin.com/jobs/view/hr-business-partners-experienced-professional-at-hitachi-energy-4449465879","company":"Hitachi Energy","title":"HR Business Partners Experienced Professional","location":"Chennai, Tamil Nadu, India","src":"linkedin","fit":70,"firstSeen":"2026-08-14","isNew":true},{"id":"d90a5525c4","url":"https://in.indeed.com/viewjob?jk=f331334a40c03eb2","company":"Manju Groups","title":"HR & Admin","location":"Vadapalani, Chennai, Tamil Nadu","src":"indeed","fit":70,"firstSeen":"2026-08-14","isNew":true},{"id":"4e6d68529b","url":"https://in.linkedin.com/jobs/view/people-services-partner-at-ventra-health-4439404424","company":"Ventra Health","title":"People Services Partner","location":"Chennai, Tamil Nadu, India","src":"linkedin","fit":70,"firstSeen":"2026-08-14","isNew":true}],"skills":[{"id":"excel","name":"Excel / Google Sheets","short":"Excel","blurb":"The one tool every HR job description asks for and almost no fresher can actually demonstrate.","drills":[{"q":"Column C holds the city for each candidate. You want to count how many are in Chennai. Which formula?","options":["=COUNT(C2:C200)","=COUNTIF(C2:C200, \"Chennai\")","=SUM(C2:C200)","=COUNTA(C2:C200)"],"answer":1,"why":"COUNT counts numbers, COUNTA counts non-empty cells, SUM adds them up. COUNTIF is the only one that counts rows matching a condition."},{"q":"=VLOOKUP(\"E1043\", A2:D50, 3, FALSE) and E1043 is not in column A. What comes back?","options":["0","An empty cell","#N/A","The closest match it can find"],"answer":2,"why":"#N/A means 'no match'. Wrap it as =IFERROR(VLOOKUP(...), \"Not found\") before you send a sheet to anyone."},{"q":"Someone inserts a new column in the middle of your lookup range. Which formula still returns the right value?","options":["VLOOKUP, because the range is absolute","INDEX + MATCH, because it looks up the column by its header instead of by position","Neither — both break","VLOOKUP, as long as the last argument is FALSE"],"answer":1,"why":"VLOOKUP's third argument is a column number. Insert a column and that number now points somewhere else. INDEX+MATCH (or XLOOKUP) matches the header, so it survives."}],"build":{"title":"A 20-person attendance tracker","brief":"Build a sheet that tracks daily attendance for 20 employees over one month, and reports each person's total days present without you counting anything by hand.","steps":["Sheet 1 — Employees: employee ID, name, department. Make up 20 rows.","Sheet 2 — Attendance: one row per employee per day, with P / A / L in a status column.","On Sheet 1, add a 'Days present' column that pulls the count from Sheet 2 with COUNTIFS.","Add a 'Department' column to Sheet 2 that fills itself from Sheet 1 using INDEX+MATCH or XLOOKUP.","Conditional formatting: any employee under 18 days present gets a highlighted row.","Freeze the header row and name every tab."],"sendLabel":"Send it to Anand"}}],"modules":[]};
+
+/* ---------- state: one versioned key, only ever grows ---------- */
+const KEY = 'hrq.v1';
+const blank = { lessons:{}, skills:{}, jobs:{}, counters:{lessons:0, skills:0, applied:0} };
+let memoryOnly = false;
+let S;
+try {
+  S = Object.assign({}, blank, JSON.parse(localStorage.getItem(KEY) || '{}'));
+  localStorage.setItem(KEY, JSON.stringify(S));
+} catch (e) {
+  S = structuredClone(blank);
+  memoryOnly = true;
+}
+function save(){
+  if (memoryOnly) return;
+  try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { memoryOnly = true; }
+}
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const el = id => document.getElementById(id);
+const day = d => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-IN',{day:'numeric',month:'short'}) : '';
+
+/* ---------- masthead ---------- */
+function renderCounts(){
+  const c = S.counters;
+  el('counts').innerHTML = [
+    [c.lessons, c.lessons === 1 ? 'module done' : 'modules done'],
+    [c.skills,  c.skills  === 1 ? 'skill built' : 'skills built'],
+    [c.applied, c.applied === 1 ? 'application' : 'applications'],
+  ].map(([n,l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join('');
+}
+
+/* ---------- the one next action ---------- */
+function nextAction(){
+  for (const sk of DATA.skills){
+    const st = S.skills[sk.id] || {drills:[], built:false};
+    const i = sk.drills.findIndex((_,n) => !st.drills[n]);
+    const name = sk.short || sk.name;
+    if (i > -1) return { label:`${name} drill ${i+1} of ${sk.drills.length}`, tab:'skills' };
+    if (!st.built) return { label:`Open the ${name} task`, tab:'skills' };
+  }
+  const m = DATA.modules.find(m => !(S.lessons[m.id]||{}).done);
+  if (m) return { label:`Start the ${m.title} quiz`, tab:'study' };
+  const n = DATA.jobs.filter(j => j.isNew && !S.jobs[j.id]).length;
+  return { label: n ? `Look at ${n} new opening${n===1?'':'s'}` : 'Check your applications', tab:'jobs' };
+}
+function renderCta(){
+  const a = nextAction();
+  const b = el('cta');
+  b.textContent = a.label;
+  b.onclick = () => { selectTab(a.tab); document.getElementById('panel-'+a.tab).scrollIntoView({behavior:'smooth',block:'start'}); };
+}
+
+/* ---------- jobs ---------- */
+function jobRow(j){
+  const st = S.jobs[j.id];
+  const chip = !st ? ''
+    : st.replied ? '<span class="chip solid">Replied</span>'
+    : `<span class="chip">Applied ${day(st.applied)}</span>`;
+  const btn = !st
+    ? `<button class="mark" data-act="apply" data-id="${j.id}">I applied</button>`
+    : !st.replied
+      ? `<button class="mark" data-act="reply" data-id="${j.id}">They replied</button>`
+      : '';
+  return `<li class="row"><div class="row-main">
+      <h3><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
+      <p class="co">${esc(j.company)}</p>
+      <p class="meta">${esc(j.location)} &middot; ${esc(j.src)}</p>
+      ${chip}
+    </div>${btn}</li>`;
+}
+function renderJobs(){
+  const applied = DATA.jobs.filter(j => S.jobs[j.id]);
+  const open    = DATA.jobs.filter(j => !S.jobs[j.id]);
+  const fresh   = open.filter(j => j.isNew).slice(0, DATA.newCap);
+  const rest    = open.filter(j => !fresh.includes(j));
+
+  const list = rows => `<ul class="rows">${rows.map(jobRow).join('')}</ul>`;
+  let html = '<section><h2>New today</h2>';
+  html += fresh.length
+    ? `<p class="lede">${fresh.length} opening${fresh.length===1?'':'s'} matched to a fresher HR profile in Chennai. Opening one marks nothing — tap “I applied” only when you actually have.</p>${list(fresh)}`
+    : '<p class="lede">Nothing new since your last look. The list refreshes every morning.</p>';
+  if (rest.length) html += `<details><summary>More matches (${rest.length})</summary>${list(rest)}</details>`;
+  html += '</section>';
+
+  html += '<section><h2>My applications</h2>';
+  html += applied.length
+    ? `<p class="lede">These stay here so you can chase a reply.</p>${list(applied)}`
+    : '<p class="lede">Nothing yet. Anything you mark as applied stays on this list.</p>';
+  html += '</section>';
+  el('panel-jobs').innerHTML = html;
+}
+
+/* ---------- skills ---------- */
+function renderSkills(){
+  el('panel-skills').innerHTML = DATA.skills.map(sk => {
+    const st = S.skills[sk.id] || {drills:[], built:false};
+    const done = sk.drills.every((_,n) => st.drills[n]);
+    const drills = sk.drills.map((d,i) => {
+      const picked = st.drills[i];
+      const opts = d.options.map((o,n) => {
+        const state = !picked ? '' : n === d.answer ? ' data-state="right"' : (picked.pick === n ? ' data-state="wrong"' : '');
+        return `<button class="opt"${state}${picked?' disabled':''} data-skill="${sk.id}" data-drill="${i}" data-opt="${n}">${esc(o)}</button>`;
+      }).join('');
+      const verdict = picked
+        ? `<p class="verdict"><b>${picked.pick === d.answer ? 'Correct.' : 'Not quite.'}</b> ${esc(d.why)}</p>` : '';
+      return `<div class="drill"><p class="q">${i+1}. ${esc(d.q)}</p><div class="opts">${opts}</div>${verdict}</div>`;
+    }).join('');
+    const build = done
+      ? `<div class="build"><h3>${esc(sk.build.title)}</h3><p class="lede">${esc(sk.build.brief)}</p>
+         <ol>${sk.build.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>
+         ${st.built
+            ? '<p class="verdict"><b>Sent.</b> It stays counted whatever happens next.</p>'
+            : `<p style="margin-top:var(--s5)"><button class="cta" data-act="built" data-skill="${sk.id}">${esc(sk.build.sendLabel || 'Send it to Anand')}</button></p>`}
+        </div>`
+      : `<div class="build"><h3>${esc(sk.build.title)}</h3><p class="locked">The three drills above open this up. It is the piece you can actually put on a CV.</p></div>`;
+    return `<section><div class="track"><h3>${esc(sk.name)}</h3><p class="lede" style="margin-bottom:0">${esc(sk.blurb)}</p>${drills}${build}</div></section>`;
+  }).join('');
+}
+
+/* ---------- study ---------- */
+function renderStudy(){
+  if (!DATA.modules.length){
+    el('panel-study').innerHTML =
+      `<section><h2>Coursera modules</h2>
+       <p class="lede">Nothing to check yet. When you finish a module on Coursera, tell Anand and the recap and questions for it turn up here.</p>
+       <p class="quiet">The page never teaches you the material — it only checks what stuck.</p></section>`;
+    return;
+  }
+  el('panel-study').innerHTML = DATA.modules.map(m => {
+    const st = S.lessons[m.id] || {};
+    return `<section><h2>${esc(m.title)}</h2>
+      <ul class="rows">${m.recap.map(r => `<li class="row"><div class="row-main">${esc(r)}</div></li>`).join('')}</ul>
+      ${st.done ? `<p class="verdict"><b>Done.</b> You scored ${st.score}.</p>` : ''}</section>`;
+  }).join('');
+}
+
+/* ---------- share ---------- */
+function renderShare(){
+  const c = S.counters;
+  const msg = `Update from HR Quest — ${c.lessons} module${c.lessons===1?'':'s'} done, ${c.skills} skill${c.skills===1?'':'s'} built, ${c.applied} application${c.applied===1?'':'s'} sent.`;
+  el('share').href = `https://wa.me/${DATA.whatsapp}?text=${encodeURIComponent(msg)}`;
+}
+
+/* ---------- tabs ---------- */
+const TABS = ['jobs','skills','study'];
+function selectTab(name){
+  TABS.forEach(t => {
+    const on = t === name;
+    const b = el('tab-'+t);
+    b.setAttribute('aria-selected', on);
+    b.tabIndex = on ? 0 : -1;
+    el('panel-'+t).hidden = !on;
+  });
+  history.replaceState(null, '', '#' + name);
+}
+TABS.forEach(t => el('tab-'+t).addEventListener('click', () => selectTab(t)));
+el('tab-jobs').parentElement.addEventListener('keydown', e => {
+  const i = TABS.indexOf(document.activeElement.id.replace('tab-',''));
+  if (i < 0) return;
+  const n = e.key === 'ArrowRight' ? i+1 : e.key === 'ArrowLeft' ? i-1 : -1;
+  if (n < 0) return;
+  e.preventDefault();
+  const t = TABS[(n + TABS.length) % TABS.length];
+  selectTab(t); el('tab-'+t).focus();
+});
+
+/* ---------- one delegated click handler ---------- */
+document.addEventListener('click', e => {
+  const opt = e.target.closest('.opt');
+  if (opt){
+    const st = S.skills[opt.dataset.skill] ||= {drills:[], built:false};
+    st.drills[+opt.dataset.drill] = { pick: +opt.dataset.opt };
+    save(); renderSkills(); renderCta();
+    return;
+  }
+  const b = e.target.closest('[data-act]');
+  if (!b) return;
+  if (b.dataset.act === 'apply'){
+    S.jobs[b.dataset.id] = { applied: DATA.builtAt, replied: false };
+    S.counters.applied++;
+  } else if (b.dataset.act === 'reply'){
+    S.jobs[b.dataset.id].replied = true;
+  } else if (b.dataset.act === 'built'){
+    S.skills[b.dataset.skill].built = true;
+    S.counters.skills++;
+  }
+  save(); render();
+});
+
+function render(){ renderCounts(); renderCta(); renderJobs(); renderSkills(); renderStudy(); renderShare(); }
+render();
+if (memoryOnly) el('storage-note').textContent =
+  'This browser will not let the page remember anything, so what you do here disappears when you close the tab. Everything still works.';
+const hash = location.hash.slice(1);
+if (TABS.includes(hash)) selectTab(hash);
+</script>
+</body>
+</html>
