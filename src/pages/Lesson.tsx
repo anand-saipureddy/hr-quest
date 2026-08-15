@@ -121,7 +121,7 @@ export default function Lesson() {
             </button>
           ) : (
             <p style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Doodle mark="sparkle" width={40} />
+              <span className="doodle-pop" style={{ display: 'inline-flex' }}><Doodle mark="sparkle" width={40} /></span>
               <span className="hand" style={{ fontSize: 18 }}>lesson done — you can still change any answer above</span>
             </p>
           )}

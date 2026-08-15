@@ -166,7 +166,7 @@ export default function SkillTrack() {
         </div>
       </section>
       <p className="hand" style={{ margin: '14px 0 0', fontSize: 17, display: 'flex', alignItems: 'center', gap: 8 }}>
-        {built && <Doodle mark="sparkle" width={36} />}
+        {built && <span className="doodle-pop" style={{ display: 'inline-flex' }}><Doodle mark="sparkle" width={36} /></span>}
         "{copy.skills.builtThis}" is on your word — nobody checks
       </p>
     </div>
