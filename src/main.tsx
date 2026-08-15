@@ -7,6 +7,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
+import { ProgressProvider } from './lib/progress-context';
 import Today from './pages/Today';
 import Course from './pages/Course';
 import Skills from './pages/Skills';
@@ -30,6 +31,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ProgressProvider>
+      <RouterProvider router={router} />
+    </ProgressProvider>
   </React.StrictMode>
 );

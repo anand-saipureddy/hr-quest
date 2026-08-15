@@ -1,5 +1,69 @@
 import type { Progress } from './storage';
 
+export type Video = { n: number; title: string };
+export type Mcq = { q: string; teach: string; options: string[]; answer: number; why: string; source: string };
+export type Scenario = { prompt: string; model: string; source: string };
+export type Lesson = { id: string; title: string; videos: Video[]; mcqs: Mcq[]; scenario: Scenario | null; cards: { front: string; back: string }[] };
+export type Module = { id: string; title: string; lessons: Lesson[] };
+export type Track = {
+  id: string; name: string; short: string; blurb: string;
+  setup: { title: string; cta: string; why: string; steps: string[]; copyLabel: string; note: string; data: string };
+  drills: Mcq[];
+  build: { title: string; what: string; steps: string[]; howYouKnow: string[]; doneLabel?: string };
+};
+export type Job = {
+  id: string; url: string; company: string; title: string; location: string;
+  src: 'naukri' | 'linkedin' | 'internshala' | 'indeed';
+  fit: number; firstSeen: string; isNew: boolean;
+  posted?: string; salary?: string; exp?: string;
+};
+
+// Today's one suggestion: first unfinished lesson → else first unfinished
+// track step → else new jobs → else caught up. Candidates are cycled by the
+// "Something else instead" button.
+export type Suggestion =
+  | { kind: 'lesson'; label: string; to: string; note: string }
+  | { kind: 'track'; label: string; to: string; note: string }
+  | { kind: 'jobs'; label: string; to: string; note: string };
+
+export function suggestions(p: Progress, modules: Module[], tracks: Track[], jobs: Job[]): Suggestion[] {
+  const out: Suggestion[] = [];
+  for (const m of modules) {
+    for (const l of m.lessons) {
+      if (!p.lessons[l.id]?.done) {
+        out.push({
+          kind: 'lesson',
+          label: `${m.title}, ${l.title}`,
+          to: `/course/${m.id}/${l.id}`,
+          note: 'A short lesson, then a few questions. You can stop after the video and the questions will wait.',
+        });
+      }
+    }
+  }
+  for (const t of tracks) {
+    const st = p.tracks[t.id];
+    const firstOpen = t.drills.findIndex((_, n) => st?.drills[n] === undefined);
+    if (firstOpen > -1 || !st?.built) {
+      out.push({
+        kind: 'track',
+        label: t.name,
+        to: `/skills/${t.id}`,
+        note: 'Build the thing first, then answer a few questions about it.',
+      });
+    }
+  }
+  const fresh = jobs.filter((j) => j.isNew && !p.jobs[j.id]).length;
+  if (fresh > 0) {
+    out.push({
+      kind: 'jobs',
+      label: fresh === 1 ? 'One new opening in Chennai' : `${fresh} new openings in Chennai`,
+      to: '/jobs',
+      note: 'Fresher HR roles, refreshed weekly. Read one and decide later.',
+    });
+  }
+  return out;
+}
+
 // Every mutation has an inverse. Every function returns a NEW Progress
 // (no in-place edits) so the caller can keep the old one for Undo.
 
