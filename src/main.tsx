@@ -13,6 +13,7 @@ import Course from './pages/Course';
 import Lesson from './pages/Lesson';
 import Flashcards from './pages/Flashcards';
 import Skills from './pages/Skills';
+import SkillTrack from './pages/SkillTrack';
 import Jobs from './pages/Jobs';
 
 const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
         { path: 'course/:moduleId/:lessonId', element: <Lesson /> },
         { path: 'course/:moduleId/:lessonId/cards', element: <Flashcards /> },
         { path: 'skills', element: <Skills /> },
+        { path: 'skills/:trackId', element: <SkillTrack /> },
         { path: 'jobs', element: <Jobs /> },
       ],
     },
