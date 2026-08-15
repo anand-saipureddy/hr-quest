@@ -1,0 +1,155 @@
+[
+  {
+    "id": "excel",
+    "name": "Excel / Google Sheets",
+    "short": "Excel",
+    "blurb": "The one tool every HR job description asks for and almost no fresher can actually demonstrate.",
+    "setup": {
+      "title": "Make the practice sheet first",
+      "cta": "Make the Excel practice sheet",
+      "why": "The three questions below are about a real sheet, not an imaginary one. Build it once and you can try every formula yourself instead of guessing.",
+      "steps": [
+        "Open a new Google Sheet — type sheets.new in your browser address bar.",
+        "Click cell A1.",
+        "Tap Copy the 20 rows below, then paste. Sheets splits it into columns on its own.",
+        "You should end up with headers in row 1 and candidates in rows 2 to 21."
+      ],
+      "copyLabel": "Copy the 20 rows",
+      "note": "Column A is Candidate ID, B is Name, C is City, D is Role applied, E is Status, F is Interview score.",
+      "data": "Candidate ID\tName\tCity\tRole applied\tStatus\tInterview score\nC1001\tAarthi Balaji\tChennai\tHR Executive\tShortlisted\t7\nC1002\tRavi Kumar\tCoimbatore\tHR Executive\tRejected\t4\nC1003\tDivya Menon\tChennai\tRecruiter\tShortlisted\t8\nC1004\tSanjay Iyer\tBengaluru\tRecruiter\tIn review\t6\nC1005\tPriya Nair\tChennai\tHR Trainee\tShortlisted\t9\nC1006\tKarthik Raja\tMadurai\tHR Trainee\tRejected\t3\nC1007\tMeena Suresh\tChennai\tHR Executive\tIn review\t7\nC1008\tArun Prasad\tChennai\tRecruiter\tShortlisted\t8\nC1009\tLakshmi Ganesan\tCoimbatore\tHR Trainee\tIn review\t5\nC1010\tVignesh Mohan\tChennai\tHR Executive\tRejected\t4\nC1011\tSneha Reddy\tHyderabad\tRecruiter\tIn review\t6\nC1012\tBharath Kumar\tChennai\tHR Trainee\tShortlisted\t8\nC1013\tAnitha Raman\tChennai\tRecruiter\tRejected\t5\nC1014\tGokul Krishnan\tSalem\tHR Executive\tIn review\t6\nC1015\tDeepa Shankar\tChennai\tHR Executive\tShortlisted\t9\nC1016\tNaveen Kumar\tBengaluru\tHR Trainee\tRejected\t4\nC1017\tSwathi Venkat\tChennai\tRecruiter\tIn review\t7\nC1018\tManoj Pillai\tChennai\tHR Trainee\tShortlisted\t8\nC1019\tRamya Krishnan\tCoimbatore\tHR Executive\tIn review\t6\nC1020\tHari Prasad\tChennai\tRecruiter\tRejected\t5"
+    },
+    "drills": [
+      {
+        "q": "Your manager asks how many of the 20 candidates are in Chennai. Column C is City. Type one of these into cell H1 — which one answers the question?",
+        "teach": "COUNTIF takes two things: the range to look in, and the condition to match. =COUNTIF(where, what). The condition goes in quotes when it is text. The other three functions here count or add cells without checking any condition at all — COUNT only counts numbers, COUNTA counts anything non-empty, SUM adds numbers up.",
+        "options": [
+          "=COUNT(C2:C21)",
+          "=COUNTIF(C2:C21, \"Chennai\")",
+          "=SUM(C2:C21)",
+          "=COUNTA(C2:C21)"
+        ],
+        "answer": 1,
+        "why": "You should get 12. COUNT returns 0 here because column C holds text, not numbers; COUNTA returns 20 because every cell is filled; SUM returns 0. COUNTIF is the only one that asks a question about each cell."
+      },
+      {
+        "q": "You paste =VLOOKUP(\"C1043\", A2:F21, 2, FALSE) into H2. There is no C1043 in your sheet — you only have C1001 to C1020. What appears in the cell?",
+        "teach": "VLOOKUP searches the first column of a range for a value, then returns something from the same row. The last argument FALSE means 'exact match only'. Try it in your sheet: first with C1005 (it works, you get a name), then with C1043.",
+        "options": [
+          "0",
+          "An empty cell",
+          "#N/A",
+          "The closest match it can find"
+        ],
+        "answer": 2,
+        "why": "#N/A is Sheets saying 'no match'. It looks like a broken sheet to whoever opens it, so wrap it: =IFERROR(VLOOKUP(\"C1043\", A2:F21, 2, FALSE), \"Not found\"). Do that before you send any sheet to a manager."
+      },
+      {
+        "q": "You keep the VLOOKUP from the last question. Now someone inserts a new column between Name and City. Your formula still says column 2. What happens, and which approach survives it?",
+        "teach": "VLOOKUP's third argument is a position — 'give me the 2nd column of the range'. It is counting, not reading headers. INDEX+MATCH splits the job in two: MATCH finds which row, INDEX pulls the value from a column you point at directly. Try it: =INDEX(B2:B21, MATCH(\"C1005\", A2:A21, 0)).",
+        "options": [
+          "VLOOKUP is fine — the range reference updates automatically",
+          "INDEX+MATCH survives, because it points at the column itself instead of counting positions",
+          "Both break, there is no way around it",
+          "VLOOKUP is fine as long as the last argument is FALSE"
+        ],
+        "answer": 1,
+        "why": "The range does shift, but the number 2 does not — it now means whatever column happens to sit second, so you get the wrong data with no error to warn you. That silent-wrong-answer is why INDEX+MATCH (or XLOOKUP) is what people use on sheets that other people edit."
+      }
+    ],
+    "build": {
+      "title": "A 20-person attendance tracker",
+      "what": "Same file, new tab. Turn the candidate sheet into something an HR team would actually run: daily attendance for 20 employees over one month, with each person's total worked out by the sheet, not by you.",
+      "steps": [
+        "Rename your current tab to Employees. Reuse the 20 rows — Candidate ID becomes Employee ID.",
+        "Add a second tab called Attendance: Employee ID, Date, Status. Put P, A or L in Status.",
+        "Fill about a week of dates for all 20 people. Copy-paste is fine — you are practising formulas, not typing.",
+        "Back on Employees, add a Days present column: =COUNTIFS(Attendance!A:A, A2, Attendance!C:C, \"P\").",
+        "Add a Department column to Attendance that fills itself from Employees with INDEX+MATCH or XLOOKUP.",
+        "Conditional formatting: highlight any row where Days present is under 4.",
+        "Freeze the header row on both tabs and name every tab properly."
+      ],
+      "howYouKnow": [
+        "Change one P to an A. The Days present number should drop on its own.",
+        "Add a 21st employee. The formulas should keep working without you editing them.",
+        "Nothing in the Days present column was typed by hand."
+      ],
+      "doneLabel": "I built this"
+    }
+  },
+  {
+    "id": "genai",
+    "name": "Generative AI for HR",
+    "short": "AI",
+    "blurb": "Every HR team is being asked to use AI this year. Knowing what to hand it — and what never to hand it — is the actual skill.",
+    "setup": {
+      "title": "Open a tool and run one real prompt",
+      "cta": "Run your first AI prompt",
+      "why": "The questions below are about what comes back, so you need something to come back. This takes two minutes and the answer you get is the answer the questions talk about.",
+      "steps": [
+        "Open any free AI tool — gemini.google.com, chatgpt.com or claude.ai. A free account is enough.",
+        "Tap Copy the prompt below and paste it in.",
+        "Read what it gives you. Keep the tab open — the third question asks you to check one line of it.",
+        "Then try deleting the last two lines of the prompt and running it again. Notice how much worse it gets."
+      ],
+      "copyLabel": "Copy the prompt",
+      "note": "The prompt names the role, the company type, the city, the must-haves, the tone and the length. Those six things are what makes it work.",
+      "data": "Write a job description for an HR Trainee at a 60-person IT services company in Chennai.\nMust-haves: MBA in HR, 0-1 years, comfortable with Google Sheets, spoken English and Tamil.\nDay-to-day: scheduling interviews, maintaining the candidate tracker, onboarding paperwork, attendance records.\nTone: plain and warm, not corporate. No buzzwords like rockstar, ninja or fast-paced.\nLength: under 250 words, with a short bulleted responsibilities list.\nDo not invent salary, benefits or any legal requirement. If you are unsure of something, leave it out."
+    },
+    "drills": [
+      {
+        "q": "You need a job description for an HR Trainee. Which of these gets you something you could actually send to a manager?",
+        "teach": "A vague prompt makes the AI guess, and it guesses generically — you get the same paragraph everyone else gets. A useful prompt pins down six things: the role, the company, the location, the must-haves, the tone, and the length. The prompt you just pasted has all six. That is why it produced something specific.",
+        "options": [
+          "\"Write a job description for an HR Trainee.\"",
+          "\"Write a job description. Make it professional and attractive to candidates.\"",
+          "\"You are an expert world-class HR leader with 20 years of experience. Write an amazing JD.\"",
+          "The prompt you just ran — role, company size, city, must-haves, tone, length, and a rule about not inventing things"
+        ],
+        "answer": 3,
+        "why": "Piling on flattery — 'world-class', '20 years of experience' — changes almost nothing. Concrete constraints change everything. The last line matters most: telling it not to invent salary or legal details is what stops the confident-sounding fiction."
+      },
+      {
+        "q": "A manager forwards you 12 CVs and asks you to use AI to shortlist them. What do you do first?",
+        "teach": "A CV is someone else's personal data — name, phone, address, sometimes date of birth. Pasting it into a public AI tool sends it to a company your employer has no agreement with, and you cannot get it back. Most HR teams have a rule about this, and 'I did not know' is not a defence in an audit.",
+        "options": [
+          "Paste all 12 in at once and ask it to rank them",
+          "Paste them one at a time so it is less data",
+          "Ask whether the company allows it, and strip names and contact details before pasting anything",
+          "Screenshot them instead of pasting the text"
+        ],
+        "answer": 2,
+        "why": "One at a time and screenshots are the same disclosure, just slower. Ask first; if it is allowed, remove the identifying details and paste only the experience and skills. If your company has an approved internal tool, use that instead — that is what it is for."
+      },
+      {
+        "q": "The job description it wrote for you includes a line about statutory leave entitlement in Tamil Nadu, stated very confidently. You did not ask for it. What do you do?",
+        "teach": "These tools produce fluent text, not verified text. They will state a leave rule, a notice period or a PF threshold in the same steady voice they use for everything else, and be wrong. The tell is confidence about a specific number you did not supply.",
+        "options": [
+          "Leave it in — it sounded specific, so it is probably from a real source",
+          "Ask the AI 'are you sure?' and keep it if it says yes",
+          "Cut it, or verify it against the actual rule or with someone senior before it goes anywhere near a candidate",
+          "Rewrite it more vaguely so it is harder to be wrong"
+        ],
+        "answer": 2,
+        "why": "'Are you sure?' just makes it apologise and often invent a different number. Anything with a legal or money consequence gets cut or checked against a real source. Being the fresher who caught it is a much better look than being the one who published it."
+      }
+    ],
+    "build": {
+      "title": "A three-piece hiring kit for one role",
+      "what": "Take the HR Trainee role from the setup and produce the three documents an HR executive actually gets asked for. Use AI for the first draft, then edit it — the edit is the part that shows you know what you are doing.",
+      "steps": [
+        "Job description: start from what you already generated. Cut anything invented, and cut every buzzword that survived.",
+        "Five screening questions for a 10-minute phone call, each with a note on what a good answer sounds like.",
+        "A rejection email — short, warm, no false promises about 'keeping your CV on file' unless you actually will.",
+        "Put all three in one Google Doc with headings, and name it properly.",
+        "At the bottom, add a short section: 'What I changed from the AI draft, and why.'",
+        "Keep the prompts you used. Being able to show your prompt is part of the skill."
+      ],
+      "howYouKnow": [
+        "That last section is not empty — if you changed nothing, you did not read it closely enough.",
+        "No number, date or legal claim in the document that you cannot point to a source for.",
+        "No real candidate's name or contact details anywhere in it."
+      ],
+      "doneLabel": "I built this"
+    }
+  }
+]
