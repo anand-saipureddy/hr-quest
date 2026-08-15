@@ -21,7 +21,7 @@ export default function Break() {
 
   return (
     <div style={{ maxWidth: 560, position: 'relative' }}>
-      <div style={{ position: 'absolute', right: 0, bottom: -8 }} className="doodle-bob">
+      <div style={{ position: 'absolute', right: 0, bottom: -8 }} className="doodle-bob deco">
         <Doodle mark="clock" width={64} />
       </div>
       <div className="card sky" style={{ padding: '34px 30px 30px' }}>

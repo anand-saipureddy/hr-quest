@@ -46,11 +46,26 @@ export default function Today() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', right: 0, top: -8 }} className="doodle-bob">
+      <div style={{ position: 'absolute', right: 0, top: -8 }} className="doodle-bob deco">
         <Doodle mark="cloud" width={110} />
+      </div>
+      <div style={{ position: 'absolute', right: 120, top: 40 }} className="deco">
+        <Doodle mark="sparkle" width={34} />
       </div>
       <p className="kicker">{todayLabel()}</p>
       <h1 style={{ fontSize: 30, maxWidth: '20ch' }}>{copy.today.heading}</h1>
+      <p style={{ margin: '12px 0 0', maxWidth: '58ch', font: '400 15px/1.65 var(--font-ui)', color: 'var(--muted)' }}>
+        {copy.today.purpose}
+      </p>
+
+      <details className="how" style={{ marginTop: 18, maxWidth: 560 }}>
+        <summary>{copy.today.howItWorks}</summary>
+        <ul>
+          <li>{copy.today.howCourse}</li>
+          <li>{copy.today.howSkills}</li>
+          <li>{copy.today.howJobs}</li>
+        </ul>
+      </details>
 
       <div style={{ marginTop: 24 }}>
         {cands.length === 0 ? (

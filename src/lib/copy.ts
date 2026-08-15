@@ -8,6 +8,9 @@ export const copy = {
     takeABreak: 'Take a break',
     footnote: 'Everything stays on this laptop.',
     yoursOnly: 'all of this is yours only ↗',
+    lowStimOn: 'Quiet mode',
+    lowStimOff: 'Quiet mode on',
+    quietHint: 'calms the colour and motion',
   },
   breakScreen: {
     heading: 'Everything you did is saved. Close the tab whenever.',
@@ -17,6 +20,11 @@ export const copy = {
   },
   today: {
     heading: "Whenever you're ready, there's one thing waiting.",
+    purpose: "Three small spaces: learn a little, build a skill, and keep an eye on Chennai HR openings. One thing at a time — nothing here rushes you.",
+    howItWorks: 'How this works',
+    howCourse: 'Course — watch a short video, then a few questions about it. Stop any time.',
+    howSkills: 'Skills — build the real thing first, then answer questions about what you built.',
+    howJobs: 'Jobs — fresh Chennai fresher roles. Save, apply, or set one aside.',
     pickedForToday: 'Picked for today',
     openLesson: 'Open the lesson',
     somethingElse: 'Something else instead',
