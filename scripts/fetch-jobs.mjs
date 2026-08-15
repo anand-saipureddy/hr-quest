@@ -22,6 +22,9 @@ const FIXTURES = process.argv.includes('--fixtures');
 
 const TITLES = ['HR Executive', 'HR Recruiter', 'HR Trainee', 'Human Resource Generalist', 'Talent Acquisition'];
 
+// Apify fields sometimes arrive as objects (company: {name}, salary: {label})
+const text = (v) => (typeof v === 'string' ? v : '');
+
 // ---------- id: stable hash of the URL, same scheme as v1 ----------
 export function jobId(url) {
   return createHash('sha1').update(url).digest('hex').slice(0, 10);
@@ -63,13 +66,13 @@ async function fetchNaukri(token) {
       if (!url || !title) continue;
       out.push({
         url,
-        company: it.company ?? it.companyName ?? '',
+        company: text(it.company) || text(it.companyName) || text(it.company?.name),
         title,
-        location: it.location ?? 'Chennai',
+        location: text(it.location) || 'Chennai',
         src: 'naukri',
-        posted: it.postedDate ?? it.posted ?? undefined,
-        salary: it.salary ?? undefined,
-        exp: it.experience ?? it.exp ?? undefined,
+        posted: text(it.postedDate ?? it.posted) || undefined,
+        salary: text(it.salary) || text(it.salary?.label) || undefined,
+        exp: text(it.experience) || text(it.exp) || text(it.experience?.label) || undefined,
       });
     }
   }
@@ -87,7 +90,7 @@ async function fetchLinkedIn(token) {
         body: JSON.stringify({
           title,
           location: 'Chennai, Tamil Nadu, India',
-          datePosted: 'past-week',
+          datePosted: 'r604800',
           experienceLevel: ['1', '2'],
           limit: 100,
         }),
@@ -102,13 +105,13 @@ async function fetchLinkedIn(token) {
       if (!url || !jt) continue;
       out.push({
         url,
-        company: it.company ?? it.companyName ?? '',
+        company: text(it.company) || text(it.companyName) || text(it.company?.name),
         title: jt,
-        location: it.location ?? 'Chennai',
+        location: text(it.location) || 'Chennai',
         src: 'linkedin',
-        posted: it.postedDate ?? it.postedAt ?? undefined,
-        salary: it.salary ?? undefined,
-        exp: it.experienceLevel ?? undefined,
+        posted: text(it.postedDate ?? it.postedAt) || undefined,
+        salary: text(it.salary) || undefined,
+        exp: text(it.experienceLevel) || undefined,
       });
     }
   }
@@ -116,16 +119,20 @@ async function fetchLinkedIn(token) {
 }
 
 // Internshala via the firecrawl CLI against the Chennai HR search URL.
-// Parsed from the markdown listing — no SDK.
+// Parsed from the markdown listing — no SDK. The CLI writes to a file (-o -)
+// does not stream to stdout, so use a temp file.
 function fetchInternshala() {
-  const md = execFileSync('firecrawl', ['scrape', 'https://internshala.com/jobs/human-resources-jobs-in-chennai/', '-o', '-'], {
+  const tmp = `/tmp/hrq-internshala-${Date.now()}.md`;
+  execFileSync('firecrawl', ['scrape', 'https://internshala.com/jobs/human-resources-jobs-in-chennai/', '-o', tmp], {
     encoding: 'utf8',
-    timeout: 120_000,
+    timeout: 180_000,
   });
+  const md = readFileSync(tmp, 'utf8');
   const out = [];
   const re = /## \[([^\]]+)\]\((https:\/\/internshala\.com\/job\/detail\/[^)]+)\)\n\n([^\n]+)\n[\s\S]*?\n\n(Chennai[^\n]*)\n\n(₹[^\n]+)/g;
   let m;
   while ((m = re.exec(md)) !== null) {
+    if (!/chennai/i.test(m[4])) continue; // the listing includes other cities
     out.push({
       title: m[1].trim(),
       url: m[2],
