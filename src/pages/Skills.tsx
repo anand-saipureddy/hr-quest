@@ -1,4 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
+import Doodle from '../components/Doodle';
 import TrackCard from '../components/TrackCard';
 import { tracks } from '../lib/content';
 import { useProgress } from '../lib/progress-context';
@@ -18,7 +19,10 @@ export default function Skills() {
   };
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
+      <div style={{ position: 'absolute', right: 0, top: -4 }}>
+        <Doodle mark="hammer" width={72} />
+      </div>
       <p className="kicker">Skills</p>
       <h1 style={{ fontSize: 28 }}>Seven tracks, no required order</h1>
       <p style={{ margin: '10px 0 22px', maxWidth: '60ch', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)' }}>

@@ -1,4 +1,4 @@
-type Mark = 'underline' | 'circle' | 'arrow' | 'star' | 'squiggle' | 'sparkle' | 'cloud' | 'clock';
+type Mark = 'underline' | 'circle' | 'arrow' | 'star' | 'squiggle' | 'sparkle' | 'cloud' | 'clock' | 'book' | 'briefcase' | 'hammer';
 
 // The doodle kit from the spec. Decorative — aria-hidden, never the sole
 // carrier of meaning. Blush and sun fills are doodle-only.
@@ -30,6 +30,25 @@ export default function Doodle({ mark, color = 'var(--sky-300)', width = 90 }: {
         <>
           <circle cx="60" cy="30" r="18" {...stroke} />
           <path d="M60 20v10l7 5" {...stroke} stroke="var(--ink)" strokeWidth="2.5" />
+        </>
+      )}
+      {mark === 'book' && (
+        <>
+          <path d="M45 9c-7-4-14-4-21 0v21c7-4 14-4 21 0 7-4 14-4 21 0V9c-7-4-14-4-21 0z" fill="var(--sky-100)" stroke="var(--ink)" strokeWidth="2" />
+          <path d="M45 9v21" stroke="var(--ink)" strokeWidth="2" />
+        </>
+      )}
+      {mark === 'briefcase' && (
+        <>
+          <rect x="12" y="17" width="66" height="19" rx="3" fill="var(--sky-100)" stroke="var(--ink)" strokeWidth="2" />
+          <path d="M33 17v-4a5 5 0 0 1 5-5h14a5 5 0 0 1 5 5v4" {...stroke} />
+          <path d="M41 26h8" stroke="var(--ink)" strokeWidth="2" />
+        </>
+      )}
+      {mark === 'hammer' && (
+        <>
+          <path d="M34 14l10 22" stroke="var(--ink)" strokeWidth="3" strokeLinecap="round" />
+          <rect x="22" y="6" width="22" height="9" rx="2" fill="var(--sky-100)" stroke="var(--ink)" strokeWidth="2" />
         </>
       )}
     </svg>
