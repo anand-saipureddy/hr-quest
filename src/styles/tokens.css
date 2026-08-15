@@ -1,0 +1,18 @@
+:root {
+  --sky-100:#E8F4FC; --sky-200:#CDE9F8; --sky-300:#9BD3F1;
+  --sky-500:#4FB3E8; --sky-700:#1F6F9F;
+  --ink:#16232B;
+  --blush:#FFE3DA;   /* doodles only, never a surface */
+  --sun:#FFE9A8;     /* doodles only, never a surface */
+  --line:#DCE8F0;
+  --bg:#F4FAFE;
+  --muted:#4A6070;
+  --r-structural:0px;  /* cards, panels, inputs */
+  --r-sticker:16px;    /* stickers, badges, doodle chips */
+  --r-pill:999px;
+
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:72px;
+
+  --font-ui:"Archivo Variable",Archivo,system-ui,sans-serif;
+  --font-hand:Caveat,cursive;
+}
