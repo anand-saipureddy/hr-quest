@@ -13,7 +13,7 @@ export default function Flashcards() {
   if (!lesson) {
     return (
       <div>
-        <Doodle mark="circle" />
+        <Doodle mark="cloud" width={100} />
         <p style={{ color: 'var(--muted)' }}>That card set isn't here yet.</p>
         <Link to="/course">Back to the course</Link>
       </div>
@@ -22,23 +22,52 @@ export default function Flashcards() {
 
   const card = lesson.cards[idx];
   return (
-    <div style={{ maxWidth: 640 }}>
+    <div>
       <p className="kicker">{lesson.title} · {lesson.cards.length} cards</p>
-      <h1 style={{ fontSize: 26 }}>Terms from this lesson</h1>
-      <div style={{ marginTop: 22, display: 'grid', gap: 14 }}>
-        <Flashcard key={`${lesson.id}-${idx}`} front={card.front} back={card.back} />
-        <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
-          <button className="btn quiet" type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)} style={idx === 0 ? { opacity: 0.5 } : undefined}>
-            Previous
-          </button>
-          <button className="btn primary" type="button" onClick={() => setIdx((i) => (i + 1) % lesson.cards.length)}>
-            {idx === lesson.cards.length - 1 ? 'Back to the first card' : 'Next card'}
-          </button>
-          <span style={{ font: '700 17px/1.3 var(--font-hand)', color: 'var(--sky-700)' }}>no deck ever goes "overdue"</span>
+      <h1 style={{ fontSize: 26, marginBottom: 22 }}>Terms from this lesson</h1>
+      <div className="lesson-grid">
+        <div style={{ position: 'relative', maxWidth: 520 }}>
+          <div style={{ position: 'absolute', left: 10, top: 10, right: -10, bottom: -10, border: '1px solid var(--sky-200)', borderRadius: 'var(--r-sticker)', background: 'var(--bg)' }} aria-hidden="true" />
+          <div style={{ position: 'relative' }}>
+            <Flashcard key={`${lesson.id}-${idx}`} front={card.front} back={card.back} />
+          </div>
+          <div style={{ position: 'absolute', right: -46, top: -22 }}>
+            <Doodle mark="star" width={54} />
+          </div>
+          <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 22 }}>
+            <button className="btn quiet" type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)} style={idx === 0 ? { opacity: 0.5 } : undefined}>
+              Previous
+            </button>
+            <button className="btn primary" type="button" onClick={() => setIdx((i) => (i + 1) % lesson.cards.length)}>
+              {idx === lesson.cards.length - 1 ? 'Back to the first card' : 'Next card'}
+            </button>
+          </div>
+          <p style={{ margin: '14px 0 0' }}>
+            <Link to={`/course/${moduleId}/${lessonId}`} style={{ font: '500 13px/1 var(--font-ui)' }}>← Back to the lesson</Link>
+          </p>
         </div>
-        <p style={{ margin: '6px 0 0' }}>
-          <Link to={`/course/${moduleId}/${lessonId}`} style={{ font: '500 13px/1 var(--font-ui)' }}>← Back to the lesson</Link>
-        </p>
+        <div style={{ width: 220 }}>
+          <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 12px' }}>This set</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {lesson.cards.map((c, n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => setIdx(n)}
+                style={{
+                  padding: '9px 12px', borderRadius: 'var(--r-pill)', cursor: 'pointer', textAlign: 'left',
+                  border: n === idx ? '2px solid var(--sky-700)' : '1px solid var(--line)',
+                  background: n === idx ? '#fff' : n < idx ? 'var(--sky-100)' : '#fff',
+                  font: `${n === idx ? 600 : 400} 12px/1.2 var(--font-ui)`,
+                  color: n === idx ? 'var(--ink)' : 'var(--muted)',
+                }}
+              >
+                {c.front}
+              </button>
+            ))}
+          </div>
+          <p className="hand" style={{ margin: '16px 0 0', fontSize: 17 }}>no deck ever goes "overdue"</p>
+        </div>
       </div>
     </div>
   );

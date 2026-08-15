@@ -21,7 +21,7 @@ export default function Course() {
   }
 
   return (
-    <div style={{ maxWidth: 720 }}>
+    <div>
       <p className="kicker">Coursera · HR for People Managers</p>
       <h1 style={{ fontSize: 28 }}>The course</h1>
       <Doodle mark="underline" color="var(--sky-500)" />
