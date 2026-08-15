@@ -1,0 +1,543 @@
+[
+  {
+    "id": "excel",
+    "name": "Excel / Google Sheets",
+    "short": "Excel",
+    "blurb": "The one tool every HR job description asks for and almost no fresher can actually demonstrate.",
+    "setup": {
+      "title": "Make the practice sheet first",
+      "cta": "Make the Excel practice sheet",
+      "why": "The three questions below are about a real sheet, not an imaginary one. Build it once and you can try every formula yourself instead of guessing.",
+      "steps": [
+        "Open a new Google Sheet — type sheets.new in your browser address bar.",
+        "Click cell A1.",
+        "Tap Copy the 20 rows below, then paste. Sheets splits it into columns on its own.",
+        "You should end up with headers in row 1 and candidates in rows 2 to 21."
+      ],
+      "copyLabel": "Copy the 20 rows",
+      "note": "Column A is Candidate ID, B is Name, C is City, D is Role applied, E is Status, F is Interview score.",
+      "data": "Candidate ID\tName\tCity\tRole applied\tStatus\tInterview score\nC1001\tAarthi Balaji\tChennai\tHR Executive\tShortlisted\t7\nC1002\tRavi Kumar\tCoimbatore\tHR Executive\tRejected\t4\nC1003\tDivya Menon\tChennai\tRecruiter\tShortlisted\t8\nC1004\tSanjay Iyer\tBengaluru\tRecruiter\tIn review\t6\nC1005\tPriya Nair\tChennai\tHR Trainee\tShortlisted\t9\nC1006\tKarthik Raja\tMadurai\tHR Trainee\tRejected\t3\nC1007\tMeena Suresh\tChennai\tHR Executive\tIn review\t7\nC1008\tArun Prasad\tChennai\tRecruiter\tShortlisted\t8\nC1009\tLakshmi Ganesan\tCoimbatore\tHR Trainee\tIn review\t5\nC1010\tVignesh Mohan\tChennai\tHR Executive\tRejected\t4\nC1011\tSneha Reddy\tHyderabad\tRecruiter\tIn review\t6\nC1012\tBharath Kumar\tChennai\tHR Trainee\tShortlisted\t8\nC1013\tAnitha Raman\tChennai\tRecruiter\tRejected\t5\nC1014\tGokul Krishnan\tSalem\tHR Executive\tIn review\t6\nC1015\tDeepa Shankar\tChennai\tHR Executive\tShortlisted\t9\nC1016\tNaveen Kumar\tBengaluru\tHR Trainee\tRejected\t4\nC1017\tSwathi Venkat\tChennai\tRecruiter\tIn review\t7\nC1018\tManoj Pillai\tChennai\tHR Trainee\tShortlisted\t8\nC1019\tRamya Krishnan\tCoimbatore\tHR Executive\tIn review\t6\nC1020\tHari Prasad\tChennai\tRecruiter\tRejected\t5"
+    },
+    "drills": [
+      {
+        "q": "Your manager asks how many of the 20 candidates are in Chennai. Column C is City. Type one of these into cell H1 — which one answers the question?",
+        "teach": "COUNTIF takes two things: the range to look in, and the condition to match. =COUNTIF(where, what). The condition goes in quotes when it is text. The other three functions here count or add cells without checking any condition at all — COUNT only counts numbers, COUNTA counts anything non-empty, SUM adds numbers up.",
+        "options": [
+          "=COUNT(C2:C21)",
+          "=COUNTIF(C2:C21, \"Chennai\")",
+          "=SUM(C2:C21)",
+          "=COUNTA(C2:C21)"
+        ],
+        "answer": 1,
+        "why": "You should get 12. COUNT returns 0 here because column C holds text, not numbers; COUNTA returns 20 because every cell is filled; SUM returns 0. COUNTIF is the only one that asks a question about each cell."
+      },
+      {
+        "q": "You paste =VLOOKUP(\"C1043\", A2:F21, 2, FALSE) into H2. There is no C1043 in your sheet — you only have C1001 to C1020. What appears in the cell?",
+        "teach": "VLOOKUP searches the first column of a range for a value, then returns something from the same row. The last argument FALSE means 'exact match only'. Try it in your sheet: first with C1005 (it works, you get a name), then with C1043.",
+        "options": [
+          "0",
+          "An empty cell",
+          "#N/A",
+          "The closest match it can find"
+        ],
+        "answer": 2,
+        "why": "#N/A is Sheets saying 'no match'. It looks like a broken sheet to whoever opens it, so wrap it: =IFERROR(VLOOKUP(\"C1043\", A2:F21, 2, FALSE), \"Not found\"). Do that before you send any sheet to a manager."
+      },
+      {
+        "q": "You keep the VLOOKUP from the last question. Now someone inserts a new column between Name and City. Your formula still says column 2. What happens, and which approach survives it?",
+        "teach": "VLOOKUP's third argument is a position — 'give me the 2nd column of the range'. It is counting, not reading headers. INDEX+MATCH splits the job in two: MATCH finds which row, INDEX pulls the value from a column you point at directly. Try it: =INDEX(B2:B21, MATCH(\"C1005\", A2:A21, 0)).",
+        "options": [
+          "VLOOKUP is fine — the range reference updates automatically",
+          "INDEX+MATCH survives, because it points at the column itself instead of counting positions",
+          "Both break, there is no way around it",
+          "VLOOKUP is fine as long as the last argument is FALSE"
+        ],
+        "answer": 1,
+        "why": "The range does shift, but the number 2 does not — it now means whatever column happens to sit second, so you get the wrong data with no error to warn you. That silent-wrong-answer is why INDEX+MATCH (or XLOOKUP) is what people use on sheets that other people edit."
+      }
+    ],
+    "build": {
+      "title": "A 20-person attendance tracker",
+      "what": "Same file, new tab. Turn the candidate sheet into something an HR team would actually run: daily attendance for 20 employees over one month, with each person's total worked out by the sheet, not by you.",
+      "steps": [
+        "Rename your current tab to Employees. Reuse the 20 rows — Candidate ID becomes Employee ID.",
+        "Add a second tab called Attendance: Employee ID, Date, Status. Put P, A or L in Status.",
+        "Fill about a week of dates for all 20 people. Copy-paste is fine — you are practising formulas, not typing.",
+        "Back on Employees, add a Days present column: =COUNTIFS(Attendance!A:A, A2, Attendance!C:C, \"P\").",
+        "Add a Department column to Attendance that fills itself from Employees with INDEX+MATCH or XLOOKUP.",
+        "Conditional formatting: highlight any row where Days present is under 4.",
+        "Freeze the header row on both tabs and name every tab properly."
+      ],
+      "howYouKnow": [
+        "Change one P to an A. The Days present number should drop on its own.",
+        "Add a 21st employee. The formulas should keep working without you editing them.",
+        "Nothing in the Days present column was typed by hand."
+      ],
+      "doneLabel": "I built this"
+    }
+  },
+  {
+    "id": "genai",
+    "name": "Generative AI for HR",
+    "short": "AI",
+    "blurb": "Every HR team is being asked to use AI this year. Knowing what to hand it — and what never to hand it — is the actual skill.",
+    "setup": {
+      "title": "Open a tool and run one real prompt",
+      "cta": "Run your first AI prompt",
+      "why": "The questions below are about what comes back, so you need something to come back. This takes two minutes and the answer you get is the answer the questions talk about.",
+      "steps": [
+        "Open any free AI tool — gemini.google.com, chatgpt.com or claude.ai. A free account is enough.",
+        "Tap Copy the prompt below and paste it in.",
+        "Read what it gives you. Keep the tab open — the third question asks you to check one line of it.",
+        "Then try deleting the last two lines of the prompt and running it again. Notice how much worse it gets."
+      ],
+      "copyLabel": "Copy the prompt",
+      "note": "The prompt names the role, the company type, the city, the must-haves, the tone and the length. Those six things are what makes it work.",
+      "data": "Write a job description for an HR Trainee at a 60-person IT services company in Chennai.\nMust-haves: MBA in HR, 0-1 years, comfortable with Google Sheets, spoken English and Tamil.\nDay-to-day: scheduling interviews, maintaining the candidate tracker, onboarding paperwork, attendance records.\nTone: plain and warm, not corporate. No buzzwords like rockstar, ninja or fast-paced.\nLength: under 250 words, with a short bulleted responsibilities list.\nDo not invent salary, benefits or any legal requirement. If you are unsure of something, leave it out."
+    },
+    "drills": [
+      {
+        "q": "You need a job description for an HR Trainee. Which of these gets you something you could actually send to a manager?",
+        "teach": "A vague prompt makes the AI guess, and it guesses generically — you get the same paragraph everyone else gets. A useful prompt pins down six things: the role, the company, the location, the must-haves, the tone, and the length. The prompt you just pasted has all six. That is why it produced something specific.",
+        "options": [
+          "\"Write a job description for an HR Trainee.\"",
+          "\"Write a job description. Make it professional and attractive to candidates.\"",
+          "\"You are an expert world-class HR leader with 20 years of experience. Write an amazing JD.\"",
+          "The prompt you just ran — role, company size, city, must-haves, tone, length, and a rule about not inventing things"
+        ],
+        "answer": 3,
+        "why": "Piling on flattery — 'world-class', '20 years of experience' — changes almost nothing. Concrete constraints change everything. The last line matters most: telling it not to invent salary or legal details is what stops the confident-sounding fiction."
+      },
+      {
+        "q": "A manager forwards you 12 CVs and asks you to use AI to shortlist them. What do you do first?",
+        "teach": "A CV is someone else's personal data — name, phone, address, sometimes date of birth. Pasting it into a public AI tool sends it to a company your employer has no agreement with, and you cannot get it back. Most HR teams have a rule about this, and 'I did not know' is not a defence in an audit.",
+        "options": [
+          "Paste all 12 in at once and ask it to rank them",
+          "Paste them one at a time so it is less data",
+          "Ask whether the company allows it, and strip names and contact details before pasting anything",
+          "Screenshot them instead of pasting the text"
+        ],
+        "answer": 2,
+        "why": "One at a time and screenshots are the same disclosure, just slower. Ask first; if it is allowed, remove the identifying details and paste only the experience and skills. If your company has an approved internal tool, use that instead — that is what it is for."
+      },
+      {
+        "q": "The job description it wrote for you includes a line about statutory leave entitlement in Tamil Nadu, stated very confidently. You did not ask for it. What do you do?",
+        "teach": "These tools produce fluent text, not verified text. They will state a leave rule, a notice period or a PF threshold in the same steady voice they use for everything else, and be wrong. The tell is confidence about a specific number you did not supply.",
+        "options": [
+          "Leave it in — it sounded specific, so it is probably from a real source",
+          "Ask the AI 'are you sure?' and keep it if it says yes",
+          "Cut it, or verify it against the actual rule or with someone senior before it goes anywhere near a candidate",
+          "Rewrite it more vaguely so it is harder to be wrong"
+        ],
+        "answer": 2,
+        "why": "'Are you sure?' just makes it apologise and often invent a different number. Anything with a legal or money consequence gets cut or checked against a real source. Being the fresher who caught it is a much better look than being the one who published it."
+      }
+    ],
+    "build": {
+      "title": "A three-piece hiring kit for one role",
+      "what": "Take the HR Trainee role from the setup and produce the three documents an HR executive actually gets asked for. Use AI for the first draft, then edit it — the edit is the part that shows you know what you are doing.",
+      "steps": [
+        "Job description: start from what you already generated. Cut anything invented, and cut every buzzword that survived.",
+        "Five screening questions for a 10-minute phone call, each with a note on what a good answer sounds like.",
+        "A rejection email — short, warm, no false promises about 'keeping your CV on file' unless you actually will.",
+        "Put all three in one Google Doc with headings, and name it properly.",
+        "At the bottom, add a short section: 'What I changed from the AI draft, and why.'",
+        "Keep the prompts you used. Being able to show your prompt is part of the skill."
+      ],
+      "howYouKnow": [
+        "That last section is not empty — if you changed nothing, you did not read it closely enough.",
+        "No number, date or legal claim in the document that you cannot point to a source for.",
+        "No real candidate's name or contact details anywhere in it."
+      ],
+      "doneLabel": "I built this"
+    }
+  },
+  {
+    "id": "interview",
+    "name": "HR interview communication",
+    "short": "Interview",
+    "blurb": "The questions are predictable. What separates candidates is whether the answer sounds like a person or a memorised paragraph.",
+    "setup": {
+      "title": "Record one answer on your phone",
+      "cta": "Record your first answer",
+      "why": "Everything below is about an actual recording of your voice, so make one first. Use the voice recorder already on your phone — nothing in this app asks for your microphone.",
+      "steps": [
+        "Open the voice recorder app on your phone.",
+        "Read the prompt below, then record yourself answering it out loud — 60 to 90 seconds, no script.",
+        "Listen back once. Just once.",
+        "Keep the recording — the questions below are about what you heard."
+      ],
+      "copyLabel": "Copy the prompt",
+      "note": "Sixty seconds is shorter than you think. Rambling past two minutes is the most common fresher mistake, and you can hear it in your own recording.",
+      "data": "Tell me about yourself.\n\nCover, in any order: your degree and why HR, one thing you have done that involved organising people or information, and what you are looking for in a first job. End with a full stop, not a trailing \"and... yeah... that's it\"."
+    },
+    "drills": [
+      {
+        "q": "Listen to your recording. The interviewer asked \"tell me about yourself\". What was your answer actually about?",
+        "teach": "This question is not a biography request. It is a check on three things: can you summarise, do you know what is relevant to this role, and do you stop when you are done. A good fresher answer is under 90 seconds and ends deliberately.",
+        "options": [
+          "My degree, one relevant thing I have done, and what I want — in under 90 seconds",
+          "My whole education history from schooling onward",
+          "My family background and where I grew up",
+          "A list of every skill written on my CV"
+        ],
+        "answer": 0,
+        "why": "Relevance and length. If your recording ran long or wandered, that is normal on a first attempt — record it once more after these questions and listen to the difference.",
+        "source": "Skills · Interview · drill"
+      },
+      {
+        "q": "Halfway through your recording you hear yourself say \"I am a people person\". What is the problem with that sentence?",
+        "teach": "Every candidate says some version of it, so it carries no information. Interviewers call phrases like this \"claims without evidence\". The fix is not a bigger claim — it is a small concrete example.",
+        "options": [
+          "It claims a trait without evidence — a 10-second example would prove it instead",
+          "It is too modest — I should say I am an exceptional people person",
+          "It is grammatically incorrect for an interview",
+          "Nothing — it is the standard expected answer"
+        ],
+        "answer": 0,
+        "why": "Claim versus evidence. \"I organised the placement-cell roster for 40 volunteers and nobody double-booked\" says \"people person\" better than the phrase itself ever could.",
+        "source": "Skills · Interview · drill"
+      },
+      {
+        "q": "An interviewer asks \"why HR?\". Which answer structure is strongest for a fresher?",
+        "teach": "Weak answers to this question describe HR as an escape (\"I didn't want to code\") or as a personality trait (\"I love people\"). Strong answers point at the work itself and show you know what the work actually is — including the unglamorous parts.",
+        "options": [
+          "Name a specific part of HR work, say what draws you to it, and show you know the unglamorous parts exist",
+          "Explain that you chose HR because you are an extrovert",
+          "Say HR is the most important function in any company",
+          "Describe how HR is a stepping stone to general management"
+        ],
+        "answer": 0,
+        "why": "Specific plus honest. Interviewers ask this precisely because most freshers cannot name what HR does all day. If you can say \"I want to learn how hiring pipelines actually run, and I know the first year is mostly scheduling and trackers\", you stand out immediately.",
+        "source": "Skills · Interview · drill"
+      }
+    ],
+    "build": {
+      "title": "A three-answer practice set",
+      "what": "Record yourself answering the three questions every Chennai HR fresher interview opens with, and mark each recording against four criteria.",
+      "steps": [
+        "Record three separate answers on your phone: \"tell me about yourself\", \"why HR\", and \"where do you see yourself in two years\".",
+        "Listen to each once and mark it against the checklist below.",
+        "Re-record the weakest one.",
+        "Keep all four recordings — hearing your own improvement is the point."
+      ],
+      "howYouKnow": [
+        "Each answer ends deliberately in under 90 seconds",
+        "Each contains at least one concrete example, not just claims",
+        "You can hear a full stop at the end instead of a trailing off",
+        "The re-recorded answer is visibly better than its first take"
+      ],
+      "doneLabel": "I recorded all three"
+    }
+  },
+  {
+    "id": "payroll",
+    "name": "Payroll & statutory basics (India)",
+    "short": "Payroll",
+    "blurb": "CTC, PF, ESI, professional tax, net pay. The vocabulary of every Indian HR role, and the thing freshers are most often caught out on.",
+    "setup": {
+      "title": "Work one salary slip end to end",
+      "cta": "Build the salary slip",
+      "why": "The terms below mean nothing until you have pushed actual numbers through them. This sheet does that once, for one fictional employee.",
+      "steps": [
+        "Open a new sheet. Paste the data below into cell A1.",
+        "Column D: PF at 12% of basic. Column E: ESI at 0.75% of gross (gross = basic + HRA + special allowance).",
+        "Column F: professional tax — flat ₹208 per month for Tamil Nadu.",
+        "Column G: net pay = gross − PF − ESI − professional tax. Column H: employer PF at 13% of basic, so CTC = gross + employer PF."
+      ],
+      "copyLabel": "Copy the salary data",
+      "note": "These rates are the standard starting points: employee PF 12% of basic, employee ESI 0.75% of gross (ESI applies only when gross is ₹21,000 or less — this example sits just above it deliberately, so check whether column E should even apply).",
+      "data": "Name\tBasic\tHRA\tSpecial\nAnitha Kumar\t18000\t7200\t4800"
+    },
+    "drills": [
+      {
+        "q": "An offer letter says \"CTC ₹3.6 lakhs\". A candidate asks what lands in the bank each month. Roughly what do you tell her?",
+        "teach": "CTC is the company's total cost, not the salary. It includes employer PF, gratuity provisioning, and sometimes insurance. Net pay is what remains after employee-side deductions — PF, ESI where it applies, professional tax, and income tax. For a ₹3.6L CTC the in-hand is typically ₹24,000–27,000 a month.",
+        "options": [
+          "Around ₹25,000 — CTC minus PF, professional tax and the employer-side components",
+          "Exactly ₹30,000 — CTC divided by twelve",
+          "Around ₹28,000 — only income tax comes off CTC",
+          "It is impossible to estimate without the company's payroll software"
+        ],
+        "answer": 0,
+        "why": "CTC ÷ 12 overstates because employer PF and gratuity sit inside CTC but never reach the bank account. Being able to explain this gap calmly is a real interview skill — candidates feel cheated by it and HR is who they ask.",
+        "source": "Skills · Payroll · drill"
+      },
+      {
+        "q": "In your sheet, PF is 12% of basic. The employee asks why PF is not 12% of her full gross. What is the correct reason?",
+        "teach": "The EPF rules tie PF to \"basic wages\" plus dearness allowance, not to gross. Companies keep basic as a fraction of gross partly for this reason — which is also why two offers with the same CTC can differ in take-home.",
+        "options": [
+          "PF is legally calculated on basic wages plus DA, not on gross",
+          "The company chooses whichever base costs it less each month",
+          "PF applies only to the HRA component",
+          "Gross includes employer contributions, which are exempt from PF"
+        ],
+        "answer": 0,
+        "why": "Basic + DA is the statutory base. This is exactly the kind of question a payroll-savvy candidate asks in a negotiation, and the kind an HR executive must answer without guessing.",
+        "source": "Skills · Payroll · drill"
+      },
+      {
+        "q": "Your sheet's gross is ₹30,000. Should column E (ESI at 0.75%) apply to this employee at all?",
+        "teach": "ESI covers employees earning up to ₹21,000 gross per month. Above that ceiling the employee is out of ESI scope entirely — no deduction, no employer contribution. The plan put this example at ₹30,000 on purpose.",
+        "options": [
+          "No — ESI applies only when monthly gross is ₹21,000 or less",
+          "Yes — ESI applies to all salaried employees",
+          "Yes — but only if the company has more than 50 employees",
+          "No — ESI was replaced by PF in 2023"
+        ],
+        "answer": 0,
+        "why": "The ₹21,000 ceiling is the fact interviewers probe for. If your sheet computed ESI for this employee, fix it — the correct ESI cell here is zero or \"not applicable\".",
+        "source": "Skills · Payroll · drill"
+      }
+    ],
+    "build": {
+      "title": "A five-employee payroll sheet",
+      "what": "A small payroll register you could show in an interview: five fictional employees with different basic/gross mixes, deductions computed by formula, and a CTC column.",
+      "steps": [
+        "Extend your sheet to five fictional employees with varied salaries — one below the ESI ceiling, four above.",
+        "Compute PF, ESI (only where it applies), professional tax, net pay and CTC by formula, never by typing results.",
+        "Add a totals row using SUM.",
+        "Add one line of notes: which employee falls under ESI and why."
+      ],
+      "howYouKnow": [
+        "Change any basic salary and every dependent column moves on its own",
+        "The ESI column is zero for everyone above ₹21,000 gross",
+        "CTC minus deductions equals net pay for every row",
+        "The totals row matches a hand-check of one row"
+      ],
+      "doneLabel": "I built this"
+    }
+  },
+  {
+    "id": "ats",
+    "name": "ATS & recruitment tools",
+    "short": "ATS",
+    "blurb": "Recruiters live inside an applicant tracking system. Knowing what the recruiter sees — stages, notes, rejection reasons — changes how you write everything.",
+    "setup": {
+      "title": "Run one fake req through a free ATS",
+      "cta": "Open a free ATS",
+      "why": "Reading about pipelines is not the same as moving a candidate through one. You need one real req with a few fake candidates to feel how stages and notes work.",
+      "steps": [
+        "Create a free account on an ATS that offers one — Zoho Recruit's free tier or a Breezy HR trial both work.",
+        "Create one job opening: \"HR Trainee, Chennai\".",
+        "Add three fake candidates by hand — invented names, no real people's details.",
+        "Move them through the pipeline: applied → screening → interview, with a note on each move."
+      ],
+      "copyLabel": "Copy the fake candidate data",
+      "note": "Use plainly fake names and example.com email addresses. Never paste a real person's CV into a tool you are trying out.",
+      "data": "Name\tEmail\tStage\nAsha Demo\tasha@example.com\tScreening\nRavi Sample\travi@example.com\tApplied\nMeena Test\tmeena@example.com\tInterview"
+    },
+    "drills": [
+      {
+        "q": "Your fake candidate Ravi is at \"Applied\" and clearly does not fit. What is the professional way to handle him in the ATS?",
+        "teach": "Every ATS has a reject/disqualify action with a reason and usually an optional rejection email. Using it is not cruel — it closes the loop so the candidate is not left waiting, and it keeps the pipeline honest for reporting.",
+        "options": [
+          "Reject him with a reason and the standard rejection email, so the loop is closed",
+          "Delete his record so the pipeline stays clean",
+          "Leave him in Applied forever in case something changes",
+          "Move him to Interview anyway to keep the numbers looking active"
+        ],
+        "answer": 0,
+        "why": "Reject with a reason. Deleting erases history you may need; leaving him hanging is the thing candidates complain about most; fake movement corrupts your own time-to-fill numbers.",
+        "source": "Skills · ATS · drill"
+      },
+      {
+        "q": "Why do recruiters write a note on the candidate at every stage move instead of just remembering?",
+        "teach": "Pipelines outlive memories and people. A note written at 11am is what the 4pm interviewer reads, what next month's audit checks, and what another recruiter relies on when the first one is on leave.",
+        "options": [
+          "Notes are the record that interviewers, audits and other recruiters depend on",
+          "Notes are required by Indian labour law for every rejection",
+          "The ATS will not move a candidate without a note",
+          "Notes train the ATS to rank future candidates automatically"
+        ],
+        "answer": 0,
+        "why": "Handover and audit. The legal claim is too strong, and most ATSes happily move candidates noteless — which is exactly why disciplined teams insist on notes.",
+        "source": "Skills · ATS · drill"
+      },
+      {
+        "q": "A hiring manager asks \"why is time-to-fill so high for this req?\". Where in the ATS do you look first?",
+        "teach": "Time-to-fill is a sum of stage durations. TheATS pipeline view shows how long candidates sat in each stage — that is where the delay lives, and it is usually one stage, not the whole process.",
+        "options": [
+          "The stage-by-stage view — find which stage candidates are sitting in longest",
+          "The job board analytics — the ad must not be reaching people",
+          "The offer letters folder — approvals are probably slow",
+          "The rejected-candidates list — the bar is probably set too high"
+        ],
+        "answer": 0,
+        "why": "Stage durations. \"Time-to-fill is high\" is a symptom; the pipeline view tells you where. That answer — \"they sit eleven days waiting for the panel interview\" — is the one that actually gets something fixed.",
+        "source": "Skills · ATS · drill"
+      }
+    ],
+    "build": {
+      "title": "A full fake recruitment cycle",
+      "what": "One complete run from req to rejection and hire notes — the artefact is the ATS itself, with every stage touched and every candidate closed out.",
+      "steps": [
+        "Take your three fake candidates through a complete cycle: one rejected at screening, one rejected after interview, one marked hired.",
+        "Write a note at every stage move, including the rejections.",
+        "Send or draft the rejection email for the screening-stage candidate.",
+        "Look at the req's pipeline summary and write down each stage's candidate count."
+      ],
+      "howYouKnow": [
+        "No candidate is left sitting in an open stage",
+        "Every move has a note someone else could act on",
+        "You can answer \"where did candidates drop off\" without opening the ATS"
+      ],
+      "doneLabel": "I ran the cycle"
+    }
+  },
+  {
+    "id": "email",
+    "name": "Email & documentation writing",
+    "short": "Email",
+    "blurb": "Half of HR is writing: offers, reschedules, chases, declines, warnings. Each has a shape, and the shape is learnable.",
+    "setup": {
+      "title": "Draft the two emails you will send most",
+      "cta": "Draft your first HR emails",
+      "why": "The drills below quote real email patterns. You need your own drafts to compare them against — write them rough, that is fine.",
+      "steps": [
+        "Open a blank document.",
+        "Draft an interview-reschedule email to a candidate using the brief below.",
+        "Draft a follow-up email to a hiring manager who has not returned interview feedback in four days.",
+        "Keep both drafts open — the questions reference them."
+      ],
+      "copyLabel": "Copy the brief",
+      "note": "Both drafts should be under 120 words. HR emails are logistics, not literature.",
+      "data": "Brief 1 — Reschedule: Priya's panel interview moves from Tuesday 11am to Thursday 3pm, same video link. Apologise once, give the new time, confirm the link is unchanged.\nBrief 2 — Chase feedback: The panel interviewed Karthik four days ago for the HR Trainee role. You need a decision or a date for a decision. Be direct without being pushy."
+    },
+    "drills": [
+      {
+        "q": "Look at your reschedule draft. What is the correct order of the three things it must contain?",
+        "teach": "A logistics email is read in a hurry, often on a phone, often in anxiety. The order that serves the reader is: the change itself first, the apology briefly, then everything that stays the same. Apologising for two paragraphs before mentioning Thursday is a common failure.",
+        "options": [
+          "New time first, one short apology, then what has not changed",
+          "Apology first at length, then the reason, then the new time",
+          "The reason for the change first, then the new time, no apology needed",
+          "Ask if Thursday suits her before stating anything"
+        ],
+        "answer": 0,
+        "why": "Change, brief apology, constants. The candidate's first question is \"when is it now\" — answer it in the first line. Asking permission again re-opens a decision the company already made.",
+        "source": "Skills · Email · drill"
+      },
+      {
+        "q": "Your chase email to the hiring manager says \"I hope this email finds you well. I am writing to gently remind you about Karthik's feedback.\" What should replace it?",
+        "teach": "Openers like that consume the one sentence a busy reader actually reads. A chase email works when the first line contains the candidate's name, the role, the age of the pending item, and the specific ask.",
+        "options": [
+          "\"Karthik's HR Trainee interview was four days ago — can you send your feedback, or a date for it, by Friday?\"",
+          "\"Just following up on my previous email regarding the pending feedback.\"",
+          "\"I understand you are busy, but the recruitment process requires timely inputs from all stakeholders.\"",
+          "\"Gentle reminder: feedback pending. Requesting the same at the earliest.\""
+        ],
+        "answer": 0,
+        "why": "Name, age, specific ask, deadline. The other three are the actual phrases that make managers ignore HR email. \"At the earliest\" in particular says there is no real deadline, so there isn't one.",
+        "source": "Skills · Email · drill"
+      },
+      {
+        "q": "A candidate you are rejecting after interview writes back asking why. What can you safely send?",
+        "teach": "Rejections are documentation. The safe pattern: thank them, state the decision, give at most one honest and non-discriminatory reason (\"we moved ahead with a candidate with more payroll exposure\"), and close. Never debate, never rank them against others, never put anything in writing you could not defend.",
+        "options": [
+          "A short note: the decision, one honest professional reason, and a courteous close",
+          "A detailed comparison of their answers against the selected candidate",
+          "No reply — rejection emails should not be answered",
+          "An invitation to reapply immediately for the same role"
+        ],
+        "answer": 0,
+        "why": "One honest reason, briefly. Comparisons create liability, silence creates the company's reputation on review sites, and instant reapplication invites are hollow.",
+        "source": "Skills · Email · drill"
+      }
+    ],
+    "build": {
+      "title": "The five-email HR kit",
+      "what": "Five templates you will actually reuse: offer, reschedule, feedback chase, post-interview decline, and a first written warning — each under 150 words, each with the specifics as fill-in blanks.",
+      "steps": [
+        "Turn your two drafts into clean templates with [Name], [Date] style blanks.",
+        "Write the remaining three: offer, post-interview decline, first written warning.",
+        "For the warning letter, include: the specific issue with a date, the expectation, the support offered, and the review date.",
+        "Save all five in one folder. This folder is the artefact."
+      ],
+      "howYouKnow": [
+        "Each template is under 150 words with the specifics as blanks",
+        "The decline email gives at most one honest reason",
+        "The warning letter names the issue, the expectation and the review date",
+        "You could send any of them with two minutes of editing"
+      ],
+      "doneLabel": "I built the kit"
+    }
+  },
+  {
+    "id": "analytics",
+    "name": "Basic HR analytics",
+    "short": "Analytics",
+    "blurb": "Attrition, time-to-fill, offer-drop. Three numbers every HR report mentions, and the definitions are where freshers get caught.",
+    "setup": {
+      "title": "Build the tracker the numbers come from",
+      "cta": "Build the hiring tracker",
+      "why": "The three metrics below are all computed from one simple tracker. Build it first so the formulas in the drills are about your sheet, not an imaginary one.",
+      "steps": [
+        "Open a new sheet and paste the data below into A1.",
+        "Add a column \"Days to fill\" = joining date minus opening date.",
+        "Add a column \"Dropped?\" — yes if the candidate accepted but did not join.",
+        "Keep it open — the drills compute numbers from these exact rows."
+      ],
+      "copyLabel": "Copy the tracker data",
+      "note": "Twelve fictional reqs across three months. The numbers are chosen so each metric in the drills comes out to a clean answer you can check by hand.",
+      "data": "Req\tOpened\tJoined\tDropped\nR1\t2026-05-02\t2026-05-30\tno\nR2\t2026-05-05\t2026-06-02\tno\nR3\t2026-05-10\t\tyes\nR4\t2026-05-18\t2026-06-15\tno\nR5\t2026-06-01\t2026-06-25\tno\nR6\t2026-06-03\t\tyes\nR7\t2026-06-10\t2026-07-08\tno\nR8\t2026-06-14\t2026-07-10\tno\nR9\t2026-07-01\t2026-07-28\tno\nR10\t2026-07-06\t\tyes\nR11\t2026-07-12\t2026-08-05\tno\nR12\t2026-07-20\t2026-08-14\tno"
+    },
+    "drills": [
+      {
+        "q": "From your tracker: what is the time-to-fill for R1, and what is the average across the reqs that actually filled?",
+        "teach": "Time-to-fill counts from the day the req opened to the day the person joined. Reqs where the candidate dropped are not \"filled\" — they stay out of the average, or the number lies.",
+        "options": [
+          "R1: 28 days; average of the nine filled reqs: 25 days",
+          "R1: 28 days; average across all twelve reqs including drops",
+          "R1: 30 days; time-to-fill is measured to offer date, not joining",
+          "R1: 28 days; drops count as zero days because they close fast"
+        ],
+        "answer": 0,
+        "why": "28 days for R1, and only filled reqs in the average. Including drops would mix a different event (a loss) into a duration metric — a very common reporting error.",
+        "source": "Skills · Analytics · drill"
+      },
+      {
+        "q": "Three of your twelve candidates accepted and then did not join. What is the offer-drop rate, and why does it matter more than it looks?",
+        "teach": "Offer-drop rate = dropped ÷ offers made. Here 3 of 12, so 25%. It matters because a drop near joining day means the whole pipeline cost — sourcing, screening, panels — is spent and the req reopens at zero.",
+        "options": [
+          "25% — and each drop reopens the req with all its pipeline cost already spent",
+          "25% — a purely cosmetic number since the candidate simply changed their mind",
+          "10% — drops are divided by total applications, not offers",
+          "It cannot be computed from a tracker, only from payroll data"
+        ],
+        "answer": 0,
+        "why": "3 ÷ 12 = 25%. A high drop rate usually points at slow offers, counter-offers, or a weak joiner-engagement step between offer and day one — all things HR can actually change.",
+        "source": "Skills · Analytics · drill"
+      },
+      {
+        "q": "A report says \"attrition was 15% last quarter\". What two numbers produced that, and what is the classic fresher mistake in computing it?",
+        "teach": "Attrition = people who left ÷ average headcount for the period. The classic mistake is dividing by the headcount on the last day instead of the average — which quietly shrinks the number when the company has been hiring.",
+        "options": [
+          "Leavers ÷ average headcount; using the closing headcount instead of the average understates it",
+          "Leavers ÷ closing headcount; the mistake is using the average instead",
+          "Leavers ÷ total hired; the mistake is forgetting new joiners",
+          "Open positions ÷ headcount; the mistake is counting unfilled roles"
+        ],
+        "answer": 0,
+        "why": "Average headcount is the honest denominator. If a company grew from 80 to 100 in the quarter, 12 leavers is 12÷90 = 13.3%, not the flattering 12÷100 = 12%.",
+        "source": "Skills · Analytics · drill"
+      }
+    ],
+    "build": {
+      "title": "A one-page hiring report",
+      "what": "A small report computed entirely from your tracker: average time-to-fill, offer-drop rate, and open-vs-filled count, with one sentence of interpretation under each number.",
+      "steps": [
+        "Compute average days-to-fill across filled reqs with AVERAGE.",
+        "Compute offer-drop rate with COUNTIF on the Dropped column.",
+        "Count reqs still open (no joining date and no drop).",
+        "Under each number write one sentence about what would make it better."
+      ],
+      "howYouKnow": [
+        "Every number traces back to the tracker by formula, not by typing",
+        "Add a thirteenth req and all three numbers update",
+        "Each interpretation sentence names a lever HR controls"
+      ],
+      "doneLabel": "I built the report"
+    }
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Getting started",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Why managing people matters",
+          "videos": [
+            {
+              "n": 1,
+              "title": "Welcome to the specialization"
+            },
+            {
+              "n": 2,
+              "title": "Becoming a managing leader"
+            },
+            {
+              "n": 3,
+              "title": "Meet John Budd"
+            },
+            {
+              "n": 4,
+              "title": "Is HR boring?"
+            }
+          ],
+          "mcqs": [
+            {
+              "q": "Where does the People Manager Value Proposition say a manager's people work begins?",
+              "teach": "The People Manager Value Proposition is the roadmap for the whole specialization. It runs in a specific order: start from what the organisation is trying to achieve, work out what people you need to achieve it, then build a strategy for leading and motivating those people. Acquiring talent, managing performance and rewarding people all come after that, not before.",
+              "options": [
+                "With the organisation's objectives, then working out what people are needed",
+                "With the vacancies the company currently has open",
+                "With the HR policies already written in the employee handbook",
+                "With the budget finance has approved for salaries this year"
+              ],
+              "answer": 0,
+              "why": "It starts from organisational objectives. The other three are real things that constrain HR, but they are inputs to the work, not its starting point. This is the difference between HR that reacts and HR that plans, and it is the single idea the rest of the specialization builds on.",
+              "source": "Module 1 · Lesson 1 · video 1"
+            },
+            {
+              "q": "The specialization says the People Manager Value Proposition does not happen in a vacuum. What shapes it from outside?",
+              "teach": "A manager never gets to design people practices on a blank page. The specialization names organisational values, external factors such as the legal environment, and in some workplaces labour unions. In India this is very concrete: PF, ESI, gratuity and state labour rules decide a great deal of what you are allowed to do.",
+              "options": [
+                "Organisational values, the legal environment, and sometimes labour unions",
+                "Only the CEO's personal preferences",
+                "Nothing — HR strategy is designed independently and then applied",
+                "Only what competitor companies are currently doing"
+              ],
+              "answer": 0,
+              "why": "Values, law and unions. This matters in an interview: when you are asked how you would handle something, an answer that ignores the legal environment sounds naive, and in India the statutory layer is where a lot of HR work actually lives.",
+              "source": "Module 1 · Lesson 1 · video 1"
+            },
+            {
+              "q": "The course argues that 'leaders have vision, managers just do policies and budgets' is a false dichotomy. Why?",
+              "teach": "There is a fashionable split where leadership is bold and future-looking and management is dull nuts-and-bolts. The course rejects it on two grounds: organisations genuinely need people who follow policies and get things done, and more importantly most managers have to do both. The course calls the combination a 'managing leader'.",
+              "options": [
+                "Because most managers have to do both — follow good process and also inspire, be strategic, and lead change",
+                "Because leadership matters and management is an outdated idea",
+                "Because management matters and leadership is mostly business-blog talk",
+                "Because you should first spend years as a manager and only then become a leader"
+              ],
+              "answer": 0,
+              "why": "Both, together. The other three all keep the split alive and just pick a side. The course's point is that the choice itself is fake — you run payroll correctly *and* you motivate the person whose payslip it is.",
+              "source": "Module 1 · Lesson 1 · video 2"
+            },
+            {
+              "q": "\"People join organizations, but they quit managers.\" What does this line imply for a new HR executive?",
+              "teach": "This line appears in two separate videos, which tells you how much weight the faculty put on it. Employer brand, salary and reputation get people through the door. Whether they stay is decided mostly by their direct manager.",
+              "options": [
+                "Retention is largely won or lost by how people are managed day to day, not by hiring alone",
+                "Recruitment is the only part of HR that really matters",
+                "Exit interviews are the most important HR process",
+                "Companies with a strong brand do not need to worry about retention"
+              ],
+              "answer": 0,
+              "why": "Day-to-day management drives retention. This is a useful thing to be able to say in an interview, because it explains why a company should care about the performance-management and manager-training work that HR does, in terms of money it does not lose.",
+              "source": "Module 1 · Lesson 1 · video 2"
+            },
+            {
+              "q": "Industrial relations is described as a 'middle way'. Between what?",
+              "teach": "Two older positions on industrial capitalism: classical economists such as Adam Smith saw competitive markets in labour, goods and services as creating enormous wealth; radical approaches such as Marx saw the employment relationship as fundamentally unequal and exploitative. Industrial relations sits between them — it takes the inequality seriously but does not reject capitalism, and looks for institutional fixes.",
+              "options": [
+                "Between classical economics and radical critique — it takes inequality seriously but seeks fixes within the system",
+                "Between HR and finance inside a company",
+                "Between the employer and the employee in a specific dispute",
+                "Between government regulation and complete deregulation"
+              ],
+              "answer": 0,
+              "why": "Classical economics and radical critique. Option 3 is the everyday meaning of 'mediating between two sides' and it is the tempting wrong answer here — that is something HR does, but it is not what makes industrial relations a middle way as a school of thought.",
+              "source": "Module 1 · Lesson 1 · video 3"
+            },
+            {
+              "q": "Someone says \"HR in our company is not strategic at all, it is just forms and approvals.\" How does the course say you should read that?",
+              "teach": "The course takes the criticism seriously rather than denying it — it accepts that in some organisations HR really is a form-processing function. But it makes a sharp distinction about where the fault sits, and that distinction is the whole point of the video.",
+              "options": [
+                "As a problem with HR in that particular organisation, not with the HR profession",
+                "As proof that HR is inherently administrative work",
+                "As a sign that the company is too small to need real HR",
+                "As something only a new HR director could possibly change"
+              ],
+              "answer": 0,
+              "why": "A problem with HR *there*, not with HR. The course is direct about this: HR serves the organisation's mission and goals, and those goals cannot be met without deploying people well — so if HR is not strategic somewhere, that is a local failure, not the nature of the field.",
+              "source": "Module 1 · Lesson 1 · video 4"
+            }
+          ],
+          "scenario": {
+            "prompt": "You are interviewing for an HR Executive role in Chennai. The interviewer leans back and says: \"Honestly, HR is just paperwork — attendance, forms, payroll. Why do you want a career in it?\"\n\nWrite how you would answer, in four to six sentences. Write it the way you would actually say it out loud.",
+            "model": "A good answer does three things, in this order.\n\nFirst, it does not get defensive. Some of that work is real and you should say so plainly — attendance, payroll and statutory filing genuinely are part of the job, and getting them right matters to every single person in the company on the day their salary lands.\n\nSecond, it reframes rather than denies. Work needs people to get done, and every one of those people has to be hired, guided, evaluated, paid and sometimes trained. Those are the decisions that determine whether the organisation actually reaches its goals, and they are HR decisions.\n\nThird, it gets concrete. \"People join organisations but they quit managers\" — if a company loses good people it is usually losing them to how they were managed, and that is squarely HR's work. You can point at retention, at time-to-fill, at what a bad hire costs.\n\nA strong close names the ambition honestly: you want to be in the part of HR that shapes those decisions, and you are willing to do the administrative groundwork properly on the way there. Nobody expects a fresher to already be strategic. They want to see that you know the difference.\n\nWhat this answer avoids: arguing that the admin work is beneath you, claiming HR is strategic everywhere when the interviewer has just told you it is not in their experience, and the phrase \"I'm a people person\" on its own.",
+            "source": "Module 1 · Lesson 1 · video 4"
+          },
+          "cards": [
+            {
+              "front": "People Manager Value Proposition — the order",
+              "back": "Organisational objectives → what people are needed → strategy for leading and motivating them. Then: acquire talent, manage performance, reward."
+            },
+            {
+              "front": "What shapes the PMVP from outside?",
+              "back": "Organisational values, external factors such as the legal environment, and sometimes labour unions."
+            },
+            {
+              "front": "\"Managing leader\"",
+              "back": "The course's rejection of the leader-vs-manager split. Follow good policy and process, and also inspire, be strategic, and lead change."
+            },
+            {
+              "front": "\"People join organizations, but they quit managers\"",
+              "back": "Retention is decided mostly by day-to-day management, not by hiring or employer brand."
+            },
+            {
+              "front": "Industrial relations as a middle way",
+              "back": "Between classical economics (markets create wealth) and radical critique (the relationship is exploitative). Takes inequality seriously, does not reject capitalism, looks for institutional solutions."
+            },
+            {
+              "front": "Three things HR should be, if done well",
+              "back": "Important, strategic, and energizing — challenging and complex rather than boring."
+            },
+            {
+              "front": "If HR is not strategic in a company, whose problem is it?",
+              "back": "That organisation's, not the profession's."
+            },
+            {
+              "front": "The onion answer",
+              "back": "An HR executive's metaphor: you peel it back a layer at a time, because everything is more complicated than it looks and you have to dig to the root cause."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
