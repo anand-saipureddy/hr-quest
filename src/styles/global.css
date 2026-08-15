@@ -39,13 +39,6 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
 a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
 .hr{border:0;border-top:1px solid var(--line)}
 
-.quiet-toggle{
-  display:inline-flex;align-items:center;min-height:36px;margin:6px 0 0;padding:0 12px;
-  background:none;border:1px solid var(--line);border-radius:var(--r-pill);
-  font:500 12px/1 var(--font-ui);color:var(--muted);
-}
-.quiet-toggle[aria-pressed="true"]{background:var(--sky-200);border-color:var(--sky-700);color:var(--ink)}
-
 /* "How this works" — a calm, collapsible explainer */
 .how{border:1px solid var(--line);border-radius:var(--r-sticker);background:#fff;padding:0 16px}
 .how summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font:500 13px/1 var(--font-ui);color:var(--muted)}
@@ -57,10 +50,6 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
 @keyframes pop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
 .doodle-bob{animation:bob 6s ease-in-out infinite}
 .doodle-pop{animation:pop 300ms ease-out}
-/* purely decorative doodles disappear in quiet mode */
-html[data-lowstim="true"] .deco{display:none}
-html[data-lowstim="true"]{--sun:var(--line);--blush:var(--line)}
-html[data-lowstim="true"] .doodle-bob,html[data-lowstim="true"] .doodle-pop{animation:none}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }

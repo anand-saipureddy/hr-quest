@@ -46,10 +46,10 @@ export default function Today() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', right: 0, top: -8 }} className="doodle-bob deco">
+      <div style={{ position: 'absolute', right: 0, top: -8 }} className="doodle-bob">
         <Doodle mark="cloud" width={110} />
       </div>
-      <div style={{ position: 'absolute', right: 120, top: 40 }} className="deco">
+      <div style={{ position: 'absolute', right: 120, top: 40 }}>
         <Doodle mark="sparkle" width={34} />
       </div>
       <p className="kicker">{todayLabel()}</p>

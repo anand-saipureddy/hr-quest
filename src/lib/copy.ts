@@ -5,18 +5,8 @@ export const copy = {
   app: {
     name: 'HR Quest',
     greeting: 'hi Pragna',
-    takeABreak: 'Take a break',
     footnote: 'Everything stays on this laptop.',
     yoursOnly: 'all of this is yours only ↗',
-    lowStimOn: 'Quiet mode',
-    lowStimOff: 'Quiet mode on',
-    quietHint: 'calms the colour and motion',
-  },
-  breakScreen: {
-    heading: 'Everything you did is saved. Close the tab whenever.',
-    body: "There's no streak to break and nothing waiting to remind you tomorrow. Come back in an hour, or next week — the page will look exactly the same.",
-    leftOff: 'Where you left off',
-    note: 'rest counts as progress too ✿',
   },
   today: {
     heading: "Whenever you're ready, there's one thing waiting.",

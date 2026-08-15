@@ -21,7 +21,10 @@ export default function Course() {
   }
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
+      <div style={{ position: 'absolute', right: 0, top: -4 }}>
+        <Doodle mark="book" width={72} />
+      </div>
       <p className="kicker">Coursera · HR for People Managers</p>
       <h1 style={{ fontSize: 28 }}>The course</h1>
       <Doodle mark="underline" color="var(--sky-500)" />

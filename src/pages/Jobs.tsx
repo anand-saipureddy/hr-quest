@@ -46,7 +46,7 @@ export default function Jobs() {
   };
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 20, flexWrap: 'wrap' }}>
         <div>
           <h1 style={{ fontSize: 26 }}>HR openings in Chennai</h1>
@@ -57,6 +57,9 @@ export default function Jobs() {
             <Doodle mark="arrow" width={34} />
             a rough sort, not a verdict
           </p>
+        </div>
+        <div style={{ paddingBottom: 6 }}>
+          <Doodle mark="briefcase" width={72} />
         </div>
       </div>
 
