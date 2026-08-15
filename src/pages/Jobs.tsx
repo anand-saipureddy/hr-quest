@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import Doodle from '../components/Doodle';
 import EmptyState from '../components/EmptyState';
 import JobRow from '../components/JobRow';
 import { jobs } from '../lib/content';
@@ -51,6 +52,10 @@ export default function Jobs() {
           <h1 style={{ fontSize: 26 }}>HR openings in Chennai</h1>
           <p style={{ margin: '6px 0 0', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
             Fresher roles only · the word is the fit, the number is just support
+          </p>
+          <p className="hand" style={{ margin: '10px 0 0', fontSize: 17, display: 'flex', alignItems: 'center', gap: 6 }}>
+            <Doodle mark="arrow" width={34} />
+            a rough sort, not a verdict
           </p>
         </div>
       </div>

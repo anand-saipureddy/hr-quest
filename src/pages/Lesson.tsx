@@ -69,14 +69,30 @@ export default function Lesson() {
         </span>
       </div>
 
+      {!showScenario && (
+        <p className="hand" style={{ margin: '0 0 14px', fontSize: 18 }}>
+          stop here any time — it's saved ✓
+        </p>
+      )}
+
       {!showScenario ? (
-        <QuestionCard
-          lessonId={lesson.id}
-          n={q}
-          mcq={lesson.mcqs[q]}
-          isLast={q === lesson.mcqs.length - 1}
-          onNext={() => (q < lesson.mcqs.length - 1 ? setQ(q + 1) : undefined)}
-        />
+        <>
+          <QuestionCard
+            lessonId={lesson.id}
+            n={q}
+            mcq={lesson.mcqs[q]}
+            isLast={q === lesson.mcqs.length - 1}
+            onNext={() => (q < lesson.mcqs.length - 1 ? setQ(q + 1) : undefined)}
+          />
+          {lesson.scenario && (
+            <div style={{ marginTop: 14, border: '1px dashed var(--sky-300)', borderRadius: 'var(--r-sticker)', padding: 16, background: 'var(--bg)' }}>
+              <p className="kicker" style={{ color: 'var(--sky-700)' }}>Next up · interview scenario</p>
+              <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
+                A short written answer to a real interview question — nobody marks it but you.
+              </p>
+            </div>
+          )}
+        </>
       ) : (
         <div style={{ display: 'grid', gap: 18 }}>
           {lesson.scenario && <ScenarioBox lessonId={lesson.id} scenario={lesson.scenario} />}
@@ -85,8 +101,9 @@ export default function Lesson() {
               Mark this lesson done
             </button>
           ) : (
-            <p style={{ margin: 0, font: '700 18px/1.3 var(--font-hand)', color: 'var(--sky-700)' }}>
-              lesson done — you can still change any answer above
+            <p style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <Doodle mark="sparkle" width={40} />
+              <span className="hand" style={{ fontSize: 18 }}>lesson done — you can still change any answer above</span>
             </p>
           )}
           <Link to={`/course/${mod.id}/${lesson.id}/cards`} style={{ font: '500 14px/1 var(--font-ui)' }}>

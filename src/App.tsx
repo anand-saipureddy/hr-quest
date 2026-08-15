@@ -1,12 +1,13 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import UndoBar from './components/UndoBar';
+import { copy } from './lib/copy';
 
 export default function App() {
   return (
     <div className="shell">
       <aside className="side">
-        <p className="brand">HR Quest</p>
-        <p className="hi">hi Anu</p>
+        <p className="brand">{copy.app.name}</p>
+        <p className="hi">{copy.app.greeting}</p>
         <nav aria-label="Sections">
           <NavLink to="/" end>Today</NavLink>
           <NavLink to="/course">Course</NavLink>
@@ -14,8 +15,8 @@ export default function App() {
           <NavLink to="/jobs">Jobs</NavLink>
         </nav>
         <div className="foot">
-          <span style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)' }}>Take a break</span>
-          <p>Everything stays on this laptop.</p>
+          <NavLink to="/break">{copy.app.takeABreak}</NavLink>
+          <p>{copy.app.footnote}</p>
         </div>
       </aside>
       <main className="main">

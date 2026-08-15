@@ -13,7 +13,7 @@ export function whyThisOne(j: Job): string {
   bits.push('Matches a fresher HR profile in Chennai');
   if (j.src === 'internshala') bits.push('Internshala listing, so it leans entry-level');
   if (j.exp) bits.push(`asks for ${j.exp} experience`);
-  if (j.salary) bits.push(`pay listed at ${j.salary}`);
+  if (j.salary && !/not disclosed/i.test(j.salary)) bits.push(`pay listed at ${j.salary}`);
   const first = bits.slice(0, 2).join('; ') + '.';
   const downside =
     j.fit < 70
