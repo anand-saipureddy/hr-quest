@@ -1,0 +1,38 @@
+name: Weekly job refresh
+
+on:
+  schedule:
+    - cron: '30 0 * * 1' # 06:00 IST Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install firecrawl CLI
+        run: npm install -g firecrawl-cli
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+      - name: Fetch and merge jobs
+        run: node scripts/fetch-jobs.mjs
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+      - name: Commit content/jobs.json if changed
+        run: |
+          if git diff --quiet content/jobs.json; then
+            echo "no change"
+          else
+            git config user.name "hr-quest-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add content/jobs.json
+            git commit -m "jobs: weekly refresh $(date +%F)"
+            git push
+          fi
