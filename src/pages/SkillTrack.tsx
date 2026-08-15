@@ -54,7 +54,7 @@ export default function SkillTrack() {
   };
 
   return (
-    <div style={{ maxWidth: 720 }}>
+    <div style={{ maxWidth: 880 }}>
       <p className="kicker">Skill · {track.name}</p>
       <h1 style={{ fontSize: 26 }}>Build the thing, then I'll ask you about it</h1>
       <div style={{ marginTop: 22 }}>

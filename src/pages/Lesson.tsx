@@ -39,13 +39,32 @@ export default function Lesson() {
   };
 
   return (
-    <div style={{ maxWidth: 640 }}>
-      <p className="kicker">{mod.title} · {lesson.title}</p>
-      <h1 style={{ fontSize: 24 }}>{lesson.title}</h1>
-      <p style={{ margin: '8px 0 22px', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
-        Videos on Coursera: {lesson.videos.map((v) => `${v.n}. ${v.title}`).join(' · ')}
-      </p>
+    <div>
+      <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: 16, marginBottom: 22, display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16, flexWrap: 'wrap' }}>
+        <div>
+          <p className="kicker">{mod.title} · {lesson.title}</p>
+          <h1 style={{ fontSize: 24 }}>{lesson.title}</h1>
+        </div>
+        <Link to="/course" style={{ font: '500 12px/1 var(--font-ui)', color: 'var(--muted)', whiteSpace: 'nowrap' }}>Save &amp; come back</Link>
+      </div>
 
+      <div className="lesson-grid">
+        <div className="lesson-left">
+          <p style={{ margin: '0 0 4px', font: '600 12px/1 var(--font-ui)', letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--sky-700)' }}>Watch on Coursera first</p>
+          <ul style={{ listStyle: 'none', margin: '10px 0 0', padding: 0, display: 'grid', gap: 8 }}>
+            {lesson.videos.map((v) => (
+              <li key={v.n} style={{ display: 'flex', gap: 10, alignItems: 'center', padding: '10px 14px', border: '1px solid var(--line)', borderRadius: 'var(--r-sticker)', background: '#fff' }}>
+                <span style={{ flex: 'none', width: 26, height: 26, borderRadius: 'var(--r-pill)', background: 'var(--sky-200)', font: '700 12px/26px var(--font-ui)', textAlign: 'center' }}>{v.n}</span>
+                <span style={{ font: '500 14px/1.35 var(--font-ui)' }}>{v.title}</span>
+              </li>
+            ))}
+          </ul>
+          <p style={{ margin: '12px 0 0', font: '400 11px/1.5 var(--font-ui)', color: 'var(--muted)' }}>
+            The videos live on Coursera; the questions below are from their transcripts.
+          </p>
+        </div>
+
+        <div className="lesson-right">
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
         {lesson.mcqs.map((_, n) => {
           const answered = progress.lessons[lesson.id]?.mcqs[n] !== undefined;
@@ -120,6 +139,8 @@ export default function Lesson() {
           </p>
         </div>
       )}
+        </div>
+      </div>
     </div>
   );
 }

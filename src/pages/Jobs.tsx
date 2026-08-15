@@ -46,7 +46,7 @@ export default function Jobs() {
   };
 
   return (
-    <div style={{ maxWidth: 860 }}>
+    <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 20, flexWrap: 'wrap' }}>
         <div>
           <h1 style={{ fontSize: 26 }}>HR openings in Chennai</h1>

@@ -18,7 +18,7 @@ export default function Skills() {
   };
 
   return (
-    <div style={{ maxWidth: 900 }}>
+    <div>
       <p className="kicker">Skills</p>
       <h1 style={{ fontSize: 28 }}>Seven tracks, no required order</h1>
       <p style={{ margin: '10px 0 22px', maxWidth: '60ch', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)' }}>

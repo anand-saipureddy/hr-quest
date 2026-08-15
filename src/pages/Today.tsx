@@ -45,7 +45,7 @@ export default function Today() {
   });
 
   return (
-    <div style={{ position: 'relative', maxWidth: 780 }}>
+    <div style={{ position: 'relative' }}>
       <div style={{ position: 'absolute', right: 0, top: -8 }} className="doodle-bob">
         <Doodle mark="cloud" width={110} />
       </div>
