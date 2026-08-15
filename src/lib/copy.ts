@@ -2,6 +2,19 @@
 // Rules: no exclamation marks, no banned words (streak, overdue, you missed,
 // keep it up, don't break the chain), wrong answers never "Incorrect".
 export const copy = {
+  app: {
+    name: 'HR Quest',
+    greeting: 'hi Pragna',
+    takeABreak: 'Take a break',
+    footnote: 'Everything stays on this laptop.',
+    yoursOnly: 'all of this is yours only ↗',
+  },
+  breakScreen: {
+    heading: 'Everything you did is saved. Close the tab whenever.',
+    body: "There's no streak to break and nothing waiting to remind you tomorrow. Come back in an hour, or next week — the page will look exactly the same.",
+    leftOff: 'Where you left off',
+    note: 'rest counts as progress too ✿',
+  },
   today: {
     heading: "Whenever you're ready, there's one thing waiting.",
     pickedForToday: 'Picked for today',
@@ -26,11 +39,6 @@ export const copy = {
     notForMe: 'Not for me',
     putItBack: 'Put it back',
     followUp: (days: number) => `It's been ${days} days — a short follow-up is normal.`,
-  },
-  breakScreen: {
-    heading: 'Everything you did is saved. Close the tab whenever.',
-    body: "There's no streak to break and nothing waiting to remind you tomorrow. Come back in an hour, or next week — the page will look exactly the same.",
-    note: 'rest counts as progress too ✿',
   },
   undo: 'Undo',
 };

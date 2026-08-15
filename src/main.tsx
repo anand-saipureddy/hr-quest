@@ -15,6 +15,7 @@ import Flashcards from './pages/Flashcards';
 import Skills from './pages/Skills';
 import SkillTrack from './pages/SkillTrack';
 import Jobs from './pages/Jobs';
+import Break from './pages/Break';
 
 const router = createBrowserRouter(
   [
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
         { path: 'skills', element: <Skills /> },
         { path: 'skills/:trackId', element: <SkillTrack /> },
         { path: 'jobs', element: <Jobs /> },
+        { path: 'break', element: <Break /> },
       ],
     },
   ],

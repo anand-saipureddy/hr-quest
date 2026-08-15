@@ -14,7 +14,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
 
 .kicker{
-  font:600 11px/1 var(--font-ui);letter-spacing:.16em;text-transform:uppercase;
+  font:600 10px/1 var(--font-ui);letter-spacing:.16em;text-transform:uppercase;
   color:var(--sky-500);margin:0 0 var(--s3);
 }
 
@@ -28,12 +28,19 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
 
 .hand{font-family:var(--font-hand);font-weight:700;color:var(--sky-700)}
 
+.panel{border:2px solid var(--ink);background:#fff}
+.card{border:1px solid var(--line);border-radius:var(--r-sticker);background:#fff;padding:var(--s4)}
+.card.ink{border:2px solid var(--ink)}
+.card.sky{background:var(--sky-100)}
+.hr{border:0;border-top:1px solid var(--line)}
+
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.doodle-bob{animation:bob 6s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 
-/* app shell */
+/* app shell — sidebar per spec screen 01 */
 .shell{display:grid;grid-template-columns:216px minmax(0,1fr);min-height:100vh;background:#fff}
 .side{border-right:1px solid var(--line);padding:var(--s5) 0;background:var(--bg)}
 .side .brand{font:700 19px/1 var(--font-ui);letter-spacing:-0.02em;margin:0 0 4px;padding:0 20px}
@@ -46,12 +53,17 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
 }
 .side nav a.active{background:var(--sky-200);border-left-color:var(--sky-700);font-weight:600;color:var(--ink)}
 .side .foot{margin-top:26px;padding:14px 20px 0;border-top:1px solid var(--line)}
+.side .foot a{
+  display:inline-flex;align-items:center;min-height:36px;
+  font:500 13px/1 var(--font-ui);color:var(--muted);text-decoration:none;
+}
 .side .foot p{margin:10px 0 0;font:400 11px/1.5 var(--font-ui);color:var(--muted)}
-.main{padding:34px 32px 72px;position:relative}
+.main{padding:34px 32px 72px;position:relative;overflow:hidden}
 @media (max-width:768px){
   .shell{grid-template-columns:1fr}
   .side{border-right:0;border-bottom:1px solid var(--line);padding:var(--s4) 0}
   .side nav{flex-direction:row;flex-wrap:wrap}
-  .side nav a{border-left:0;border-bottom:3px solid transparent}
+  .side nav a{border-left:0;border-bottom:3px solid transparent;min-height:44px}
   .side nav a.active{border-bottom-color:var(--sky-700)}
+  .main{padding:24px 18px 56px}
 }

@@ -165,7 +165,10 @@ export default function SkillTrack() {
           )}
         </div>
       </section>
-      <p className="hand" style={{ margin: '14px 0 0', fontSize: 17 }}>"{copy.skills.builtThis}" is on your word — nobody checks</p>
+      <p className="hand" style={{ margin: '14px 0 0', fontSize: 17, display: 'flex', alignItems: 'center', gap: 8 }}>
+        {built && <Doodle mark="sparkle" width={36} />}
+        "{copy.skills.builtThis}" is on your word — nobody checks
+      </p>
     </div>
   );
 }
