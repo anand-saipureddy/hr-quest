@@ -1,0 +1,108 @@
+import { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import Doodle from '../components/Doodle';
+import QuestionCard from '../components/QuestionCard';
+import ScenarioBox from '../components/ScenarioBox';
+import { modules } from '../lib/content';
+import { markLessonDone } from '../lib/progress';
+import { useProgress } from '../lib/progress-context';
+import { pushUndo } from '../components/UndoBar';
+
+// The important one. Sequence: recall MCQs (one visible) → written interview
+// scenario → flashcards link. Progress as dots, never "1 of 3".
+export default function Lesson() {
+  const { moduleId, lessonId } = useParams();
+  const mod = modules.find((m) => m.id === moduleId);
+  const lesson = mod?.lessons.find((l) => l.id === lessonId);
+  const { progress, set } = useProgress();
+  const [q, setQ] = useState(0);
+
+  if (!mod || !lesson) {
+    return (
+      <div>
+        <Doodle mark="circle" />
+        <p style={{ color: 'var(--muted)' }}>That lesson isn't here yet.</p>
+        <Link to="/course">Back to the course</Link>
+      </div>
+    );
+  }
+
+  const answeredCount = lesson.mcqs.filter((_, n) => progress.lessons[lesson.id]?.mcqs[n] !== undefined).length;
+  const allAnswered = answeredCount === lesson.mcqs.length;
+  const done = !!progress.lessons[lesson.id]?.done;
+  const showScenario = allAnswered || done;
+
+  const finish = () => {
+    const prev = progress;
+    set(markLessonDone(progress, lesson.id, true));
+    pushUndo(() => set(markLessonDone(prev, lesson.id, false)));
+  };
+
+  return (
+    <div style={{ maxWidth: 640 }}>
+      <p className="kicker">{mod.title} · {lesson.title}</p>
+      <h1 style={{ fontSize: 24 }}>{lesson.title}</h1>
+      <p style={{ margin: '8px 0 22px', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
+        Videos on Coursera: {lesson.videos.map((v) => `${v.n}. ${v.title}`).join(' · ')}
+      </p>
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+        {lesson.mcqs.map((_, n) => {
+          const answered = progress.lessons[lesson.id]?.mcqs[n] !== undefined;
+          const current = n === q && !showScenario;
+          return (
+            <button
+              key={n}
+              type="button"
+              aria-label={`Question ${n + 1}${answered ? ', answered' : ''}`}
+              onClick={() => setQ(n)}
+              style={{
+                width: 12, height: 12, borderRadius: 'var(--r-pill)', padding: 0, cursor: 'pointer',
+                border: current ? '2px solid var(--sky-700)' : 'none',
+                background: answered ? 'var(--sky-700)' : 'var(--sky-200)',
+              }}
+            />
+          );
+        })}
+        <span style={{ marginLeft: 6, font: '400 12px/1 var(--font-ui)', color: 'var(--muted)' }}>
+          {lesson.mcqs.length} questions, no timer
+        </span>
+      </div>
+
+      {!showScenario ? (
+        <QuestionCard
+          lessonId={lesson.id}
+          n={q}
+          mcq={lesson.mcqs[q]}
+          isLast={q === lesson.mcqs.length - 1}
+          onNext={() => (q < lesson.mcqs.length - 1 ? setQ(q + 1) : undefined)}
+        />
+      ) : (
+        <div style={{ display: 'grid', gap: 18 }}>
+          {lesson.scenario && <ScenarioBox lessonId={lesson.id} scenario={lesson.scenario} />}
+          {!done ? (
+            <button className="btn primary" type="button" onClick={finish} style={{ justifySelf: 'start' }}>
+              Mark this lesson done
+            </button>
+          ) : (
+            <p style={{ margin: 0, font: '700 18px/1.3 var(--font-hand)', color: 'var(--sky-700)' }}>
+              lesson done — you can still change any answer above
+            </p>
+          )}
+          <Link to={`/course/${mod.id}/${lesson.id}/cards`} style={{ font: '500 14px/1 var(--font-ui)' }}>
+            Review the flashcards from this lesson →
+          </Link>
+          <p style={{ margin: 0 }}>
+            <button
+              type="button"
+              onClick={() => setQ(0)}
+              style={{ background: 'none', border: 'none', padding: 0, font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }}
+            >
+              Go back over the questions
+            </button>
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}

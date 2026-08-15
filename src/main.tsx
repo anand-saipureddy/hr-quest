@@ -10,6 +10,7 @@ import App from './App';
 import { ProgressProvider } from './lib/progress-context';
 import Today from './pages/Today';
 import Course from './pages/Course';
+import Lesson from './pages/Lesson';
 import Skills from './pages/Skills';
 import Jobs from './pages/Jobs';
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       children: [
         { index: true, element: <Today /> },
         { path: 'course', element: <Course /> },
+        { path: 'course/:moduleId/:lessonId', element: <Lesson /> },
         { path: 'skills', element: <Skills /> },
         { path: 'jobs', element: <Jobs /> },
       ],
