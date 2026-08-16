@@ -98,12 +98,17 @@ test('working column: .page > .col is a flex column with a gap (Screen-1 collisi
   assert.match(m[0], /gap\s*:/, '.page > .col must declare a vertical gap');
 });
 
-test('.page is centred in .main so wider laptops distribute the slack on both sides', () => {
+test('.page fills .main flush left — no centering, no 1240px cap that leaves the right side empty', () => {
   const m = css.match(/\.page\s*\{[^}]*\}/);
   assert.ok(m, '.page rule not found');
-  assert.match(
+  assert.doesNotMatch(
     m[0],
     /margin\s*:\s*0\s+auto/,
-    '.page must be centred (margin: 0 auto) so on wider laptops the empty space is on both sides of the page, not piled up on the right',
+    '.page must not be centred (margin: 0 auto) — that pushes the working column away from the sidebar (the "middle moved to the right" bug)',
+  );
+  assert.doesNotMatch(
+    m[0],
+    /max-width\s*:\s*1240px/,
+    '.page must not be constrained to 1240px — that leaves the right side of wider laptops empty',
   );
 });

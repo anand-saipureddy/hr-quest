@@ -32,7 +32,7 @@ export default function Flashcards() {
       <p className="kicker">{lesson.title} · {lesson.cards.length} cards</p>
       <h1 style={{ fontSize: 26, marginBottom: 22 }}>Terms from this lesson</h1>
       <div className="page">
-        <div className="col">
+        <div className="col" style={{ justifyContent: 'center' }}>
           <div style={{ position: 'relative', maxWidth: 520 }}>
             <div style={{ position: 'absolute', left: 10, top: 10, right: -10, bottom: -10, border: '1px solid var(--sky-200)', borderRadius: 'var(--r-sticker)', background: 'var(--bg)' }} aria-hidden="true" />
             <div style={{ position: 'relative' }}>

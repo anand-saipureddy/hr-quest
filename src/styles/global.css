@@ -87,8 +87,8 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
   grid-template-columns:minmax(0,1fr) 300px;
   gap:36px;
   align-items:stretch;        /* A1 — never `start` */
-  max-width:1240px;
-  margin:0 auto;              /* centre on wider laptops so the slack is on both sides */
+  /* no max-width, no auto margins — the page fills .main flush left, so the
+     working column stays against the sidebar and the right side is used. */
 }
 .page > .col{min-width:0;display:flex;flex-direction:column;gap:26px}
 
