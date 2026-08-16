@@ -74,3 +74,36 @@ test('StepSpine dotted connector is visible (dash and gap both readable, not pin
   assert.ok(Number.isFinite(dash) && Number.isFinite(gap), 'strokeDasharray must be two numbers');
   assert.ok(dash >= 2 && gap >= 3, `strokeDasharray "${m[1]}" is too sparse — the dots disappear (dash>=2, gap>=3)`);
 });
+
+test('StepSpine connector extends past the outer circles (line meets each number, no gap)', () => {
+  const spine = readFileSync(join(__dirname, '..', 'src', 'components', 'StepSpine.tsx'), 'utf8');
+  const m = spine.match(/<path[^>]*\bd\s*=\s*['"`]([^'"`]+)['"`]/);
+  assert.ok(m, 'StepSpine connector path not found');
+  const coords = m[1].match(/M\s*(\d+)\s+\d+\s+H\s*(\d+)/);
+  assert.ok(coords, `StepSpine path must be "M x 15 H x" (horizontal at y=15). Got: ${m[1]}`);
+  const [start, end] = coords.slice(1, 3).map(Number);
+  // In viewBox 0 0 400 30, circles are at 1/6 and 5/6 (66.67, 333.33). The
+  // connector must start BEFORE the first circle and end AFTER the last
+  // (i.e. < 66 and > 333) so the visible line clearly enters and exits
+  // every circle — no gap between the number and the line.
+  assert.ok(start < 66, `connector start x=${start} is inside the first circle; line must start before x=66 so it meets the number`);
+  assert.ok(end > 333, `connector end x=${end} is inside the last circle; line must end after x=333 so it meets the number`);
+});
+
+test('working column: .page > .col is a flex column with a gap (Screen-1 collision guard)', () => {
+  const m = css.match(/\.page\s*>\s*\.col\s*\{[^}]*\}/);
+  assert.ok(m, '.page > .col rule not found');
+  assert.match(m[0], /display\s*:\s*flex/, '.page > .col must be display:flex');
+  assert.match(m[0], /flex-direction\s*:\s*column/, '.page > .col must be flex-direction:column');
+  assert.match(m[0], /gap\s*:/, '.page > .col must declare a vertical gap');
+});
+
+test('.page is centred in .main so wider laptops distribute the slack on both sides', () => {
+  const m = css.match(/\.page\s*\{[^}]*\}/);
+  assert.ok(m, '.page rule not found');
+  assert.match(
+    m[0],
+    /margin\s*:\s*0\s+auto/,
+    '.page must be centred (margin: 0 auto) so on wider laptops the empty space is on both sides of the page, not piled up on the right',
+  );
+});

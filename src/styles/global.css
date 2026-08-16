@@ -88,6 +88,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
   gap:36px;
   align-items:stretch;        /* A1 — never `start` */
   max-width:1240px;
+  margin:0 auto;              /* centre on wider laptops so the slack is on both sides */
 }
 .page > .col{min-width:0;display:flex;flex-direction:column;gap:26px}
 
