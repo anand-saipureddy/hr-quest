@@ -1,14 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import Doodle from './components/Doodle';
 import UndoBar from './components/UndoBar';
 import { copy } from './lib/copy';
-
-function todayShortLabel(): string {
-  const d = new Date();
-  const wd = d.toLocaleDateString('en-IN', { weekday: 'short' });
-  const mo = d.toLocaleDateString('en-IN', { month: 'short' });
-  return `${wd} \u00b7 ${d.getDate()} ${mo}`;
-}
 
 export default function App() {
   return (
@@ -22,40 +14,6 @@ export default function App() {
           <NavLink to="/skills">Skills</NavLink>
           <NavLink to="/jobs">Jobs</NavLink>
         </nav>
-        <div className="foot">
-          <div
-            style={{
-              background: 'var(--sky-100)',
-              border: '1px solid var(--sky-300)',
-              borderRadius: 'var(--r-sticker)',
-              padding: '16px 16px 14px',
-            }}
-          >
-            <Doodle mark="twinkle" width={112} />
-            <p
-              className="hand"
-              style={{
-                fontSize: 17,
-                lineHeight: 1.2,
-                margin: '10px 0 6px',
-                color: 'var(--sky-700)',
-              }}
-            >
-              {copy.app.footnote}
-            </p>
-            <p
-              style={{
-                margin: 0,
-                font: '500 10px/1.4 var(--font-ui)',
-                color: 'var(--muted)',
-                letterSpacing: '.08em',
-                textTransform: 'uppercase',
-              }}
-            >
-              {todayShortLabel()}
-            </p>
-          </div>
-        </div>
       </aside>
       <main className="main">
         <Outlet />
@@ -64,3 +22,4 @@ export default function App() {
     </div>
   );
 }
+
