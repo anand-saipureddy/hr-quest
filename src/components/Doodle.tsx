@@ -1,13 +1,13 @@
 type Mark =
   | 'underline' | 'circle' | 'arrow' | 'star' | 'squiggle' | 'sparkle' | 'cloud' | 'clock' | 'book' | 'briefcase' | 'hammer'
-  | 'desk' | 'books' | 'toolbox' | 'skyline' | 'clockArrow'
+  | 'desk' | 'books' | 'toolbox' | 'skyline' | 'clockArrow' | 'twinkle'
   | 'sheet' | 'chat' | 'person' | 'payslip' | 'board' | 'envelope' | 'bars';
 
 const BOX: Record<Mark, [number, number]> = {
   desk: [220, 170], books: [200, 150], toolbox: [200, 150], skyline: [220, 140], clockArrow: [140, 90],
   sheet: [60, 44], chat: [60, 44], person: [60, 44], payslip: [60, 44], board: [60, 44], envelope: [60, 44], bars: [60, 44],
   underline: [90, 40], circle: [90, 40], arrow: [90, 40], star: [90, 40], squiggle: [90, 40], sparkle: [90, 40],
-  cloud: [120, 60], clock: [120, 60], book: [90, 40], briefcase: [90, 40], hammer: [90, 40],
+  cloud: [120, 60], clock: [120, 60], book: [90, 40], briefcase: [90, 40], hammer: [90, 40], twinkle: [120, 60],
 };
 
 // The doodle kit from the spec. Decorative — aria-hidden, never the sole
@@ -23,6 +23,13 @@ export default function Doodle({ mark, color = 'var(--sky-300)', width = 90 }: {
       {mark === 'circle' && <circle cx="45" cy="20" r="15" {...stroke} />}
       {mark === 'star' && <path d="M45 4l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.5" />}
       {mark === 'arrow' && <path d="M8 8c18 0 30 8 30 18M38 26l-8-4M38 26l2-9" {...stroke} stroke="var(--ink)" strokeWidth="2" />}
+      {mark === 'twinkle' && (
+        <>
+          <path d="M12 44h40a11 11 0 0 0 0-18 15 15 0 0 0-28-4 11 11 0 0 0-20 6 8 8 0 0 0 8 16z" fill="var(--sky-200)" stroke="var(--ink)" strokeWidth="1.6" />
+          <path d="M100 10l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.3" strokeLinejoin="round" />
+          <path d="M56 32c10 2 22 0 32-8" stroke="var(--sky-500)" strokeWidth="2" strokeLinecap="round" strokeDasharray="1 7" fill="none" />
+        </>
+      )}
       {mark === 'sparkle' && (
         <>
           <path d="M22 4l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.5" />

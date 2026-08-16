@@ -28,18 +28,16 @@ export default function App() {
               background: 'var(--sky-100)',
               border: '1px solid var(--sky-300)',
               borderRadius: 'var(--r-sticker)',
-              padding: '14px 14px 12px',
+              padding: '16px 16px 14px',
             }}
           >
-            <div className="doodle-bob" style={{ display: 'flex' }}>
-              <Doodle mark="sparkle" width={36} />
-            </div>
+            <Doodle mark="twinkle" width={112} />
             <p
               className="hand"
               style={{
-                fontSize: 16,
-                lineHeight: 1.25,
-                margin: '6px 0 6px',
+                fontSize: 17,
+                lineHeight: 1.2,
+                margin: '10px 0 6px',
                 color: 'var(--sky-700)',
               }}
             >
