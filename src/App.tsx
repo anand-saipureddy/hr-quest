@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import Doodle from './components/Doodle';
 import UndoBar from './components/UndoBar';
 import { copy } from './lib/copy';
 
@@ -15,6 +16,7 @@ export default function App() {
           <NavLink to="/jobs">Jobs</NavLink>
         </nav>
         <div className="foot">
+          <div className="doodle-bob"><Doodle mark="cloud" width={96} /></div>
           <p>{copy.app.footnote}</p>
         </div>
       </aside>

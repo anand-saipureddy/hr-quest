@@ -12,23 +12,21 @@ function todayLabel(): string {
   return new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' });
 }
 
+const DOOR_ICON: Record<'course' | 'skills' | 'jobs', 'book' | 'hammer' | 'briefcase'> = {
+  course: 'book',
+  skills: 'hammer',
+  jobs: 'briefcase',
+};
+
+const trimLead = (s: string, lead: string) => (s.startsWith(lead) ? s.slice(lead.length) : s);
+
 export default function Today() {
   const { progress, blocked, hydrated } = useProgress();
   const [idx, setIdx] = useState(0);
 
   if (!hydrated) return null; // pre-hydration: render nothing yet
 
-  if (blocked) {
-    return (
-      <div>
-        <p className="kicker">{todayLabel()}</p>
-        <h1 style={{ fontSize: 30, maxWidth: '22ch' }}>{copy.today.heading}</h1>
-        <p style={{ maxWidth: '56ch', color: 'var(--muted)' }}>{copy.today.storageBlocked}</p>
-      </div>
-    );
-  }
-
-  const cands = suggestions(progress, modules, tracks, jobs);
+  const cands = blocked ? [] : suggestions(progress, modules, tracks, jobs);
   const doneAnything =
     Object.keys(progress.lessons).length + Object.keys(progress.tracks).length + Object.keys(progress.jobs).length > 0;
 
@@ -39,37 +37,71 @@ export default function Today() {
   // Door cards: static area descriptors, never tallies of undone work
   const lessonsTotal = modules.reduce((n, m) => n + m.lessons.length, 0);
   const freshJobs = jobs.filter((j) => j.isNew && !progress.jobs[j.id]).length;
-  const startedTrack = tracks.find((t) => {
-    const st = progress.tracks[t.id];
-    return st && !st.built && Object.keys(st.drills).length > 0;
-  });
+
+  const doors: { key: 'course' | 'skills' | 'jobs'; to: string; title: string; line: string; cue: string }[] = [
+    {
+      key: 'course',
+      to: '/course',
+      title: 'Course',
+      line: trimLead(copy.today.howCourse, 'Course — '),
+      cue: lessonsTotal === 1 ? '1 lesson ready →' : `${lessonsTotal} lessons ready →`,
+    },
+    {
+      key: 'skills',
+      to: '/skills',
+      title: 'Skills',
+      line: trimLead(copy.today.howSkills, 'Skills — '),
+      cue: `${tracks.length} tracks →`,
+    },
+    {
+      key: 'jobs',
+      to: '/jobs',
+      title: 'Jobs',
+      line: trimLead(copy.today.howJobs, 'Jobs — '),
+      cue: freshJobs > 0 ? `${freshJobs} new in Chennai →` : 'Chennai fresher roles →',
+    },
+  ];
+
+  const rail = (
+    <aside className="rail">
+      <p style={{ margin: 0, font: '400 14px/1.7 var(--font-ui)', color: 'var(--muted)' }}>{copy.today.purpose}</p>
+      {doneAnything && (
+        <>
+          <hr />
+          <div>
+            <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 14px' }}>{copy.today.thingsDone}</p>
+            <StatRow
+              items={[
+                [lessonsDone, lessonsDone === 1 ? 'lesson done' : 'lessons done'],
+                [skillsBuilt, skillsBuilt === 1 ? 'skill built' : 'skills built'],
+                [applied, applied === 1 ? 'application sent' : 'applications sent'],
+              ]}
+            />
+          </div>
+        </>
+      )}
+      <hr />
+      <div style={{ background: 'var(--bg)', border: '1px dashed var(--sky-300)', padding: '18px 18px 20px' }}>
+        <p className="hand" style={{ fontSize: 20, margin: 0 }}>{copy.app.yoursOnly}</p>
+      </div>
+      <div className="spacer" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <Doodle mark="clockArrow" width={150} />
+      </div>
+    </aside>
+  );
 
   return (
-    <div style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', right: 0, top: -8 }} className="doodle-bob">
-        <Doodle mark="cloud" width={110} />
-      </div>
-      <div style={{ position: 'absolute', right: 120, top: 40 }}>
-        <Doodle mark="sparkle" width={34} />
-      </div>
-      <p className="kicker">{todayLabel()}</p>
-      <h1 style={{ fontSize: 30, maxWidth: '20ch' }}>{copy.today.heading}</h1>
-      <p style={{ margin: '12px 0 0', maxWidth: '58ch', font: '400 15px/1.65 var(--font-ui)', color: 'var(--muted)' }}>
-        {copy.today.purpose}
-      </p>
+    <div className="page">
+      <div className="col" style={{ display: 'flex', flexDirection: 'column', gap: 26 }}>
+        <div>
+          <p className="kicker">{todayLabel()}</p>
+          <h1 style={{ fontSize: 32, maxWidth: '22ch' }}>{copy.today.heading}</h1>
+        </div>
 
-      <details className="how" style={{ marginTop: 18, maxWidth: 560 }}>
-        <summary>{copy.today.howItWorks}</summary>
-        <ul>
-          <li>{copy.today.howCourse}</li>
-          <li>{copy.today.howSkills}</li>
-          <li>{copy.today.howJobs}</li>
-        </ul>
-      </details>
-
-      <div style={{ marginTop: 24 }}>
-        {cands.length === 0 ? (
-          <div className="card ink sky" style={{ padding: 22, maxWidth: 520 }}>
+        {blocked ? (
+          <p style={{ maxWidth: '56ch', color: 'var(--muted)' }}>{copy.today.storageBlocked}</p>
+        ) : cands.length === 0 ? (
+          <div className="card ink sky" style={{ padding: 22, maxWidth: 560 }}>
             <p style={{ margin: 0, font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
               {doneAnything ? copy.today.allCaughtUp : copy.today.freshInstall}
             </p>
@@ -77,41 +109,27 @@ export default function Today() {
         ) : (
           <NextThing s={cands[idx % cands.length]} hasMore={cands.length > 1} onShuffle={() => setIdx((i) => i + 1)} />
         )}
-      </div>
 
-      {doneAnything && (
-        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 26, flexWrap: 'wrap' }}>
-          <StatRow
-            items={[
-              [lessonsDone, lessonsDone === 1 ? 'lesson done' : 'lessons done'],
-              [skillsBuilt, skillsBuilt === 1 ? 'skill built' : 'skills built'],
-              [applied, applied === 1 ? 'application sent' : 'applications sent'],
-            ]}
-          />
-          <span className="hand" style={{ fontSize: 18, marginLeft: 'auto' }}>{copy.app.yoursOnly}</span>
+        <div style={{ display: 'grid', gap: 10 }}>
+          {doors.map((d) => (
+            <Link
+              key={d.key}
+              to={d.to}
+              style={{ display: 'grid', gridTemplateColumns: '56px minmax(0,1fr) auto', alignItems: 'center', gap: 18, border: '1px solid var(--line)', background: '#fff', padding: '18px 20px', textDecoration: 'none', color: 'inherit' }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Doodle mark={DOOR_ICON[d.key]} width={50} />
+              </div>
+              <div>
+                <p style={{ font: '600 17px/1.25 var(--font-ui)', margin: '0 0 4px' }}>{d.title}</p>
+                <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{d.line}</p>
+              </div>
+              <span style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--sky-700)', whiteSpace: 'nowrap' }}>{d.cue}</span>
+            </Link>
+          ))}
         </div>
-      )}
-
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 12, marginTop: 26 }}>
-        <Link to="/course" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p style={{ font: '600 15px/1.2 var(--font-ui)', margin: '0 0 6px' }}>Course</p>
-          <p style={{ margin: 0, font: '400 12px/1.5 var(--font-ui)', color: 'var(--muted)' }}>
-            {lessonsTotal === 1 ? '1 lesson ready' : `${lessonsTotal} lessons ready`}
-          </p>
-        </Link>
-        <Link to="/skills" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p style={{ font: '600 15px/1.2 var(--font-ui)', margin: '0 0 6px' }}>Skills</p>
-          <p style={{ margin: 0, font: '400 12px/1.5 var(--font-ui)', color: 'var(--muted)' }}>
-            7 tracks{startedTrack ? ` · ${startedTrack.short} in progress` : ''}
-          </p>
-        </Link>
-        <Link to="/jobs" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <p style={{ font: '600 15px/1.2 var(--font-ui)', margin: '0 0 6px' }}>Jobs</p>
-          <p style={{ margin: 0, font: '400 12px/1.5 var(--font-ui)', color: 'var(--muted)' }}>
-            {freshJobs > 0 ? `${freshJobs} new in Chennai` : 'Chennai fresher roles'}
-          </p>
-        </Link>
       </div>
+      {rail}
     </div>
   );
 }

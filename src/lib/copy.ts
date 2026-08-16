@@ -15,6 +15,7 @@ export const copy = {
     howCourse: 'Course — watch a short video, then a few questions about it. Stop any time.',
     howSkills: 'Skills — build the real thing first, then answer questions about what you built.',
     howJobs: 'Jobs — fresh Chennai fresher roles. Save, apply, or set one aside.',
+    thingsDone: 'Things you have done',
     pickedForToday: 'Picked for today',
     openLesson: 'Open the lesson',
     somethingElse: 'Something else instead',
@@ -22,6 +23,18 @@ export const copy = {
     allCaughtUp: 'Nothing needs you today. Everything you did is saved.',
     storageBlocked:
       'This browser will not let the page remember anything, so what you do here disappears when you close the tab. Everything still works.',
+  },
+  course: {
+    shape: {
+      title: 'What a lesson looks like',
+      steps: [
+        { t: 'Watch on Coursera', d: 'The videos live there; the questions here come from their transcripts.' },
+        { t: 'A few recall questions', d: 'One on screen at a time, no timer, answers changeable.' },
+        { t: 'One interview scenario', d: 'A short written answer nobody marks but you.' },
+        { t: 'Flashcards, whenever', d: 'Eight cards from the same lesson, in any order.' },
+      ],
+    },
+    nothingExpires: 'nothing here expires ✓',
   },
   lesson: {
     changeMyAnswer: 'Change my answer',
@@ -32,10 +45,18 @@ export const copy = {
   skills: {
     builtThis: 'I built this',
     howYouKnow: "How you'll know it works",
+    spineTitle: 'Every track, the same three steps',
+    spineNote: 'Predictable on purpose — you always know what the next screen asks of you.',
   },
   jobs: {
     notForMe: 'Not for me',
     putItBack: 'Put it back',
+    roughSort: 'a rough sort, not a verdict',
+    lists: 'Lists',
+    allSeven: 'All seven',
+    sortingTitle: 'How the sorting works',
+    sortingNote:
+      'Strong, Good and Worth a look are rough groupings from the words in the posting — location, fresher wording, pay. The percentage under it is only there if you want it. "Not for me" moves a role to its own list; nothing is ever deleted.',
     followUp: (days: number) => `It's been ${days} days — a short follow-up is normal.`,
   },
   undo: 'Undo',
