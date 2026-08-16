@@ -38,6 +38,19 @@ export const copy = {
     thatsIt: "That's it.",
     nextQuestion: 'Next question',
   },
+  course: {
+    shape: {
+      title: 'What a lesson looks like',
+      steps: [
+        { t: 'Watch on Coursera', d: 'The videos live there; the questions here come from their transcripts.' },
+        { t: 'A few recall questions', d: 'One on screen at a time, no timer, answers changeable.' },
+        { t: 'One interview scenario', d: 'A short written answer nobody marks but you.' },
+        { t: 'Flashcards, whenever', d: 'Eight cards from the same lesson, in any order.' },
+      ],
+    },
+    nothingExpires: 'nothing here expires ✓',
+    notWritten: 'Not written up yet',
+  },
   skills: {
     builtThis: 'I built this',
     howYouKnow: "How you'll know it works",
