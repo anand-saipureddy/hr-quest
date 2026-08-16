@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import Doodle from '../components/Doodle';
 import TrackCard, { MARK_BY_TRACK } from '../components/TrackCard';
 import { SPINE_STEPS } from '../components/StepSpine';
@@ -33,9 +33,9 @@ export default function Skills() {
           <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: st === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>{label}</p>
           <p style={{ font: '600 19px/1.25 var(--font-ui)', margin: 0 }}>{t.name}</p>
           <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '52ch' }}>{t.blurb}</p>
-          <a href={`/skills/${t.id}`} className={st === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
+          <Link to={`/skills/${t.id}`} className={st === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
             {st === 'built' ? 'Revisit' : st === 'started' ? 'Continue' : 'Open'}
-          </a>
+          </Link>
         </div>
         <Doodle mark={MARK_BY_TRACK[t.id]} width={96} />
       </div>
