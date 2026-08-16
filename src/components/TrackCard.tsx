@@ -4,7 +4,7 @@ import type { Track } from '../lib/progress';
 
 // Track card on the Skills index. Status label is the only ordering implied;
 // no track is locked, none suggested first. Each card carries its own mark.
-const MARK_BY_TRACK: Record<Track['id'], 'sheet' | 'chat' | 'person' | 'payslip' | 'board' | 'envelope' | 'bars'> = {
+export const MARK_BY_TRACK: Record<Track['id'], 'sheet' | 'chat' | 'person' | 'payslip' | 'board' | 'envelope' | 'bars'> = {
   excel: 'sheet',
   genai: 'chat',
   interview: 'person',

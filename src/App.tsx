@@ -16,8 +16,8 @@ export default function App() {
           <NavLink to="/jobs">Jobs</NavLink>
         </nav>
         <div className="foot">
-          <div className="doodle-bob"><Doodle mark="cloud" width={96} /></div>
-          <p>{copy.app.footnote}</p>
+          <div className="doodle-bob" style={{ display: 'flex', justifyContent: 'flex-start' }}><Doodle mark="sparkle" width={50} /></div>
+          <p className="hand" style={{ fontSize: 17, margin: '6px 0 0' }}>{copy.app.footnote}</p>
         </div>
       </aside>
       <main className="main">

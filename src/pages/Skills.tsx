@@ -1,10 +1,11 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import Doodle from '../components/Doodle';
-import TrackCard from '../components/TrackCard';
+import TrackCard, { MARK_BY_TRACK } from '../components/TrackCard';
 import { SPINE_STEPS } from '../components/StepSpine';
 import { tracks } from '../lib/content';
 import { useProgress } from '../lib/progress-context';
 import { copy } from '../lib/copy';
+import type { Track } from '../lib/progress';
 
 // Seven tracks. No track is locked; there is no suggested order.
 export default function Skills() {
@@ -21,6 +22,28 @@ export default function Skills() {
 
   const lead = tracks[0];
   const rest = tracks.slice(1);
+  const selectedTrack = selected ? tracks.find((t) => t.id === selected) ?? null : null;
+
+  // Featured card: lead layout (span 2, mark right) for the unfiltered lead
+  // and for the filtered single track. Uses <Link to> so the router basename
+  // is respected (a plain <a href> 404s on the basename'd route).
+  const renderFeatured = (t: Track) => {
+    const st = status(t.id);
+    const label = st === 'built' ? 'Built' : st === 'started' ? 'In progress' : 'New';
+    return (
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 96px', gap: 20, alignItems: 'center', gridColumn: 'span 2', border: st === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: st === 'started' ? 'var(--sky-100)' : '#fff' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
+          <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: st === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>{label}</p>
+          <p style={{ font: '600 19px/1.25 var(--font-ui)', margin: 0 }}>{t.name}</p>
+          <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '52ch' }}>{t.blurb}</p>
+          <Link to={`/skills/${t.id}`} className={st === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
+            {st === 'built' ? 'Revisit' : st === 'started' ? 'Continue' : 'Open'}
+          </Link>
+        </div>
+        <Doodle mark={MARK_BY_TRACK[t.id]} width={96} />
+      </div>
+    );
+  };
 
   return (
     <div className="page">
@@ -63,24 +86,16 @@ export default function Skills() {
           ))}
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12 }}>
-          {lead && (
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 96px', gap: 20, alignItems: 'center', gridColumn: 'span 2', border: status(lead.id) === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: status(lead.id) === 'started' ? 'var(--sky-100)' : '#fff' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
-                <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: status(lead.id) === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>
-                  {status(lead.id) === 'built' ? 'Built' : status(lead.id) === 'started' ? 'In progress' : 'New'}
-                </p>
-                <p style={{ font: '600 19px/1.25 var(--font-ui)', margin: 0 }}>{lead.name}</p>
-                <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '52ch' }}>{lead.blurb}</p>
-                <a href={`/skills/${lead.id}`} className={status(lead.id) === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
-                  {status(lead.id) === 'built' ? 'Revisit' : status(lead.id) === 'started' ? 'Continue' : 'Open'}
-                </a>
-              </div>
-              <Doodle mark="sheet" width={96} />
-            </div>
+          {selectedTrack ? (
+            renderFeatured(selectedTrack)
+          ) : (
+            <>
+              {lead && renderFeatured(lead)}
+              {rest.map((t) => (
+                <TrackCard key={t.id} track={t} status={status(t.id)} />
+              ))}
+            </>
           )}
-          {rest.map((t) => (
-            <TrackCard key={t.id} track={t} status={status(t.id)} />
-          ))}
         </div>
       </div>
 

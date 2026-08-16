@@ -4,8 +4,8 @@
 export const copy = {
   app: {
     name: 'HR Quest',
-    greeting: 'hi Pragna',
-    footnote: 'Everything stays on this laptop.',
+    greeting: 'hi Prajna',
+    footnote: 'one small thing today is enough',
     yoursOnly: 'all of this is yours only ↗',
   },
   today: {
