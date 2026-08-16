@@ -1,13 +1,14 @@
 // The identical three-step spine for every track: setup → drills → build,
 // joined by a dotted doodle. Predictability is the accommodation.
+export const SPINE_STEPS = ['Make the thing', 'Answer the questions', 'The real task'];
+
 export default function StepSpine({ current }: { current: 1 | 2 | 3 }) {
-  const steps = ['Make the thing', 'Answer the questions', 'The real task'];
   return (
     <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 0, marginBottom: 26 }}>
       <svg viewBox="0 0 400 20" width="100%" height="20" preserveAspectRatio="none" style={{ position: 'absolute', left: 0, top: 14 }} aria-hidden="true">
         <path d="M20 10h360" stroke="var(--sky-300)" strokeWidth="3" strokeDasharray="1 8" strokeLinecap="round" fill="none" />
       </svg>
-      {steps.map((label, i) => {
+      {SPINE_STEPS.map((label, i) => {
         const n = i + 1;
         const done = n < current;
         const now = n === current;

@@ -1,11 +1,12 @@
 import { useSearchParams } from 'react-router-dom';
 import Doodle from '../components/Doodle';
 import TrackCard from '../components/TrackCard';
+import { SPINE_STEPS } from '../components/StepSpine';
 import { tracks } from '../lib/content';
 import { useProgress } from '../lib/progress-context';
+import { copy } from '../lib/copy';
 
 // Seven tracks. No track is locked; there is no suggested order.
-// Sticker slot ships as a grey labelled placeholder — never an emoji.
 export default function Skills() {
   const { progress } = useProgress();
   const [params, setParams] = useSearchParams();
@@ -18,45 +19,88 @@ export default function Skills() {
     return 'new';
   };
 
+  const lead = tracks[0];
+  const rest = tracks.slice(1);
+
   return (
-    <div style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', right: 0, top: -4 }}>
-        <Doodle mark="hammer" width={72} />
-      </div>
-      <p className="kicker">Skills</p>
-      <h1 style={{ fontSize: 28 }}>Seven tracks, no required order</h1>
-      <p style={{ margin: '10px 0 22px', maxWidth: '60ch', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
-        Each one: build the real thing first, then answer questions about the thing you built.
-      </p>
-      <div role="tablist" aria-label="Skill tracks" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
-        {tracks.map((t) => (
+    <div className="page">
+      <div className="col">
+        <p className="kicker">Skills</p>
+        <h1 style={{ fontSize: 30 }}>Seven tracks, no required order</h1>
+        <p style={{ margin: '10px 0 22px', maxWidth: '60ch', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
+          Each one: build the real thing first, then answer questions about the thing you built.
+        </p>
+        <div role="tablist" aria-label="Skill tracks" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
           <button
-            key={t.id}
+            type="button"
             role="tab"
-            aria-selected={selected === t.id}
-            onClick={() => setParams({ t: t.id }, { replace: true })}
+            aria-selected={!selected}
+            onClick={() => setParams({}, { replace: true })}
             style={{
               minHeight: 40, padding: '0 16px', borderRadius: 'var(--r-pill)', cursor: 'pointer',
-              border: selected === t.id ? '2px solid var(--sky-700)' : '1px solid var(--line)',
-              background: selected === t.id ? 'var(--sky-200)' : '#fff',
-              font: '500 13px/1 var(--font-ui)', color: selected === t.id ? 'var(--ink)' : 'var(--muted)',
+              border: !selected ? '2px solid var(--sky-700)' : '1px solid var(--line)',
+              background: !selected ? 'var(--sky-200)' : '#fff',
+              font: '500 13px/1 var(--font-ui)', color: !selected ? 'var(--ink)' : 'var(--muted)',
             }}
           >
-            {t.short}
+            {copy.jobs.allSeven}
           </button>
-        ))}
-      </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(250px,1fr))', gap: 14 }}>
-        {tracks.map((t) => (
-          <TrackCard key={t.id} track={t} status={status(t.id)} />
-        ))}
-        <div style={{ border: '1px dashed var(--sky-300)', borderRadius: 'var(--r-sticker)', padding: 20, background: 'var(--bg)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <p className="hand" style={{ fontSize: 20, margin: '0 0 8px' }}>sticker slot</p>
-          <p style={{ margin: 0, font: '400 12px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
-            One illustration per track goes here. Grey placeholder until then.
-          </p>
+          {tracks.map((t) => (
+            <button
+              key={t.id}
+              role="tab"
+              aria-selected={selected === t.id}
+              onClick={() => setParams({ t: t.id }, { replace: true })}
+              style={{
+                minHeight: 40, padding: '0 16px', borderRadius: 'var(--r-pill)', cursor: 'pointer',
+                border: selected === t.id ? '2px solid var(--sky-700)' : '1px solid var(--line)',
+                background: selected === t.id ? 'var(--sky-200)' : '#fff',
+                font: '500 13px/1 var(--font-ui)', color: selected === t.id ? 'var(--ink)' : 'var(--muted)',
+              }}
+            >
+              {t.short}
+            </button>
+          ))}
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12 }}>
+          {lead && (
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 96px', gap: 20, alignItems: 'center', gridColumn: 'span 2', border: status(lead.id) === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: status(lead.id) === 'started' ? 'var(--sky-100)' : '#fff' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
+                <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: status(lead.id) === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>
+                  {status(lead.id) === 'built' ? 'Built' : status(lead.id) === 'started' ? 'In progress' : 'New'}
+                </p>
+                <p style={{ font: '600 19px/1.25 var(--font-ui)', margin: 0 }}>{lead.name}</p>
+                <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '52ch' }}>{lead.blurb}</p>
+                <a href={`/skills/${lead.id}`} className={status(lead.id) === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
+                  {status(lead.id) === 'built' ? 'Revisit' : status(lead.id) === 'started' ? 'Continue' : 'Open'}
+                </a>
+              </div>
+              <Doodle mark="sheet" width={96} />
+            </div>
+          )}
+          {rest.map((t) => (
+            <TrackCard key={t.id} track={t} status={status(t.id)} />
+          ))}
         </div>
       </div>
+
+      <aside className="rail">
+        <div>
+          <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 14px' }}>{copy.skills.spineTitle}</p>
+          <div style={{ display: 'grid', gap: 12 }}>
+            {SPINE_STEPS.map((label, i) => (
+              <div key={label} style={{ display: 'grid', gridTemplateColumns: '28px minmax(0,1fr)', gap: 12, alignItems: 'center' }}>
+                <span style={{ width: 28, height: 28, borderRadius: 999, background: 'var(--sky-200)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', font: '700 12px/1 var(--font-ui)' }}>{i + 1}</span>
+                <p style={{ margin: 0, font: '600 14px/1.3 var(--font-ui)' }}>{label}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ margin: '14px 0 0', font: '400 12px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{copy.skills.spineNote}</p>
+        </div>
+        <div className="spacer" style={{ display: 'flex', justifyContent: 'center' }}>
+          <Doodle mark="toolbox" width={200} />
+        </div>
+      </aside>
     </div>
   );
 }

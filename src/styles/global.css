@@ -39,13 +39,6 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
 a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
 .hr{border:0;border-top:1px solid var(--line)}
 
-/* "How this works" — a calm, collapsible explainer */
-.how{border:1px solid var(--line);border-radius:var(--r-sticker);background:#fff;padding:0 16px}
-.how summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font:500 13px/1 var(--font-ui);color:var(--muted)}
-.how summary:hover{color:var(--ink)}
-.how ul{margin:0 0 14px;padding-left:18px;display:grid;gap:8px}
-.how li{font:400 13px/1.6 var(--font-ui);color:var(--muted)}
-
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes pop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
 .doodle-bob{animation:bob 6s ease-in-out infinite}
@@ -56,7 +49,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
 
 /* app shell — sidebar per spec screen 01 */
 .shell{display:grid;grid-template-columns:216px minmax(0,1fr);min-height:100vh;background:#fff}
-.side{border-right:1px solid var(--line);padding:var(--s5) 0;background:var(--bg)}
+.side{display:flex;flex-direction:column;border-right:1px solid var(--line);padding:var(--s5) 0;background:var(--bg)}
 .side .brand{font:700 19px/1 var(--font-ui);letter-spacing:-0.02em;margin:0 0 4px;padding:0 20px}
 .side .hi{font:700 17px/1 var(--font-hand);color:var(--sky-700);margin:0 0 26px;padding:0 20px}
 .side nav{display:flex;flex-direction:column}
@@ -66,18 +59,25 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
   color:var(--muted);text-decoration:none;
 }
 .side nav a.active{background:var(--sky-200);border-left-color:var(--sky-700);font-weight:600;color:var(--ink)}
-.side .foot{margin-top:26px;padding:14px 20px 0;border-top:1px solid var(--line)}
+.side .foot{margin-top:auto;padding:16px 20px 0;border-top:1px solid var(--line)}
 .side .foot a{
   display:inline-flex;align-items:center;min-height:36px;
   font:500 13px/1 var(--font-ui);color:var(--muted);text-decoration:none;
 }
 .side .foot p{margin:10px 0 0;font:400 11px/1.5 var(--font-ui);color:var(--muted)}
-.main{padding:34px 40px 72px;position:relative;overflow:hidden}
-/* spec: laptop-first, 1280 primary */
-.main > *{max-width:1100px}
-/* lesson: two columns on laptop, stacked on small screens */
-.lesson-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:start}
-@media (max-width:900px){.lesson-grid{grid-template-columns:1fr}}
+.main{padding:36px 40px 56px;position:relative;overflow:hidden}
+
+/* the one layout for every page */
+.page{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;max-width:1240px}
+.page > .col{min-width:0}
+.rail{display:flex;flex-direction:column;gap:22px;border-left:1px solid var(--line);padding-left:28px}
+.rail .spacer{margin-top:auto}
+.rail hr{border:0;border-top:1px solid var(--line);margin:0}
+
+@media (max-width:1120px){
+  .page{grid-template-columns:minmax(0,1fr);gap:28px}
+  .rail{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:22px}
+}
 
 @media (max-width:768px){
   .shell{grid-template-columns:1fr}
