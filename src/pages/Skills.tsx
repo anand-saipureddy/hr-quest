@@ -30,8 +30,9 @@ export default function Skills() {
   const renderFeatured = (t: Track) => {
     const st = status(t.id);
     const label = st === 'built' ? 'Built' : st === 'started' ? 'In progress' : 'New';
+    const cls = `lead-card${st === 'started' ? ' ink sky' : ''}`;
     return (
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 96px', gap: 20, alignItems: 'center', gridColumn: 'span 2', border: st === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: st === 'started' ? 'var(--sky-100)' : '#fff' }}>
+      <div className={cls}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
           <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: st === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>{label}</p>
           <p style={{ font: '600 19px/1.25 var(--font-ui)', margin: 0 }}>{t.name}</p>
@@ -85,7 +86,7 @@ export default function Skills() {
             </button>
           ))}
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12 }}>
+        <div className="track-grid">
           {selectedTrack ? (
             renderFeatured(selectedTrack)
           ) : (

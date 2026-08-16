@@ -112,11 +112,7 @@ export default function Today() {
 
         <div style={{ display: 'grid', gap: 10 }}>
           {doors.map((d) => (
-            <Link
-              key={d.key}
-              to={d.to}
-              style={{ display: 'grid', gridTemplateColumns: '56px minmax(0,1fr) auto', alignItems: 'center', gap: 18, border: '1px solid var(--line)', background: '#fff', padding: '18px 20px', textDecoration: 'none', color: 'inherit' }}
-            >
+            <Link key={d.key} to={d.to} className="door-row">
               <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Doodle mark={DOOR_ICON[d.key]} width={50} />
               </div>
@@ -124,7 +120,7 @@ export default function Today() {
                 <p style={{ font: '600 17px/1.25 var(--font-ui)', margin: '0 0 4px' }}>{d.title}</p>
                 <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{d.line}</p>
               </div>
-              <span style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--sky-700)', whiteSpace: 'nowrap' }}>{d.cue}</span>
+              <span className="door-cue">{d.cue}</span>
             </Link>
           ))}
         </div>

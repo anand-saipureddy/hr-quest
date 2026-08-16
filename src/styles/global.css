@@ -65,25 +65,83 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
   font:500 13px/1 var(--font-ui);color:var(--muted);text-decoration:none;
 }
 .side .foot p{margin:10px 0 0;font:400 11px/1.5 var(--font-ui);color:var(--muted)}
-.main{padding:36px 40px 56px;position:relative;overflow:hidden}
 
-/* the one layout for every page */
-.page{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;max-width:1240px}
-.page > .col{min-width:0}
+/* the page fills the main column so every screen is a full-height app frame */
+.main{padding:36px 40px 56px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.page{
+  flex:1;
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;
+  align-items:stretch;max-width:1240px;
+}
+.page > .col{min-width:0;display:flex;flex-direction:column;gap:26px}
 .rail{display:flex;flex-direction:column;gap:22px;border-left:1px solid var(--line);padding-left:28px}
 .rail .spacer{margin-top:auto}
 .rail hr{border:0;border-top:1px solid var(--line);margin:0}
 
+/* Hero (Today) — two-bay panel; stacks on mobile */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 250px;border:2px solid var(--ink);background:var(--sky-100)}
+.hero-left{padding:26px 24px 24px}
+.hero-right{border-left:1px solid var(--sky-300);background:var(--bg);display:flex;align-items:flex-end;justify-content:center;padding:14px;overflow:hidden}
+
+/* Track grid (Skills) */
+.track-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.lead-card{
+  display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:20px;align-items:center;
+  grid-column:span 2;border:1px solid var(--line);border-radius:var(--r-sticker);
+  padding:20px;background:#fff;
+}
+.lead-card.ink{border:2px solid var(--ink)}
+.lead-card.sky{background:var(--sky-100)}
+
+/* Door rows (Today) */
+.door-row{
+  display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:18px;
+  border:1px solid var(--line);background:#fff;padding:18px 20px;
+  text-decoration:none;color:inherit;
+}
+.door-cue{font:500 13px/1 var(--font-ui);color:var(--sky-700);white-space:nowrap}
+
+/* Job row (Jobs) */
+.job-row{
+  display:grid;grid-template-columns:88px minmax(0,1fr) 168px;gap:22px;
+  padding:20px 0;border-bottom:1px solid var(--line);align-items:start;
+}
+.job-row.applied{background:var(--bg)}
+.job-actions{display:flex;flex-direction:column;gap:8px;min-width:0}
+
 @media (max-width:1120px){
   .page{grid-template-columns:minmax(0,1fr);gap:28px}
   .rail{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:22px}
+  .track-grid{grid-template-columns:1fr}
 }
 
 @media (max-width:768px){
   .shell{grid-template-columns:1fr}
   .side{border-right:0;border-bottom:1px solid var(--line);padding:var(--s4) 0}
+  .side .brand,.side .hi{padding:0 16px}
   .side nav{flex-direction:row;flex-wrap:wrap}
-  .side nav a{border-left:0;border-bottom:3px solid transparent;min-height:44px}
+  .side nav a{border-left:0;border-bottom:3px solid transparent;min-height:44px;padding:0 14px}
   .side nav a.active{border-bottom-color:var(--sky-700)}
   .main{padding:24px 18px 56px}
+  .page{gap:22px}
+  .page > .col{gap:22px}
+
+  /* Hero stacks; scene becomes a band under the text */
+  .hero{grid-template-columns:1fr}
+  .hero-right{border-left:0;border-top:1px solid var(--sky-300);justify-content:center;padding:10px;min-height:auto}
+
+  /* Lead card stacks; mark sits on its own line */
+  .lead-card{grid-template-columns:1fr;gap:14px;justify-items:start}
+
+  /* Door row: cue drops to its own line under the title+line */
+  .door-row{grid-template-columns:56px 1fr;row-gap:6px}
+  .door-cue{grid-column:2 / -1;justify-self:start}
+
+  /* Job row stacks: badge + title row, then why/chips, then actions full-width */
+  .job-row{grid-template-columns:auto 1fr;column-gap:14px;row-gap:10px}
+  .job-actions{
+    grid-column:1 / -1;flex-direction:column;align-items:stretch;gap:8px;
+    border-top:1px solid var(--line);padding-top:12px;
+  }
+  .job-actions > *{display:flex;justify-content:center;width:100%}
 }
