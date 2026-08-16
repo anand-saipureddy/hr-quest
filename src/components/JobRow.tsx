@@ -27,7 +27,7 @@ export default function JobRow({ job }: { job: Job }) {
   const followUpDays = st.applied && !st.note?.includes('replied') ? daysSince(st.appliedOn) : 0;
 
   return (
-    <li style={{ display: 'grid', gridTemplateColumns: '88px minmax(0,1fr) 168px', gap: 22, padding: '20px 0', borderBottom: '1px solid var(--line)', alignItems: 'start', background: st.applied ? 'var(--bg)' : 'transparent' }}>
+    <li className={`job-row${st.applied ? ' applied' : ''}`}>
       <FitBadge fit={job.fit} />
       <div style={{ minWidth: 0 }}>
         <p style={{ font: '600 17px/1.3 var(--font-ui)', margin: 0 }}>{job.title}</p>
@@ -52,7 +52,7 @@ export default function JobRow({ job }: { job: Job }) {
           </div>
         )}
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
+      <div className="job-actions">
         {!st.notMe && (
           <>
             <a className="btn primary" href={job.url} target="_blank" rel="noopener" style={{ justifyContent: 'flex-start', fontSize: 13 }}>
