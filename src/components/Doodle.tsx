@@ -1,17 +1,20 @@
 type Mark =
   | 'underline' | 'circle' | 'arrow' | 'star' | 'squiggle' | 'sparkle' | 'cloud' | 'clock' | 'book' | 'briefcase' | 'hammer'
-  | 'desk' | 'books' | 'toolbox' | 'skyline' | 'clockArrow' | 'twinkle'
+  | 'desk' | 'clockArrow' | 'books' | 'toolbox' | 'skyline'
   | 'sheet' | 'chat' | 'person' | 'payslip' | 'board' | 'envelope' | 'bars';
 
 const BOX: Record<Mark, [number, number]> = {
-  desk: [220, 170], books: [200, 150], toolbox: [200, 150], skyline: [220, 140], clockArrow: [140, 90],
+  desk: [220, 170], clockArrow: [140, 90], books: [200, 150], toolbox: [200, 150], skyline: [220, 140],
   sheet: [60, 44], chat: [60, 44], person: [60, 44], payslip: [60, 44], board: [60, 44], envelope: [60, 44], bars: [60, 44],
   underline: [90, 40], circle: [90, 40], arrow: [90, 40], star: [90, 40], squiggle: [90, 40], sparkle: [90, 40],
-  cloud: [120, 60], clock: [120, 60], book: [90, 40], briefcase: [90, 40], hammer: [90, 40], twinkle: [120, 60],
+  cloud: [120, 60], clock: [120, 60], book: [90, 40], briefcase: [90, 40], hammer: [90, 40],
 };
 
-// The doodle kit from the spec. Decorative — aria-hidden, never the sole
-// carrier of meaning. Blush and sun fills are doodle-only.
+// The doodle kit. Decorative — aria-hidden, never the sole carrier of meaning.
+// New scene marks are copied verbatim from the design (geometry) and translated
+// to the app's token palette (--sky-*, --ink, --sun, --blush) and React attribute
+// names (camelCase). Keeping them identical to the source so the rail scenes
+// carry their visual weight.
 export default function Doodle({ mark, color = 'var(--sky-300)', width = 90 }: { mark: Mark; color?: string; width?: number }) {
   const stroke = { fill: 'none', stroke: color, strokeWidth: 3, strokeLinecap: 'round' as const };
   const [vbW, vbH] = BOX[mark];
@@ -23,13 +26,6 @@ export default function Doodle({ mark, color = 'var(--sky-300)', width = 90 }: {
       {mark === 'circle' && <circle cx="45" cy="20" r="15" {...stroke} />}
       {mark === 'star' && <path d="M45 4l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.5" />}
       {mark === 'arrow' && <path d="M8 8c18 0 30 8 30 18M38 26l-8-4M38 26l2-9" {...stroke} stroke="var(--ink)" strokeWidth="2" />}
-      {mark === 'twinkle' && (
-        <>
-          <path d="M12 44h40a11 11 0 0 0 0-18 15 15 0 0 0-28-4 11 11 0 0 0-20 6 8 8 0 0 0 8 16z" fill="var(--sky-200)" stroke="var(--ink)" strokeWidth="1.6" />
-          <path d="M100 10l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.3" strokeLinejoin="round" />
-          <path d="M56 32c10 2 22 0 32-8" stroke="var(--sky-500)" strokeWidth="2" strokeLinecap="round" strokeDasharray="1 7" fill="none" />
-        </>
-      )}
       {mark === 'sparkle' && (
         <>
           <path d="M22 4l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.5" />
@@ -68,16 +64,6 @@ export default function Doodle({ mark, color = 'var(--sky-300)', width = 90 }: {
           <rect x="22" y="6" width="22" height="9" rx="2" fill="var(--sky-100)" stroke="var(--ink)" strokeWidth="2" />
         </>
       )}
-      {mark === 'clockArrow' && (
-        <>
-          <path d="M20 74c10-8 22-10 34-6" stroke="var(--sky-300)" strokeWidth="3" strokeLinecap="round" strokeDasharray="1 8" fill="none" />
-          <path d="M62 78c18 2 34-6 44-22" stroke="var(--ink)" strokeWidth="2" fill="none" strokeLinecap="round" />
-          <path d="M106 56l-9 2M106 56l1 9" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" />
-          <circle cx="30" cy="30" r="14" fill="none" stroke="var(--sky-300)" strokeWidth="3" />
-          <path d="M30 22v9l6 4" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-          <path d="M96 16l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.6" strokeLinejoin="round" />
-        </>
-      )}
       {mark === 'desk' && (
         <>
           <path d="M28 132h164" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" />
@@ -96,6 +82,16 @@ export default function Doodle({ mark, color = 'var(--sky-300)', width = 90 }: {
           <path d="M160 34l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.8" strokeLinejoin="round" />
           <path d="M40 62c6-2 6-10 12-10" stroke="var(--sky-300)" strokeWidth="3" strokeLinecap="round" strokeDasharray="1 7" fill="none" />
           <circle cx="186" cy="66" r="6" fill="var(--blush)" stroke="var(--ink)" strokeWidth="1.8" />
+        </>
+      )}
+      {mark === 'clockArrow' && (
+        <>
+          <path d="M20 74c10-8 22-10 34-6" stroke="var(--sky-300)" strokeWidth="3" strokeLinecap="round" strokeDasharray="1 8" fill="none" />
+          <path d="M62 78c18 2 34-6 44-22" stroke="var(--ink)" strokeWidth="2" fill="none" strokeLinecap="round" />
+          <path d="M106 56l-9 2M106 56l1 9" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="30" cy="30" r="14" fill="none" stroke="var(--sky-300)" strokeWidth="3" />
+          <path d="M30 22v9l6 4" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+          <path d="M96 16l4 11 11 4-11 4-4 11-4-11-11-4 11-4z" fill="var(--sun)" stroke="var(--ink)" strokeWidth="1.6" strokeLinejoin="round" />
         </>
       )}
       {mark === 'books' && (

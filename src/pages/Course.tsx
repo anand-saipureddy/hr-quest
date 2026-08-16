@@ -27,7 +27,7 @@ export default function Course() {
         <p className="kicker">Coursera · HR for People Managers</p>
         <h1 style={{ fontSize: 30 }}>The course</h1>
         <Doodle mark="underline" color="var(--sky-500)" />
-        <p style={{ margin: '14px 0 26px', maxWidth: '56ch', font: '400 14px/1.65 var(--font-ui)', color: 'var(--muted)' }}>
+        <p style={{ margin: '14px 0 26px', maxWidth: '56ch', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
           Open one when you feel like it — nothing here expires and nothing is in a hurry.
         </p>
 
@@ -37,15 +37,15 @@ export default function Course() {
             const hasLessons = m.lessons.length > 0;
             if (!hasLessons) {
               return (
-                <div key={m.id} style={{ border: '1px solid var(--line)', borderRadius: 'var(--r-sticker)', background: '#fff', opacity: 0.8, display: 'flex', alignItems: 'baseline', gap: 16, padding: '20px 22px' }}>
+                <div key={m.id} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '20px 22px', border: '1px solid var(--line)', background: '#fff', opacity: 0.8 }}>
                   <span style={{ font: '700 28px/1 var(--font-ui)', color: 'var(--sky-300)' }}>{String(i + 1).padStart(2, '0')}</span>
                   <span style={{ flex: 1, font: '600 18px/1.3 var(--font-ui)', color: 'var(--muted)' }}>{m.title}</span>
-                  <span style={{ font: '500 12px/1 var(--font-ui)', color: 'var(--muted)' }}>Not written up yet</span>
+                  <span style={{ font: '500 12px/1 var(--font-ui)', color: 'var(--muted)' }}>{copy.course.notWritten}</span>
                 </div>
               );
             }
             return (
-              <div key={m.id} style={{ border: isOpen ? '2px solid var(--ink)' : '1px solid var(--line)', borderRadius: 'var(--r-sticker)', overflow: 'hidden', background: '#fff' }}>
+              <div key={m.id} style={{ border: isOpen ? '2px solid var(--ink)' : '1px solid var(--line)', background: '#fff' }}>
                 <button
                   type="button"
                   aria-expanded={isOpen}
@@ -80,7 +80,7 @@ export default function Course() {
                             <p style={{ font: '600 16px/1.3 var(--font-ui)', margin: '0 0 6px' }}>{l.title}</p>
                             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                               {chips.map((c) => (
-                                <span key={c} style={{ padding: '4px 10px', border: '1px solid var(--line)', borderRadius: 'var(--r-pill)', font: '500 11px/1.3 var(--font-ui)', color: 'var(--muted)' }}>{c}</span>
+                                <span key={c} className="pill">{c}</span>
                               ))}
                             </div>
                           </div>
@@ -99,7 +99,7 @@ export default function Course() {
       </div>
 
       <aside className="rail">
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="scene">
           <Doodle mark="books" width={210} />
         </div>
         <div>
@@ -116,6 +116,7 @@ export default function Course() {
             ))}
           </ol>
         </div>
+        <hr />
         <p className="hand" style={{ fontSize: 19, margin: 0 }}>{copy.course.nothingExpires}</p>
       </aside>
     </div>

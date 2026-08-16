@@ -5,8 +5,14 @@ export const copy = {
   app: {
     name: 'HR Quest',
     greeting: 'hi Prajna',
-    footnote: 'one small thing today is enough',
+    footnote: 'Everything stays on this laptop.',
     yoursOnly: 'all of this is yours only ↗',
+  },
+  nav: {
+    today: (n: number) => `${n} waiting`,
+    course: (n: number) => `${n} ${n === 1 ? 'lesson' : 'lessons'}`,
+    skills: (n: number) => `${n} tracks`,
+    jobs: (n: number) => `${n} new`,
   },
   today: {
     heading: "Whenever you're ready, there's one thing waiting.",
@@ -15,7 +21,9 @@ export const copy = {
     howCourse: 'Course — watch a short video, then a few questions about it. Stop any time.',
     howSkills: 'Skills — build the real thing first, then answer questions about what you built.',
     howJobs: 'Jobs — fresh Chennai fresher roles. Save, apply, or set one aside.',
+    spaces: 'Three small spaces',
     thingsDone: 'Things you have done',
+    privateLabel: 'Private',
     pickedForToday: 'Picked for today',
     openLesson: 'Open the lesson',
     somethingElse: 'Something else instead',
@@ -23,6 +31,12 @@ export const copy = {
     allCaughtUp: 'Nothing needs you today. Everything you did is saved.',
     storageBlocked:
       'This browser will not let the page remember anything, so what you do here disappears when you close the tab. Everything still works.',
+  },
+  lesson: {
+    changeMyAnswer: 'Change my answer',
+    notQuite: 'Not quite —',
+    thatsIt: "That's it.",
+    nextQuestion: 'Next question',
   },
   course: {
     shape: {
@@ -35,24 +49,24 @@ export const copy = {
       ],
     },
     nothingExpires: 'nothing here expires ✓',
-  },
-  lesson: {
-    changeMyAnswer: 'Change my answer',
-    notQuite: 'Not quite —',
-    thatsIt: "That's it.",
-    nextQuestion: 'Next question',
+    notWritten: 'Not written up yet',
   },
   skills: {
     builtThis: 'I built this',
     howYouKnow: "How you'll know it works",
     spineTitle: 'Every track, the same three steps',
     spineNote: 'Predictable on purpose — you always know what the next screen asks of you.',
+    stepNotes: [
+      'A roster, a prompt, a payslip — something that exists when you’re done.',
+      'About the thing you just built, so the answers are already yours.',
+      'The version of it an actual HR team would hand you.',
+    ],
+    closingLine: 'Start with whichever one sounds least boring.',
   },
   jobs: {
     notForMe: 'Not for me',
     putItBack: 'Put it back',
     roughSort: 'a rough sort, not a verdict',
-    lists: 'Lists',
     allSeven: 'All seven',
     sortingTitle: 'How the sorting works',
     sortingNote:

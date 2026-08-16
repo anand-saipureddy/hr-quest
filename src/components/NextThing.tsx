@@ -7,9 +7,9 @@ import type { Suggestion } from '../lib/progress';
 // Two-bay grid keeps the next thing on the same rhythm as every other screen.
 export default function NextThing({ s, onShuffle, hasMore }: { s: Suggestion; onShuffle: () => void; hasMore: boolean }) {
   return (
-    <div className="hero">
-      <div className="hero-left">
-        <p className="kicker" style={{ color: 'var(--sky-700)' }}>{copy.today.pickedForToday}</p>
+    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 250px', border: '2px solid var(--ink)', background: 'var(--sky-100)' }}>
+      <div style={{ padding: '26px 24px 24px' }}>
+        <p className="kicker" style={{ color: 'var(--sky-700)', margin: '0 0 12px' }}>{copy.today.pickedForToday}</p>
         <p style={{ font: '700 22px/1.3 var(--font-ui)', margin: '0 0 8px' }}>{s.label}</p>
         <p style={{ margin: '0 0 20px', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '38ch' }}>{s.note}</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -19,7 +19,7 @@ export default function NextThing({ s, onShuffle, hasMore }: { s: Suggestion; on
           )}
         </div>
       </div>
-      <div className="hero-right">
+      <div style={{ borderLeft: '1px solid var(--sky-300)', background: 'var(--bg)', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', padding: 14, overflow: 'hidden' }}>
         <Doodle mark="desk" width={222} />
       </div>
     </div>

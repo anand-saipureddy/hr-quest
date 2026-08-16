@@ -1,4 +1,4 @@
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Doodle from '../components/Doodle';
 import TrackCard, { MARK_BY_TRACK } from '../components/TrackCard';
 import { SPINE_STEPS } from '../components/StepSpine';
@@ -24,22 +24,18 @@ export default function Skills() {
   const rest = tracks.slice(1);
   const selectedTrack = selected ? tracks.find((t) => t.id === selected) ?? null : null;
 
-  // Featured card: lead layout (span 2, mark right) for the unfiltered lead
-  // and for the filtered single track. Uses <Link to> so the router basename
-  // is respected (a plain <a href> 404s on the basename'd route).
   const renderFeatured = (t: Track) => {
     const st = status(t.id);
     const label = st === 'built' ? 'Built' : st === 'started' ? 'In progress' : 'New';
-    const cls = `lead-card${st === 'started' ? ' ink sky' : ''}`;
     return (
-      <div className={cls}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 96px', gap: 20, alignItems: 'center', gridColumn: 'span 2', border: st === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', padding: 20, background: st === 'started' ? 'var(--sky-100)' : '#fff' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'flex-start' }}>
           <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: st === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>{label}</p>
           <p style={{ font: '600 19px/1.25 var(--font-ui)', margin: 0 }}>{t.name}</p>
           <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '52ch' }}>{t.blurb}</p>
-          <Link to={`/skills/${t.id}`} className={st === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
+          <a href={`/skills/${t.id}`} className={st === 'started' ? 'btn primary' : 'btn quiet'} style={{ minHeight: 40, fontSize: 13, textDecoration: 'none' }}>
             {st === 'built' ? 'Revisit' : st === 'started' ? 'Continue' : 'Open'}
-          </Link>
+          </a>
         </div>
         <Doodle mark={MARK_BY_TRACK[t.id]} width={96} />
       </div>
@@ -86,7 +82,7 @@ export default function Skills() {
             </button>
           ))}
         </div>
-        <div className="track-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12 }}>
           {selectedTrack ? (
             renderFeatured(selectedTrack)
           ) : (
@@ -102,19 +98,23 @@ export default function Skills() {
 
       <aside className="rail">
         <div>
-          <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 14px' }}>{copy.skills.spineTitle}</p>
-          <div style={{ display: 'grid', gap: 12 }}>
+          <p style={{ margin: '0 0 6px', paddingBottom: 14, borderBottom: '2px solid var(--ink)', font: '600 10px/1 var(--font-ui)', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)' }}>{copy.skills.spineTitle}</p>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             {SPINE_STEPS.map((label, i) => (
-              <div key={label} style={{ display: 'grid', gridTemplateColumns: '28px minmax(0,1fr)', gap: 12, alignItems: 'center' }}>
-                <span style={{ width: 28, height: 28, borderRadius: 999, background: 'var(--sky-200)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', font: '700 12px/1 var(--font-ui)' }}>{i + 1}</span>
-                <p style={{ margin: 0, font: '600 14px/1.3 var(--font-ui)' }}>{label}</p>
+              <div key={label} style={{ display: 'grid', gridTemplateColumns: '34px minmax(0,1fr)', gap: 14, alignItems: 'start', padding: '16px 0', borderBottom: '1px solid var(--line)' }}>
+                <span style={{ width: 34, height: 34, background: 'var(--sky-200)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', font: '700 14px/1 var(--font-ui)' }}>{i + 1}</span>
+                <div>
+                  <p style={{ margin: '0 0 4px', font: '600 15px/1.3 var(--font-ui)' }}>{label}</p>
+                  <p style={{ margin: 0, font: '400 12px/1.55 var(--font-ui)', color: 'var(--muted)' }}>{copy.skills.stepNotes[i]}</p>
+                </div>
               </div>
             ))}
           </div>
-          <p style={{ margin: '14px 0 0', font: '400 12px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{copy.skills.spineNote}</p>
+          <p style={{ margin: '18px 0 0', font: '400 12px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{copy.skills.spineNote}</p>
         </div>
-        <div className="spacer" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Doodle mark="toolbox" width={200} />
+        <p style={{ margin: 0, paddingTop: 18, borderTop: '1px solid var(--line)', font: '600 13px/1.5 var(--font-ui)', color: 'var(--sky-700)' }}>{copy.skills.closingLine}</p>
+        <div className="scene" style={{ order: 3 }}>
+          <Doodle mark="toolbox" width={286} />
         </div>
       </aside>
     </div>

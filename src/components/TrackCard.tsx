@@ -18,10 +18,10 @@ export default function TrackCard({ track, status }: { track: Track; status: 'bu
   const label = status === 'built' ? 'Built' : status === 'started' ? 'In progress' : 'New';
   const mark = MARK_BY_TRACK[track.id];
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 10, border: status === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: status === 'started' ? 'var(--sky-100)' : '#fff' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 10, border: status === 'started' ? '2px solid var(--ink)' : '1px solid var(--line)', padding: 20, background: status === 'started' ? 'var(--sky-100)' : '#fff' }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
         <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.14em', textTransform: 'uppercase', color: status === 'started' ? 'var(--sky-700)' : 'var(--muted)', margin: 0 }}>{label}</p>
-        <Doodle mark={mark} width={60} />
+        <Doodle mark={mark} width={48} />
       </div>
       <p style={{ font: '600 17px/1.25 var(--font-ui)', margin: 0 }}>{track.name}</p>
       <p style={{ margin: 0, font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', flex: 1 }}>{track.blurb}</p>

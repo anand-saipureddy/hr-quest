@@ -20,7 +20,6 @@ export default function Jobs() {
 
   const list = (params.get('list') as ListKey) || 'recent';
 
-  // Recent = first NEW_CAP of the isNew set (by fit); Earlier = everything else
   const fresh = jobs.filter((j) => j.isNew && !progress.jobs[j.id]?.notMe && !progress.jobs[j.id]?.applied).sort((a, b) => b.fit - a.fit);
   const recent = fresh.slice(0, NEW_CAP);
   const overflow = new Set(recent.map((j) => j.id));
@@ -138,38 +137,39 @@ export default function Jobs() {
       </div>
 
       <aside className="rail">
-        <div role="tablist" aria-label="Job lists" style={{ display: 'flex', flexDirection: 'column' }}>
-          <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 12px' }}>{copy.jobs.lists}</p>
-          {(Object.keys(lists) as ListKey[]).map((k) => {
-            const l = lists[k];
-            const active = k === list;
-            return (
-              <button
-                key={k}
-                role="tab"
-                aria-selected={active}
-                onClick={() => select(k)}
-                style={{
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                  minHeight: 42, padding: '0 12px', borderBottom: '1px solid var(--line)',
-                  border: 0, borderRadius: 0, cursor: 'pointer',
-                  background: active ? 'var(--ink)' : 'transparent',
-                  color: active ? '#fff' : 'var(--muted)',
-                  font: `${active ? 600 : 500} 13px/1 var(--font-ui)`,
-                }}
-              >
-                <span>{l.label}</span>
-                <span style={{ font: '500 12px/1 var(--font-ui)', opacity: active ? 0.75 : 1 }}>{l.rows.length}</span>
-              </button>
-            );
-          })}
+        <div role="tablist" aria-label="Job lists">
+          <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px', paddingBottom: 10, borderBottom: '2px solid var(--ink)' }}>Lists</p>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {(Object.keys(lists) as ListKey[]).map((k) => {
+              const l = lists[k];
+              const active = k === list;
+              return (
+                <button
+                  key={k}
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => select(k)}
+                  style={{
+                    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                    minHeight: 52, padding: '0 14px', border: 0, borderRadius: 0, cursor: 'pointer',
+                    background: active ? 'var(--ink)' : 'transparent',
+                    color: active ? '#fff' : 'var(--muted)',
+                    font: `${active ? 600 : 500} 14px/1.2 var(--font-ui)`,
+                  }}
+                >
+                  <span>{l.label}</span>
+                  <span style={{ font: '500 12px/1 var(--font-ui)', opacity: active ? 0.75 : 1 }}>{l.rows.length}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
-        <div style={{ background: 'var(--bg)', border: '1px dashed var(--sky-300)', padding: 18 }}>
-          <p style={{ margin: '0 0 8px', font: '600 13px/1.3 var(--font-ui)' }}>{copy.jobs.sortingTitle}</p>
+        <div style={{ background: 'var(--bg)', borderLeft: '2px solid var(--sky-700)', padding: '14px 16px' }}>
+          <p style={{ margin: '0 0 6px', font: '600 13px/1.3 var(--font-ui)' }}>{copy.jobs.sortingTitle}</p>
           <p style={{ margin: 0, font: '400 12px/1.65 var(--font-ui)', color: 'var(--muted)' }}>{copy.jobs.sortingNote}</p>
         </div>
-        <div className="spacer" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Doodle mark="skyline" width={220} />
+        <div className="scene">
+          <Doodle mark="skyline" width={300} />
         </div>
       </aside>
     </div>
