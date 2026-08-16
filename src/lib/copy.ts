@@ -4,9 +4,15 @@
 export const copy = {
   app: {
     name: 'HR Quest',
-    greeting: 'hi Pragna',
+    greeting: 'hi Prajna',
     footnote: 'Everything stays on this laptop.',
     yoursOnly: 'all of this is yours only ↗',
+  },
+  nav: {
+    today: (n: number) => `${n} waiting`,
+    course: (n: number) => `${n} ${n === 1 ? 'lesson' : 'lessons'}`,
+    skills: (n: number) => `${n} tracks`,
+    jobs: (n: number) => `${n} new`,
   },
   today: {
     heading: "Whenever you're ready, there's one thing waiting.",
