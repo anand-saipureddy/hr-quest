@@ -116,6 +116,16 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
   padding:20px 4px;
   text-decoration:none;color:inherit;
 }
+
+/* Flashcards: one card at a time on mobile, the full deck in a
+   2-column grid on laptop (>=1120px, the same breakpoint the page
+   itself goes 2-col at). */
+.flashcards-grid{display:none}
+.flashcards-single{display:block}
+@media (min-width:1120px){
+  .flashcards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .flashcards-single{display:none}
+}
 .door-cue{font:500 13px/1 var(--font-ui);color:var(--sky-700);white-space:nowrap}
 
 /* Job row (Jobs) */

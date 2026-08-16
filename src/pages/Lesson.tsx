@@ -17,6 +17,7 @@ export default function Lesson() {
   const lesson = mod?.lessons.find((l) => l.id === lessonId);
   const { progress, set } = useProgress();
   const [q, setQ] = useState(0);
+  const [reviewing, setReviewing] = useState(false);
 
   if (!mod || !lesson) {
     return (
@@ -33,7 +34,10 @@ export default function Lesson() {
   const answeredCount = lesson.mcqs.filter((_, n) => progress.lessons[lesson.id]?.mcqs[n] !== undefined).length;
   const allAnswered = answeredCount === lesson.mcqs.length;
   const done = !!progress.lessons[lesson.id]?.done;
-  const showScenario = allAnswered || done;
+  // "Go back over the questions" enters review mode: the questions
+  // re-appear (with their saved answers) even though `done` is true.
+  // "Back to the summary" exits it.
+  const showScenario = !reviewing && (allAnswered || done);
 
   const finish = () => {
     const prev = progress;
@@ -84,6 +88,17 @@ export default function Lesson() {
 
           {!showScenario ? (
             <>
+              {reviewing && (
+                <p style={{ margin: '0 0 12px' }}>
+                  <button
+                    type="button"
+                    onClick={() => setReviewing(false)}
+                    style={{ background: 'none', border: 'none', padding: 0, font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }}
+                  >
+                    ← Back to the summary
+                  </button>
+                </p>
+              )}
               <QuestionCard
                 lessonId={lesson.id}
                 n={q}
@@ -119,7 +134,7 @@ export default function Lesson() {
               <p style={{ margin: 0 }}>
                 <button
                   type="button"
-                  onClick={() => setQ(0)}
+                  onClick={() => { setReviewing(true); setQ(0); }}
                   style={{ background: 'none', border: 'none', padding: 0, font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }}
                 >
                   Go back over the questions

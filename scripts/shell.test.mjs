@@ -66,6 +66,26 @@ test('sidebar nav rows carry the 3px transparent left border so all four labels 
   assert.match(m[0], /padding\s*:\s*0\s+17px/, '.side nav a padding-left must be 17px (3 + 17 = 20px, matches the brand)');
 });
 
+test('Flashcards: all cards visible on laptop, one at a time on mobile', () => {
+  assert.match(css, /\.flashcards-grid\s*\{/, 'must define .flashcards-grid class');
+  assert.match(css, /\.flashcards-single\s*\{/, 'must define .flashcards-single class');
+  // The media block contains two inner rules; a plain [^}]* can't cross
+  // the inner }, so search the substring from the breakpoint onward.
+  const idx = css.indexOf('@media (min-width:1120px)');
+  assert.ok(idx >= 0, 'must have a @media (min-width:1120px) breakpoint for the flashcard grid');
+  const mediaBlock = css.slice(idx);
+  assert.match(
+    mediaBlock,
+    /\.flashcards-grid\s*\{[\s\S]*?display\s*:\s*grid/,
+    'within the @media (min-width:1120px) block, .flashcards-grid must become display:grid so all cards are visible on laptop',
+  );
+  assert.match(
+    mediaBlock,
+    /\.flashcards-single\s*\{[\s\S]*?display\s*:\s*none/,
+    'within the @media (min-width:1120px) block, .flashcards-single must become display:none so the one-at-a-time view is hidden on laptop',
+  );
+});
+
 test('StepSpine dotted connector is visible (dash and gap both readable, not pinprick-sparse)', () => {
   const spine = readFileSync(join(__dirname, '..', 'src', 'components', 'StepSpine.tsx'), 'utf8');
   const m = spine.match(/strokeDasharray\s*=\s*['"`]([^'"`]+)['"`]/);

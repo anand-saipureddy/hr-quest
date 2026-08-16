@@ -33,21 +33,30 @@ export default function Flashcards() {
       <h1 style={{ fontSize: 26, marginBottom: 22 }}>Terms from this lesson</h1>
       <div className="page">
         <div className="col" style={{ justifyContent: 'center' }}>
-          <div style={{ position: 'relative', maxWidth: 520 }}>
-            <div style={{ position: 'absolute', left: 10, top: 10, right: -10, bottom: -10, border: '1px solid var(--sky-200)', borderRadius: 'var(--r-sticker)', background: 'var(--bg)' }} aria-hidden="true" />
-            <div style={{ position: 'relative' }}>
-              <Flashcard key={`${lesson.id}-${idx}`} front={card.front} back={card.back} />
-            </div>
-            <div style={{ position: 'absolute', right: -46, top: -22 }}>
-              <Doodle mark="star" width={54} />
-            </div>
-            <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 22 }}>
-              <button className="btn quiet" type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)} style={idx === 0 ? { opacity: 0.5 } : undefined}>
-                Previous
-              </button>
-              <button className="btn primary" type="button" onClick={() => setIdx((i) => (i + 1) % lesson.cards.length)}>
-                {idx === lesson.cards.length - 1 ? 'Back to the first card' : 'Next card'}
-              </button>
+          {/* Laptop: every card visible at once */}
+          <div className="flashcards-grid">
+            {lesson.cards.map((c, n) => (
+              <Flashcard key={n} front={c.front} back={c.back} />
+            ))}
+          </div>
+          {/* Mobile: one card at a time, with Previous/Next */}
+          <div className="flashcards-single">
+            <div style={{ position: 'relative', maxWidth: 520 }}>
+              <div style={{ position: 'absolute', left: 10, top: 10, right: -10, bottom: -10, border: '1px solid var(--sky-200)', borderRadius: 'var(--r-sticker)', background: 'var(--bg)' }} aria-hidden="true" />
+              <div style={{ position: 'relative' }}>
+                <Flashcard key={`${lesson.id}-${idx}`} front={card.front} back={card.back} />
+              </div>
+              <div style={{ position: 'absolute', right: -46, top: -22 }}>
+                <Doodle mark="star" width={54} />
+              </div>
+              <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 22 }}>
+                <button className="btn quiet" type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)} style={idx === 0 ? { opacity: 0.5 } : undefined}>
+                  Previous
+                </button>
+                <button className="btn primary" type="button" onClick={() => setIdx((i) => (i + 1) % lesson.cards.length)}>
+                  {idx === lesson.cards.length - 1 ? 'Back to the first card' : 'Next card'}
+                </button>
+              </div>
             </div>
           </div>
         </div>
