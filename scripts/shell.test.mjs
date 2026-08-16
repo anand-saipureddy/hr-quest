@@ -65,3 +65,12 @@ test('sidebar nav rows carry the 3px transparent left border so all four labels 
   assert.match(m[0], /border-left\s*:\s*3px\s+solid\s+transparent/, '.side nav a must keep the 3px transparent left border');
   assert.match(m[0], /padding\s*:\s*0\s+17px/, '.side nav a padding-left must be 17px (3 + 17 = 20px, matches the brand)');
 });
+
+test('StepSpine dotted connector is visible (dash and gap both readable, not pinprick-sparse)', () => {
+  const spine = readFileSync(join(__dirname, '..', 'src', 'components', 'StepSpine.tsx'), 'utf8');
+  const m = spine.match(/strokeDasharray\s*=\s*['"`]([^'"`]+)['"`]/);
+  assert.ok(m, 'StepSpine connector is missing a strokeDasharray');
+  const [dash, gap] = m[1].split(/\s+/).map(Number);
+  assert.ok(Number.isFinite(dash) && Number.isFinite(gap), 'strokeDasharray must be two numbers');
+  assert.ok(dash >= 2 && gap >= 3, `strokeDasharray "${m[1]}" is too sparse — the dots disappear (dash>=2, gap>=3)`);
+});

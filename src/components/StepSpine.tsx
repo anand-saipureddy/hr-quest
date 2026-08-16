@@ -6,7 +6,7 @@ export default function StepSpine({ current, anchors }: { current: 1 | 2 | 3; an
   return (
     <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 0, marginBottom: 26 }}>
       <svg viewBox="0 0 400 30" width="100%" height="30" preserveAspectRatio="none" style={{ position: 'absolute', left: 0, top: 0, zIndex: 0 }} aria-hidden="true">
-        <path d="M66 15 H333" stroke="var(--sky-300)" strokeWidth="3" strokeDasharray="1 8" strokeLinecap="round" fill="none" />
+        <path d="M66 15 H333" stroke="var(--sky-300)" strokeWidth="3.5" strokeDasharray="2 4" strokeLinecap="round" fill="none" />
       </svg>
       {SPINE_STEPS.map((label, i) => {
         const n = i + 1;
