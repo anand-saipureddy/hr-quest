@@ -106,9 +106,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
   .rail .scene{margin:0 auto}
 }
 
-/* lesson: two columns on laptop, stacked on small screens (removed in step 7) */
-.lesson-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:start}
-@media (max-width:900px){.lesson-grid{grid-template-columns:1fr}}
+/* lesson: uses the shared .page grid; no separate .lesson-grid */
 
 @media (max-width:768px){
   .shell{grid-template-columns:1fr}
