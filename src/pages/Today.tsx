@@ -45,10 +45,11 @@ export default function Today() {
 
   const rail = (
     <aside className="rail">
-      <p style={{ margin: 0, font: '400 14px/1.7 var(--font-ui)', color: 'var(--ink)' }}>{copy.today.purpose}</p>
-      <hr style={{ borderTop: '2px solid var(--ink)' }} />
+      <div style={{ borderBottom: '2px solid var(--ink)', paddingBottom: 20 }}>
+        <p style={{ margin: 0, font: '400 14px/1.7 var(--font-ui)', color: 'var(--muted)' }}>{copy.today.purpose}</p>
+      </div>
       <div>
-        <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>{copy.today.thingsDone}</p>
+        <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 4px' }}>{copy.today.thingsDone}</p>
         <StatRow
           items={[
             [lessonsDone, lessonsDone === 1 ? 'lesson done' : 'lessons done'],
@@ -57,10 +58,9 @@ export default function Today() {
           ]}
         />
       </div>
-      <hr />
-      <div style={{ background: 'var(--bg)', borderLeft: '2px solid var(--sky-700)', padding: '14px 16px' }}>
-        <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>{copy.today.privateLabel}</p>
-        <p style={{ margin: 0, font: '500 14px/1.5 var(--font-ui)', color: 'var(--ink)' }}>{copy.app.yoursOnly}</p>
+      <div style={{ background: 'var(--bg)', borderLeft: '2px solid var(--sky-700)', padding: 18 }}>
+        <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>{copy.today.privateLabel}</p>
+        <p style={{ margin: 0, font: '400 12px/1.65 var(--font-ui)', color: 'var(--muted)' }}>{copy.app.yoursOnly}</p>
       </div>
       <div className="scene">
         <Doodle mark="clockArrow" width={280} />
@@ -71,11 +71,13 @@ export default function Today() {
   return (
     <div className="page">
       <div className="col">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', paddingBottom: 14, borderBottom: '2px solid var(--ink)' }}>
-          <p className="kicker" style={{ color: 'var(--muted)', margin: 0 }}>Today</p>
-          <p className="kicker" style={{ color: 'var(--muted)', margin: 0 }}>{fullDate()}</p>
+        <div style={{ borderBottom: '2px solid var(--ink)', paddingBottom: 22 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 20, marginBottom: 14 }}>
+            <p className="kicker" style={{ color: 'var(--muted)', margin: 0, letterSpacing: '.18em' }}>Today</p>
+            <p style={{ margin: 0, font: '500 11px/1 var(--font-ui)', letterSpacing: '.06em', color: 'var(--muted)' }}>{fullDate()}</p>
+          </div>
+          <h1 style={{ fontSize: 34, letterSpacing: '-0.03em', maxWidth: '22ch', margin: 0 }}>{copy.today.heading}</h1>
         </div>
-        <h1 style={{ fontSize: 34, letterSpacing: '-0.03em', maxWidth: '22ch', marginTop: 20 }}>{copy.today.heading}</h1>
 
         {blocked ? (
           <p style={{ maxWidth: '56ch', color: 'var(--muted)' }}>{copy.today.storageBlocked}</p>
@@ -90,8 +92,8 @@ export default function Today() {
         )}
 
         <div>
-          <p className="kicker" style={{ color: 'var(--muted)', margin: '0 0 10px' }}>{copy.today.spaces}</p>
-          <div style={{ borderTop: '2px solid var(--ink)' }}>
+          <p className="kicker" style={{ color: 'var(--muted)', margin: '0 0 12px', paddingBottom: 10, borderBottom: '2px solid var(--ink)', letterSpacing: '.18em' }}>{copy.today.spaces}</p>
+          <div>
             {doors.map((d) => (
               <Link key={d.key} to={d.to} className="door-row">
                 <div style={{ display: 'flex', justifyContent: 'center' }}>

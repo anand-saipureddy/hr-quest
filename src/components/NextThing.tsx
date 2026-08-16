@@ -9,8 +9,8 @@ export default function NextThing({ s, onShuffle, hasMore }: { s: Suggestion; on
   return (
     <div className="hero-grid">
       <div className="hero-left">
-        <p className="kicker" style={{ color: 'var(--sky-700)', margin: '0 0 12px' }}>{copy.today.pickedForToday}</p>
-        <p style={{ font: '700 22px/1.3 var(--font-ui)', margin: '0 0 8px' }}>{s.label}</p>
+        <p className="kicker" style={{ color: 'var(--sky-700)', margin: '0 0 14px' }}>{copy.today.pickedForToday}</p>
+        <p style={{ font: '700 22px/1.3 var(--font-ui)', letterSpacing: '-0.015em', margin: '0 0 8px' }}>{s.label}</p>
         <p style={{ margin: '0 0 20px', font: '400 14px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '38ch' }}>{s.note}</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <Link className="btn primary" to={s.to}>{copy.today.openLesson}</Link>
