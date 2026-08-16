@@ -54,10 +54,19 @@ export const copy = {
   skills: {
     builtThis: 'I built this',
     howYouKnow: "How you'll know it works",
+    spineTitle: 'Every track, the same three steps',
+    spineNote: 'Predictable on purpose — you always know what the next screen asks of you.',
+    stepNotes: [
+      'A roster, a prompt, a payslip — something that exists when you’re done.',
+      'About the thing you just built, so the answers are already yours.',
+      'The version of it an actual HR team would hand you.',
+    ],
+    closingLine: 'Start with whichever one sounds least boring.',
   },
   jobs: {
     notForMe: 'Not for me',
     putItBack: 'Put it back',
+    allSeven: 'All seven',
     followUp: (days: number) => `It's been ${days} days — a short follow-up is normal.`,
   },
   undo: 'Undo',
