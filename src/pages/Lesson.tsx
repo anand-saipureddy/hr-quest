@@ -7,6 +7,7 @@ import { modules } from '../lib/content';
 import { markLessonDone } from '../lib/progress';
 import { useProgress } from '../lib/progress-context';
 import { pushUndo } from '../components/UndoBar';
+import { copy } from '../lib/copy';
 
 // The important one. Sequence: recall MCQs (one visible) → written interview
 // scenario → flashcards link. Progress as dots, never "1 of 3".
@@ -20,9 +21,11 @@ export default function Lesson() {
   if (!mod || !lesson) {
     return (
       <div>
+        <p style={{ margin: '0 0 14px' }}>
+          <Link to="/course" style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'none' }}>{copy.app.backToCourse}</Link>
+        </p>
         <Doodle mark="circle" />
         <p style={{ color: 'var(--muted)' }}>That lesson isn't here yet.</p>
-        <Link to="/course">Back to the course</Link>
       </div>
     );
   }
@@ -40,12 +43,12 @@ export default function Lesson() {
 
   return (
     <div>
-      <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: 16, marginBottom: 22, display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16, flexWrap: 'wrap' }}>
-        <div>
-          <p className="kicker">{mod.title} · {lesson.title}</p>
-          <h1 style={{ fontSize: 24 }}>{lesson.title}</h1>
-        </div>
-        <Link to="/course" style={{ font: '500 12px/1 var(--font-ui)', color: 'var(--muted)', whiteSpace: 'nowrap' }}>Save &amp; come back</Link>
+      <p style={{ margin: '0 0 14px' }}>
+        <Link to="/course" style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'none' }}>{copy.app.backToCourse}</Link>
+      </p>
+      <div style={{ borderBottom: '1px solid var(--line)', paddingBottom: 16, marginBottom: 22 }}>
+        <p className="kicker">{mod.title} · {lesson.title}</p>
+        <h1 style={{ fontSize: 24 }}>{lesson.title}</h1>
       </div>
 
       <div className="page">

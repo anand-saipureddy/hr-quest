@@ -35,9 +35,11 @@ export default function SkillTrack() {
   if (!track) {
     return (
       <div>
+        <p style={{ margin: '0 0 14px' }}>
+          <Link to="/skills" style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'none' }}>{copy.app.backToSkills}</Link>
+        </p>
         <Doodle mark="circle" />
         <p style={{ color: 'var(--muted)' }}>That track isn't here yet.</p>
-        <Link to="/skills">Back to skills</Link>
       </div>
     );
   }
@@ -55,13 +57,16 @@ export default function SkillTrack() {
 
   return (
     <div style={{ maxWidth: 880 }}>
+      <p style={{ margin: '0 0 14px' }}>
+        <Link to="/skills" style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'none' }}>{copy.app.backToSkills}</Link>
+      </p>
       <p className="kicker">Skill · {track.name}</p>
       <h1 style={{ fontSize: 26 }}>Build the thing, then I'll ask you about it</h1>
       <div style={{ marginTop: 22 }}>
-        <StepSpine current={current as 1 | 2 | 3} />
+        <StepSpine current={current as 1 | 2 | 3} anchors={['step-setup', 'step-drills', 'step-build']} />
       </div>
 
-      <section style={{ border: '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: '#fff', marginBottom: 18 }}>
+      <section id="step-setup" style={{ scrollMarginTop: 16, border: '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: '#fff', marginBottom: 18 }}>
         <p className="kicker" style={{ color: 'var(--muted)' }}>Step 1 · setup</p>
         <h2 style={{ fontSize: 17, fontWeight: 600 }}>{track.setup.title}</h2>
         {track.setup.why && <p style={{ margin: '8px 0 0', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{track.setup.why}</p>}
@@ -102,7 +107,7 @@ export default function SkillTrack() {
         {track.setup.note && <p style={{ margin: '14px 0 0', font: '400 12px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{track.setup.note}</p>}
       </section>
 
-      <section style={{ marginBottom: 18 }}>
+      <section id="step-drills" style={{ scrollMarginTop: 16, marginBottom: 18 }}>
         <DrillCard
           trackId={track.id}
           n={drillIdx}
@@ -129,7 +134,7 @@ export default function SkillTrack() {
         )}
       </section>
 
-      <section style={{ border: '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: '#fff' }}>
+      <section id="step-build" style={{ scrollMarginTop: 16, border: '1px solid var(--line)', borderRadius: 'var(--r-sticker)', padding: 20, background: '#fff' }}>
         <p className="kicker" style={{ color: 'var(--muted)' }}>Step 3 · the artefact</p>
         <h2 style={{ fontSize: 17, fontWeight: 600 }}>{track.build.title}</h2>
         <p style={{ margin: '8px 0 0', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>{track.build.what}</p>

@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import Flashcard from '../components/Flashcard';
 import Doodle from '../components/Doodle';
 import { modules } from '../lib/content';
+import { copy } from '../lib/copy';
 
 // No deck ever goes overdue. Closing and reopening starts clean.
 export default function Flashcards() {
@@ -13,9 +14,11 @@ export default function Flashcards() {
   if (!lesson) {
     return (
       <div>
+        <p style={{ margin: '0 0 14px' }}>
+          <Link to="/course" style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'none' }}>{copy.app.backToCourse}</Link>
+        </p>
         <Doodle mark="cloud" width={100} />
         <p style={{ color: 'var(--muted)' }}>That card set isn't here yet.</p>
-        <Link to="/course">Back to the course</Link>
       </div>
     );
   }
@@ -23,30 +26,32 @@ export default function Flashcards() {
   const card = lesson.cards[idx];
   return (
     <div>
+      <p style={{ margin: '0 0 14px' }}>
+        <Link to={`/course/${moduleId}/${lessonId}`} style={{ font: '500 13px/1 var(--font-ui)', color: 'var(--muted)', textDecoration: 'none' }}>{copy.app.backToLesson}</Link>
+      </p>
       <p className="kicker">{lesson.title} · {lesson.cards.length} cards</p>
       <h1 style={{ fontSize: 26, marginBottom: 22 }}>Terms from this lesson</h1>
-      <div className="lesson-grid">
-        <div style={{ position: 'relative', maxWidth: 520 }}>
-          <div style={{ position: 'absolute', left: 10, top: 10, right: -10, bottom: -10, border: '1px solid var(--sky-200)', borderRadius: 'var(--r-sticker)', background: 'var(--bg)' }} aria-hidden="true" />
-          <div style={{ position: 'relative' }}>
-            <Flashcard key={`${lesson.id}-${idx}`} front={card.front} back={card.back} />
+      <div className="page">
+        <div className="col">
+          <div style={{ position: 'relative', maxWidth: 520 }}>
+            <div style={{ position: 'absolute', left: 10, top: 10, right: -10, bottom: -10, border: '1px solid var(--sky-200)', borderRadius: 'var(--r-sticker)', background: 'var(--bg)' }} aria-hidden="true" />
+            <div style={{ position: 'relative' }}>
+              <Flashcard key={`${lesson.id}-${idx}`} front={card.front} back={card.back} />
+            </div>
+            <div style={{ position: 'absolute', right: -46, top: -22 }}>
+              <Doodle mark="star" width={54} />
+            </div>
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 22 }}>
+              <button className="btn quiet" type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)} style={idx === 0 ? { opacity: 0.5 } : undefined}>
+                Previous
+              </button>
+              <button className="btn primary" type="button" onClick={() => setIdx((i) => (i + 1) % lesson.cards.length)}>
+                {idx === lesson.cards.length - 1 ? 'Back to the first card' : 'Next card'}
+              </button>
+            </div>
           </div>
-          <div style={{ position: 'absolute', right: -46, top: -22 }}>
-            <Doodle mark="star" width={54} />
-          </div>
-          <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 22 }}>
-            <button className="btn quiet" type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)} style={idx === 0 ? { opacity: 0.5 } : undefined}>
-              Previous
-            </button>
-            <button className="btn primary" type="button" onClick={() => setIdx((i) => (i + 1) % lesson.cards.length)}>
-              {idx === lesson.cards.length - 1 ? 'Back to the first card' : 'Next card'}
-            </button>
-          </div>
-          <p style={{ margin: '14px 0 0' }}>
-            <Link to={`/course/${moduleId}/${lessonId}`} style={{ font: '500 13px/1 var(--font-ui)' }}>← Back to the lesson</Link>
-          </p>
         </div>
-        <div style={{ width: 220 }}>
+        <aside className="rail">
           <p style={{ font: '600 10px/1 var(--font-ui)', letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 12px' }}>This set</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {lesson.cards.map((c, n) => (
@@ -67,7 +72,7 @@ export default function Flashcards() {
             ))}
           </div>
           <p className="hand" style={{ margin: '16px 0 0', fontSize: 17 }}>no deck ever goes "overdue"</p>
-        </div>
+        </aside>
       </div>
     </div>
   );

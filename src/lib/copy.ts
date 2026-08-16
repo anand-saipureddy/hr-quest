@@ -7,6 +7,9 @@ export const copy = {
     greeting: 'hi Prajna',
     footnote: 'Everything stays on this laptop.',
     yoursOnly: 'all of this is yours only ↗',
+    backToSkills: '← Back to skills',
+    backToCourse: '← Back to the course',
+    backToLesson: '← Back to the lesson',
   },
   nav: {
     today: (n: number) => `${n} waiting`,
