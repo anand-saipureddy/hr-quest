@@ -39,13 +39,6 @@ h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
 a.card:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--sky-200)}
 .hr{border:0;border-top:1px solid var(--line)}
 
-/* "How this works" — a calm, collapsible explainer */
-.how{border:1px solid var(--line);border-radius:var(--r-sticker);background:#fff;padding:0 16px}
-.how summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font:500 13px/1 var(--font-ui);color:var(--muted)}
-.how summary:hover{color:var(--ink)}
-.how ul{margin:0 0 14px;padding-left:18px;display:grid;gap:8px}
-.how li{font:400 13px/1.6 var(--font-ui);color:var(--muted)}
-
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes pop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
 .doodle-bob{animation:bob 6s ease-in-out infinite}
