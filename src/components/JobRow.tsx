@@ -27,23 +27,23 @@ export default function JobRow({ job }: { job: Job }) {
   const followUpDays = st.applied && !st.note?.includes('replied') ? daysSince(st.appliedOn) : 0;
 
   return (
-    <li style={{ display: 'flex', gap: 20, padding: '20px 0', borderBottom: '1px solid var(--line)', alignItems: 'flex-start', background: st.applied ? 'var(--bg)' : 'transparent' }}>
+    <li style={{ display: 'grid', gridTemplateColumns: '88px minmax(0,1fr) 168px', gap: 22, padding: '20px 0', borderBottom: '1px solid var(--line)', alignItems: 'start', background: st.applied ? 'var(--bg)' : 'transparent' }}>
       <FitBadge fit={job.fit} />
-      <div style={{ flex: 1, minWidth: 0 }}>
+      <div style={{ minWidth: 0 }}>
         <p style={{ font: '600 17px/1.3 var(--font-ui)', margin: 0 }}>{job.title}</p>
         <p style={{ margin: '3px 0 0', font: '400 14px/1.4 var(--font-ui)' }}>
           {job.company} · {job.location}{job.salary ? ` · ${job.salary}` : ''}
         </p>
-        <p style={{ margin: '8px 0 0', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)', maxWidth: '56ch' }}>
+        <p style={{ margin: '8px 0 0', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
           <b style={{ color: 'var(--ink)' }}>Why this one:</b> {whyThisOne(job)}
         </p>
         <div style={{ display: 'flex', gap: 6, marginTop: 10, flexWrap: 'wrap' }}>
-          <span style={{ padding: '4px 10px', border: '1px solid var(--line)', borderRadius: 'var(--r-pill)', font: '500 11px/1.3 var(--font-ui)', color: 'var(--muted)' }}>{BOARD[job.src]}</span>
-          {job.exp && <span style={{ padding: '4px 10px', border: '1px solid var(--line)', borderRadius: 'var(--r-pill)', font: '500 11px/1.3 var(--font-ui)', color: 'var(--muted)' }}>{job.exp}</span>}
-          {job.isNew && <span style={{ padding: '4px 10px', border: '1px solid var(--line)', borderRadius: 'var(--r-pill)', font: '500 11px/1.3 var(--font-ui)', color: 'var(--muted)' }}>New this week</span>}
+          <span className="pill">{BOARD[job.src]}</span>
+          {job.exp && <span className="pill">{job.exp}</span>}
+          {job.isNew && <span className="pill">New this week</span>}
         </div>
         {followUpDays >= 7 && (
-          <p style={{ margin: '10px 0 0', font: '400 13px/1.5 var(--font-ui)', color: 'var(--muted)' }}>{copy.jobs.followUp(followUpDays)}</p>
+          <p style={{ margin: '12px 0 0', font: '400 13px/1.5 var(--font-ui)', color: 'var(--muted)', borderLeft: '2px solid var(--sky-300)', paddingLeft: 12 }}>{copy.jobs.followUp(followUpDays)}</p>
         )}
         {(st.applied || st.saved) && (
           <div style={{ marginTop: 6, display: 'grid', gap: 8 }}>
@@ -52,7 +52,7 @@ export default function JobRow({ job }: { job: Job }) {
           </div>
         )}
       </div>
-      <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', gap: 8, width: 150 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
         {!st.notMe && (
           <>
             <a className="btn primary" href={job.url} target="_blank" rel="noopener" style={{ justifyContent: 'flex-start', fontSize: 13 }}>

@@ -66,7 +66,11 @@ export const copy = {
   jobs: {
     notForMe: 'Not for me',
     putItBack: 'Put it back',
+    roughSort: 'a rough sort, not a verdict',
     allSeven: 'All seven',
+    sortingTitle: 'How the sorting works',
+    sortingNote:
+      'Strong, Good and Worth a look are rough groupings from the words in the posting — location, fresher wording, pay. The percentage under it is only there if you want it. "Not for me" moves a role to its own list; nothing is ever deleted.',
     followUp: (days: number) => `It's been ${days} days — a short follow-up is normal.`,
   },
   undo: 'Undo',
