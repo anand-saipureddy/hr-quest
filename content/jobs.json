@@ -9,7 +9,7 @@
     "id": "eb5fa0cba1",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hr-executive-and-recruiter-direction-chennai-0-to-0-years-150826002294",
@@ -21,7 +21,7 @@
     "id": "1eb7ec4d0b",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-it-recruitment-intern-acara-solutions-chennai-0-to-1-years-021225020678",
@@ -33,7 +33,7 @@
     "id": "6d3c754ca3",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-graduate-trainee-finance-hr-bpo-operations-crew-kraftorz-llp-chennai-0-to-1-years-120826504389",
@@ -45,7 +45,7 @@
     "id": "65100e3662",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-management-associate-hr-fresher-fresher-mba-fresher-workfreaks-business-services-chennai-0-to-0-years-140826019577",
@@ -57,7 +57,7 @@
     "id": "7d21f18fcc",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-talent-acquisition-intern-rupeek-chennai-0-to-1-years-130826021708",
@@ -69,7 +69,7 @@
     "id": "b8e2e8a613",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-talent-acquisition-specialist-freshers-technocompass-consulting-mumbai-chennai-vadodara-0-to-1-years-140826504446",
@@ -81,7 +81,7 @@
     "id": "b18eadb601",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-us-it-recruiter-fresher-realtekh-software-services-chennai-0-to-1-years-110826039929",
@@ -93,7 +93,7 @@
     "id": "fb80bf18b7",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-recruiter-intern-stellar-talent-hr-consultancy-chennai-chennai-0-to-1-years-110826031064",
@@ -105,7 +105,7 @@
     "id": "03d5326147",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/sr-executive-hr-operations-at-cognizant-4442035123",
@@ -118,7 +118,7 @@
     "id": "d9c14db17f",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/executive-senior-executive-hr-admin-at-emerson-4444937614",
@@ -131,7 +131,7 @@
     "id": "2ac0023d51",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/executive-officer-assistant-manager-hr-at-larsen-toubro-4454378398",
@@ -144,7 +144,7 @@
     "id": "75fdbd6082",
     "fit": 100,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/trainee-talent-acquisition-at-kumaran-systems-4454564392",
@@ -157,6 +157,56 @@
     "id": "4cc057de23",
     "fit": 100,
     "firstSeen": "2026-08-15",
+    "isNew": false
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-human-resource-executive-kadtech-hr-solutions-chennai-bengaluru-mumbai-all-areas-0-to-0-years-160826001332",
+    "company": "Kadtech Hr Solutions",
+    "title": "Human Resource Executive",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "Not Disclosed",
+    "id": "5161c60b76",
+    "fit": 100,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-human-resource-intern-females-freshers-graduates-apply-now-outpace-consulting-services-chennai-0-to-1-years-250224001369",
+    "company": "Outpace Consulting Services",
+    "title": "Human Resource Intern : Females : Freshers : Graduates : Apply Now",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "5,000",
+    "id": "a1ff697782",
+    "fit": 100,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/international-recruitment-manager-tamil-nadu-at-study-info-centre-4453960911",
+    "company": "Study Info Centre",
+    "title": "International Recruitment Manager, Tamil Nadu",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Mid-Senior level",
+    "id": "b5a2d2fed2",
+    "fit": 100,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/global-hr-generalist-contract-at-netgear-4453058596",
+    "company": "NETGEAR",
+    "title": "Global HR Generalist - Contract",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-12T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "edd1468127",
+    "fit": 100,
+    "firstSeen": "2026-08-17",
     "isNew": true
   },
   {
@@ -169,7 +219,7 @@
     "id": "674f3fe890",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-it-recruiter-careernet-chennai-coimbatore-0-to-3-years-220426010691",
@@ -181,7 +231,7 @@
     "id": "132ac5c3d3",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-night-shift-recruiter-jeshurun-technologies-chennai-0-to-3-years-130826034877",
@@ -193,7 +243,7 @@
     "id": "992e443aff",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-recruiter-work-from-home-takecare-manpower-services-chennai-0-to-2-years-120826916629",
@@ -205,7 +255,7 @@
     "id": "34a0185391",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-recruiter-work-from-home-takecare-manpower-services-chennai-0-to-1-years-120826916623",
@@ -217,7 +267,7 @@
     "id": "56460908e9",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-us-it-recruiter-lorven-technologies-chennai-0-to-0-years-100826018553",
@@ -229,7 +279,7 @@
     "id": "017024848e",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-talent-acquisition-specialist-psrtek-chennai-0-to-1-years-140826032248",
@@ -241,7 +291,7 @@
     "id": "f5717e6d43",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hr-marketing-sarva-sudarsanaa-academy-chennai-0-to-0-years-150826001828",
@@ -253,7 +303,7 @@
     "id": "1f2c4f602d",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-freelance-recruiter-unnathi-career-academy-chennai-bengaluru-delhi-ncr-0-to-1-years-130826911876",
@@ -265,7 +315,7 @@
     "id": "a869390bce",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-associate-recruiter-night-shift-work-from-office-only-synectics-apac-chennai-0-to-3-years-190626017719",
@@ -277,7 +327,7 @@
     "id": "b7ec81c9f5",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-associate-recruiter-night-shift-work-from-office-only-synectics-apac-chennai-0-to-1-years-100826023744",
@@ -289,7 +339,7 @@
     "id": "ac7ea5bb5e",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-field-recruiter-cadila-global-solutions-chennai-0-to-4-years-110826018257",
@@ -301,7 +351,7 @@
     "id": "e84a7eacef",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-it-recruiter-for-green-start-management-consultants-green-start-chennai-0-to-5-years-150826001434",
@@ -313,7 +363,7 @@
     "id": "d265fbb44d",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-services-partner-at-glencore-4451120553",
@@ -326,7 +376,7 @@
     "id": "101c99b361",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-officer-people-and-culture-at-guidehouse-4395278152",
@@ -339,7 +389,7 @@
     "id": "c7edbd6c85",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-coordinator-%E2%80%93-general-administration-hr-at-randstad-india-4451658262",
@@ -352,7 +402,7 @@
     "id": "376a3a49b6",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-partner-ind-corp-hrp-team-at-amazon-4443025372",
@@ -365,7 +415,7 @@
     "id": "b1af3fa112",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-services-analyst-at-glencore-4450998699",
@@ -378,7 +428,7 @@
     "id": "84e0e2cc92",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/us-hr-operations-at-lorven-technologies-inc-4451698362",
@@ -391,7 +441,7 @@
     "id": "11c7296569",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/recruitment-specialist-at-lactalis-india-4451391501",
@@ -404,7 +454,7 @@
     "id": "1a9910520f",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/talent-acquisition-chennai-office-at-intuitive-apps-inc-4451098983",
@@ -417,7 +467,7 @@
     "id": "2908b03d20",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/talent-acquisition-specialist-at-ramco-systems-4452399219",
@@ -431,7 +481,7 @@
     "id": "00ea4f6539",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/corporate-recruiter-at-pinnacle-group-inc-4452077228",
@@ -444,7 +494,7 @@
     "id": "95d0c5406e",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-resource-manager-holiday-inn-chennai-at-ihg-hotels-resorts-4450171396",
@@ -457,7 +507,7 @@
     "id": "06b09008cc",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/recruitment-specialist-at-grhombus-technologies-pvt-ltd-4451508613",
@@ -470,7 +520,7 @@
     "id": "7079540602",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-audit-management-lead-analyst-vice-president-at-citi-4444383166",
@@ -483,7 +533,7 @@
     "id": "447e807aba",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-people-analytics-organization-insights-%E2%80%93-senior-analyst-%E2%80%93-chennai-at-golden-opportunities-4452427035",
@@ -496,7 +546,7 @@
     "id": "7c21dbfccf",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-%E2%80%93-payroll-avp-2-at-intuitive-apps-inc-4451097922",
@@ -509,7 +559,7 @@
     "id": "f4aa4741d7",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/recruiter-at-beats-jobs-4450119250",
@@ -522,7 +572,7 @@
     "id": "a0ab86b7d0",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/recruiter-at-pinnacle-group-inc-4454817399",
@@ -535,7 +585,7 @@
     "id": "d844327881",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-manager-at-alight-solutions-4451265979",
@@ -548,7 +598,7 @@
     "id": "51ac9acef8",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/talent-acquisition-sourcer-at-kla-4451705831",
@@ -561,7 +611,7 @@
     "id": "1cf3c17790",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/us-recruitment-pst-at-ltm-4451119747",
@@ -574,7 +624,7 @@
     "id": "caff6a07cf",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/talent-acquisition-specialist-at-dbm-vircon-4451550199",
@@ -587,7 +637,7 @@
     "id": "ff3ffbabc6",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-talent-acquisition-specialist-at-taggd-4449837372",
@@ -600,7 +650,7 @@
     "id": "832791366b",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/assistant-manager-coe-talent-acquisition-factory-plant-at-kone-4452472049",
@@ -613,7 +663,7 @@
     "id": "669ad73b3f",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/technical-recruiter-at-swits-digital-private-limited-4453095462",
@@ -626,7 +676,7 @@
     "id": "32f30ab0b5",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/us-it-recruiter-at-themesoft-inc-4452686592",
@@ -639,7 +689,7 @@
     "id": "ef269639ee",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/technical-recruiter-for-uae-market-at-unison-group-4454579211",
@@ -652,7 +702,7 @@
     "id": "f80c34bce1",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/us-it-recruiter-2%2B-years-chennai-at-apexon-4453064320",
@@ -665,7 +715,7 @@
     "id": "06cb223d37",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/us-it-recruiter-at-galent-4441555507",
@@ -678,7 +728,7 @@
     "id": "d4661093e1",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-senior-project-manager-at-ncr-voyix-4453355437",
@@ -691,7 +741,7 @@
     "id": "da4de5eeac",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-senior-project-manager-at-ncr-voyix-4453338338",
@@ -704,7 +754,7 @@
     "id": "9b8f1c60cb",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/technical-recruiter-at-vysystems-4451349820",
@@ -717,7 +767,7 @@
     "id": "e5cb79cdfb",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-technical-recruiter-us-staffing-chennai-onsite-night-shift-at-avacend-inc-4453249820",
@@ -730,7 +780,7 @@
     "id": "4d30d564c5",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/lead-technical-recruiter-at-teceze-4451143452",
@@ -743,7 +793,7 @@
     "id": "659e53fd6d",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-us-recruiter-at-savancys-inc-4453571476",
@@ -756,7 +806,7 @@
     "id": "3fe76b2957",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-us-it-recruiter-at-trinity-technology-solutions-llc-4451388577",
@@ -769,7 +819,7 @@
     "id": "8172c221d9",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/manager-talent-acquisition-at-kumaran-systems-4454531118",
@@ -782,7 +832,7 @@
     "id": "8c2c050fca",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/head-of-recruitment-at-techdoquest-4449522296",
@@ -795,7 +845,7 @@
     "id": "256cc2abd0",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-u-s-it-recruiter-account-manager-at-purple-drive-technologies-4451686589",
@@ -808,7 +858,7 @@
     "id": "a0324d2e7f",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hr-business-partner-based-in-bengaluru-at-harting-technology-group-4405304386",
@@ -821,7 +871,7 @@
     "id": "d6907c9530",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/technical-recruiter-temporary-at-striim-4451580051",
@@ -834,7 +884,7 @@
     "id": "605f5c2479",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/us-technical-recruiter-%E2%80%93-semiconductor-it-at-highbrow-technology-inc-4451690843",
@@ -847,7 +897,7 @@
     "id": "3a6571b2d3",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/lead-hr-a-reputed-real-estate-organisation-at-fyndbridge-consultants-advisors-4450475959",
@@ -860,7 +910,7 @@
     "id": "3b48920a84",
     "fit": 92,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "title": "Field Recruiter",
@@ -872,6 +922,32 @@
     "id": "86a1a6915d",
     "fit": 92,
     "firstSeen": "2026-08-15",
+    "isNew": false
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/recruiter-at-pinnacle-group-inc-4428170408",
+    "company": "Pinnacle Group, Inc.",
+    "title": "Recruiter",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "0a1f854c3b",
+    "fit": 92,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/lead-talent-acquisition-at-guidehouse-4428111395",
+    "company": "Guidehouse",
+    "title": "Lead - Talent Acquisition",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Associate",
+    "id": "a03d4cb01f",
+    "fit": 92,
+    "firstSeen": "2026-08-17",
     "isNew": true
   },
   {
@@ -1150,7 +1226,7 @@
     "id": "1fa05c18ca",
     "fit": 82,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/plant-hr-at-dana-incorporated-4451540675",
@@ -1163,7 +1239,7 @@
     "id": "270f9c6985",
     "fit": 82,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-hr-at-cholayil-private-limited-4450901873",
@@ -1176,7 +1252,7 @@
     "id": "da27470615",
     "fit": 82,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "9c8dacef02",
@@ -1216,7 +1292,7 @@
     "id": "924374d946",
     "fit": 80,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-freshers-hiring-international-bpo-customer-support-executive-glorious-hr-services-chennai-thiruvallur-tamil-nadu-0-to-3-years-130826013410",
@@ -1228,7 +1304,7 @@
     "id": "b5a9e68e9d",
     "fit": 80,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-customer-service-executives-fresher-experienced-glorious-hr-services-thrissur-chennai-vellore-0-to-5-years-100826007227",
@@ -1240,7 +1316,7 @@
     "id": "24328d5fb2",
     "fit": 80,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "a03c8490f7",
@@ -1433,7 +1509,7 @@
     "id": "fa7b3cbd38",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-junior-human-resources-executive-celebrity-fashions-tambaram-chennai-0-to-2-years-140826018268",
@@ -1445,7 +1521,7 @@
     "id": "02800eacdc",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-junior-human-resources-executive-hireworks-recruitment-consultants-chennai-0-to-0-years-240726012330",
@@ -1457,7 +1533,7 @@
     "id": "594088d42a",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-assembly-executive-ciel-hr-chennai-0-to-0-years-130826019451",
@@ -1469,7 +1545,7 @@
     "id": "0112470b6b",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-field-executive-ciel-hr-chennai-0-to-2-years-100826023219",
@@ -1481,7 +1557,7 @@
     "id": "4c09464ffe",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-malayalam-work-from-home-customer-support-executive-imarque-solutions-chennai-0-to-1-years-080826011923",
@@ -1493,7 +1569,7 @@
     "id": "a1833c8921",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-email-and-chat-support-executive-techglora-integrated-it-services-chennai-0-to-1-years-070826502472",
@@ -1505,7 +1581,7 @@
     "id": "51559672ff",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-non-voice-customer-service-executive-sutherland-chennai-0-to-0-years-260326017594",
@@ -1517,7 +1593,7 @@
     "id": "ebe2b64326",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-non-voice-hiring-customer-service-executive-sutherland-chennai-0-to-0-years-110826029533",
@@ -1529,7 +1605,7 @@
     "id": "b13ba68e07",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-customer-support-executive-wfo-chennai-jobdunia-services-chennai-0-to-2-years-140826017355",
@@ -1541,7 +1617,7 @@
     "id": "c364801850",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-field-marketing-executive-chennai-other-tamil-nadu-regions-justdial-chennai-coimbatore-ramanathapuram-0-to-5-years-110826020006",
@@ -1553,7 +1629,7 @@
     "id": "7e0e83e393",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-resources-generalist-at-sensata-technologies-4453693079",
@@ -1566,7 +1642,7 @@
     "id": "e7ec17b744",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/transport-executive-at-jll-4452493846",
@@ -1579,7 +1655,7 @@
     "id": "db1fd257c9",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/procurement-facilities-executive-at-five9-4426172083",
@@ -1592,7 +1668,7 @@
     "id": "e18937d3c6",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/facility-executive-soft-services-at-jll-4451525363",
@@ -1605,7 +1681,7 @@
     "id": "ab4bf1038e",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/executive-guest-relations-at-cushman-wakefield-4452190937",
@@ -1618,7 +1694,7 @@
     "id": "70d602a1af",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-executive-cbc-back-office-at-dhl-global-forwarding-4452477051",
@@ -1631,7 +1707,7 @@
     "id": "05f2faeeb3",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/executive-assistant-at-park-hyatt-4443985819",
@@ -1644,7 +1720,7 @@
     "id": "dcbb1118d2",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/admin-commercial-support-executive-at-attar-mohamed-dawood-company-4451616850",
@@ -1657,7 +1733,7 @@
     "id": "908d2dcaa5",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/administrative-executive-at-sgx-graphics-4451201021",
@@ -1670,7 +1746,7 @@
     "id": "b6cacae025",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/administrative-executive-at-sgs-co-4451129122",
@@ -1683,7 +1759,7 @@
     "id": "11026a87e6",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/operations-executive-at-chennai-chess-club-4449390529",
@@ -1696,7 +1772,7 @@
     "id": "b8fb71e214",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-executive-paid-social-at-wpp-media-4450141504",
@@ -1709,7 +1785,7 @@
     "id": "7b1ebd2091",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/executive-operations-avm-at-blue-dart-4451399609",
@@ -1722,7 +1798,7 @@
     "id": "54c90dc5e2",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/executive-assistant-at-atman-4451224100",
@@ -1735,7 +1811,7 @@
     "id": "6dea7b8c4f",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/sr-executive-operations-cjh-at-blue-dart-4454504263",
@@ -1748,7 +1824,7 @@
     "id": "b084013cd1",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-executive-assistant-manager-social-content-at-tafe-tractors-and-farm-equipment-limited-4453569470",
@@ -1761,7 +1837,7 @@
     "id": "4ca4416d5c",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/claims-processing-executive-walk-in-22-august-2026-at-kavi-india-4451908120",
@@ -1774,7 +1850,7 @@
     "id": "f3309ae811",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/operation-executive-at-printo-4452923173",
@@ -1788,7 +1864,7 @@
     "id": "923087acea",
     "fit": 72,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/junior-executive-%E2%80%93-program-management-at-flex-4451186318",
@@ -1801,6 +1877,95 @@
     "id": "a1cc73f8ff",
     "fit": 72,
     "firstSeen": "2026-08-15",
+    "isNew": false
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-bpo-voice-customer-support-executive-voice-and-semi-voice-banking-takecare-manpower-services-chennai-0-to-1-years-290726026096",
+    "company": "Takecare Manpower Services",
+    "title": "Bpo voice/customer support executive/voice and semi voice/Banking",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "1.75-2.75 Lacs",
+    "id": "0502072ad9",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-voice-process-executive-takecare-manpower-services-chennai-0-to-0-years-120826917284",
+    "company": "Takecare Manpower Services",
+    "title": "Voice Process Executive",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "1.5-2.75 Lacs",
+    "id": "7a2ba98c82",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/building-permission-executive-at-airtel-4453990327",
+    "company": "airtel",
+    "title": "Building Permission Executive",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Executive",
+    "id": "f61bc7b391",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/senior-executive-at-valeo-4275629539",
+    "company": "Valeo",
+    "title": "Senior Executive",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "cb9a349f58",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/executive-assistant-to-managing-director-at-rams-real-estates-4451674290",
+    "company": "Rams Real estates",
+    "title": "Executive Assistant to Managing Director",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-11T00:00:00.000Z",
+    "exp": "Mid-Senior level",
+    "id": "877fc7b523",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/senior-executive-auditor-qa-at-exl-4452970761",
+    "company": "EXL",
+    "title": "Senior Executive - Auditor/QA",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-13T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "bab1e2c91b",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/executive-%E2%80%93-admin-at-enactis-healthcare-private-ltd-4455216132",
+    "company": "Enactis Healthcare Private Ltd",
+    "title": "Executive – Admin",
+    "location": "Greater Chennai Area",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "feafb7c414",
+    "fit": 72,
+    "firstSeen": "2026-08-17",
     "isNew": true
   },
   {
@@ -1849,7 +2014,7 @@
     "id": "d324d7b9a6",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-walk-in-drive-for-freshers-at-firstsource-chennai-firstsource-chennai-0-to-0-years-130125017330",
@@ -1861,7 +2026,7 @@
     "id": "cb38d7777f",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-it-support-engineer-freshers-creative-hands-hr-hyderabad-chennai-bengaluru-0-to-4-years-130826008695",
@@ -1873,7 +2038,7 @@
     "id": "c63ec65c38",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-for-domestic-bpo-graduate-fresher-easy-selection-creative-hands-hr-chennai-bengaluru-0-to-3-years-100826004104",
@@ -1885,7 +2050,7 @@
     "id": "d95ead1f89",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-multiple-roles-open-for-freshers-and-experienced-talent-creative-hands-hr-hyderabad-chennai-bengaluru-0-to-5-years-080826011562",
@@ -1897,7 +2062,7 @@
     "id": "d38d9ab69b",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-freshers-bcom-b-sc-mba-msc-chennai-immediate-creative-hands-hr-hyderabad-chennai-bengaluru-0-to-4-years-100826003237",
@@ -1909,7 +2074,7 @@
     "id": "947d1d8d37",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-retail-trainee-associate-only-freshers-starbucks-hyderabad-chennai-bengaluru-0-to-0-years-100826019601",
@@ -1921,7 +2086,7 @@
     "id": "58298fbc15",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-trainee-teamlease-chennai-0-to-0-years-120826029430",
@@ -1933,7 +2098,7 @@
     "id": "395d335ffd",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-trainee-fresher-mudhra-fine-blanc-chennai-0-to-3-years-241125006846",
@@ -1945,7 +2110,7 @@
     "id": "6489809b92",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-trainee-metal-finishers-dantechdentallab-chennai-0-to-3-years-110826505078",
@@ -1957,7 +2122,7 @@
     "id": "30e419be67",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-trainee-lead-hr-services-sriperumbudur-chennai-kanchipuram-0-to-0-years-110826016969",
@@ -1969,7 +2134,7 @@
     "id": "b0acbaefeb",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-post-graduate-engineer-trainee-wenger-watson-chennai-0-to-0-years-220426023208",
@@ -1981,7 +2146,7 @@
     "id": "3f237370df",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-engineer-trainee-diploma-trainee-korea-fuel-tech-india-pvt-ltd-chennai-0-to-5-years-100826017874",
@@ -1993,7 +2158,7 @@
     "id": "4252d08b12",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-customer-support-associate-trainee-candor-management-services-chennai-0-to-2-years-200723004430",
@@ -2005,7 +2170,7 @@
     "id": "85d1e606ac",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-trainee-coder-global-healthcare-billing-partners-pvt-ltd-chennai-0-to-2-years-100826500078",
@@ -2017,7 +2182,7 @@
     "id": "561d1f0045",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-international-voice-process-night-shift-evodigital-technologies-chennai-0-to-2-years-130826033256",
@@ -2029,7 +2194,7 @@
     "id": "cd818165a3",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-walk-in-drive-for-international-non-voice-process-freshers-sagility-india-chennai-0-to-0-years-110826025402",
@@ -2041,7 +2206,7 @@
     "id": "4756b4bce4",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-non-voice-fresher-night-shift-bangalore-salem-trigent-software-salem-chennai-bengaluru-0-to-0-years-020524007064",
@@ -2053,7 +2218,7 @@
     "id": "fbc31626a4",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-l1-experienced-international-voice-process-sutherland-chennai-0-to-2-years-300626014204",
@@ -2065,7 +2230,7 @@
     "id": "7139f5a8f3",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-international-non-voice-process-freshers-sutherland-chennai-0-to-0-years-280226012909",
@@ -2077,7 +2242,7 @@
     "id": "8f51049c10",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-international-non-voice-process-sutherland-chennai-0-to-0-years-270726026767",
@@ -2089,7 +2254,7 @@
     "id": "e47f00b07e",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-international-non-voice-process-sutherland-chennai-0-to-0-years-270726026680",
@@ -2101,7 +2266,7 @@
     "id": "a417869fe1",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-freshers-international-technical-support-voice-sutherland-chennai-0-to-1-years-241125023944",
@@ -2113,7 +2278,7 @@
     "id": "5a42a3ed52",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-l1-experienced-international-voice-process-sutherland-chennai-0-to-2-years-240726024703",
@@ -2125,7 +2290,7 @@
     "id": "d09e6724c7",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-international-voice-process-sutherland-chennai-0-to-1-years-180426015065",
@@ -2137,7 +2302,7 @@
     "id": "99063d6344",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-for-non-voice-process-fresher-only-sutherland-chennai-0-to-1-years-150726021313",
@@ -2149,7 +2314,7 @@
     "id": "63d3967056",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-international-voice-process-sutherland-chennai-0-to-3-years-150526030950",
@@ -2161,7 +2326,7 @@
     "id": "ebaa7faefd",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-hiring-for-international-voice-process-sutherland-chennai-0-to-1-years-140826018991",
@@ -2173,7 +2338,7 @@
     "id": "2f0962a075",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-international-voice-urgent-fresher-hiring-sutherland-chennai-0-to-1-years-140826018433",
@@ -2185,7 +2350,7 @@
     "id": "ffda49bb0f",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-international-non-voice-process-freshers-sutherland-chennai-0-to-0-years-130826031743",
@@ -2197,7 +2362,7 @@
     "id": "425db6071c",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-freshers-for-non-voice-process-chat-support-sutherland-chennai-0-to-1-years-130826016507",
@@ -2209,7 +2374,7 @@
     "id": "e4565902ee",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-for-international-chat-support-sutherland-chennai-0-to-1-years-120826038590",
@@ -2221,7 +2386,7 @@
     "id": "6e5e8819ea",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-electrical-technician-freshers-sodexo-chennai-0-to-2-years-100726006117",
@@ -2233,7 +2398,7 @@
     "id": "33b2d9ded2",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-hiring-for-international-chat-support-sutherland-chennai-0-to-2-years-070826018026",
@@ -2245,7 +2410,7 @@
     "id": "a326c3db5d",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-international-non-voice-process-sutherland-chennai-0-to-0-years-310726026272",
@@ -2257,7 +2422,7 @@
     "id": "438a9e3c17",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-immediate-hiring-for-freshers-prochant-india-dlf-porur-chennai-prochant-chennai-0-to-0-years-220726010312",
@@ -2269,7 +2434,7 @@
     "id": "570371f912",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-international-voice-process-sutherland-chennai-0-to-2-years-200426020721",
@@ -2281,7 +2446,7 @@
     "id": "8413b70331",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-freshers-us-healthcare-us-shift-chennai-ntt-data-ntt-data-inc-chennai-0-to-1-years-120826022366",
@@ -2293,7 +2458,7 @@
     "id": "f9e33b1943",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hcltech-freshers-hiring-process-associate-voice-hcltech-chennai-0-to-1-years-110826011269",
@@ -2305,7 +2470,7 @@
     "id": "b4f808623d",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-immediate-hiring-freshers-for-international-chat-support-sutherland-chennai-0-to-1-years-100826005191",
@@ -2317,7 +2482,7 @@
     "id": "52a1ae5475",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-freshers-for-international-voice-process-sutherland-chennai-0-to-2-years-090826002018",
@@ -2329,7 +2494,7 @@
     "id": "2095e116dd",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hot-vacancy-international-voice-process-sutherland-chennai-0-to-3-years-090426023656",
@@ -2341,7 +2506,7 @@
     "id": "3fb24dc1f2",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-international-voice-process-customer-support-sutherland-chennai-0-to-2-years-070826018453",
@@ -2353,7 +2518,7 @@
     "id": "d8d1c677eb",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-for-international-chat-and-email-support-sutherland-chennai-0-to-1-years-070826018243",
@@ -2365,7 +2530,7 @@
     "id": "fba709d29a",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-intern-vital-bio-systems-p-ltd-chennai-0-to-1-years-100826500061",
@@ -2377,7 +2542,7 @@
     "id": "0b55b913f6",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/sourcing-specialist-freshers-at-perfict-4451186555",
@@ -2390,7 +2555,7 @@
     "id": "f00559e76e",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/trainee-consultant-at-metayb-4449832689",
@@ -2403,7 +2568,7 @@
     "id": "f50657bf77",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-analyst-%E2%80%93-management-trainee-healthcare-sector-industry-at-fyndbridge-consultants-advisors-4450460878",
@@ -2416,7 +2581,7 @@
     "id": "a25edd59a6",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/mega-walkin-drive-at-hcl-tech-for-voice-process-fresher-walk-in-interview-14th-aug-2026-10-am-to-2-pm-at-hcltech-4454016619",
@@ -2429,7 +2594,7 @@
     "id": "18e93306fb",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/mega-walkin-drive-at-hcl-tech-for-voice-process-fresher-walk-in-interview-on-17th-aug-2026-11-am-to-3-pm-at-hcltech-4455106029",
@@ -2442,7 +2607,7 @@
     "id": "86f59e4f6a",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/trainee-senior-assistant-qa-at-fourrts-india-laboratories-pvt-ltd-4451913985",
@@ -2455,7 +2620,7 @@
     "id": "8f4ae7504f",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/trainee-assembly-at-rockwell-automation-4415303739",
@@ -2468,7 +2633,7 @@
     "id": "266235f0b2",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/trainee-roles-in-order-management-at-gsot-4452731046",
@@ -2481,7 +2646,7 @@
     "id": "5e6c2e225f",
     "fit": 70,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "title": "Customer Acquisition Trainee",
@@ -2493,6 +2658,44 @@
     "id": "9560530064",
     "fit": 70,
     "firstSeen": "2026-08-15",
+    "isNew": false
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-hiring-non-voice-fresher-s-medical-billing-prochant-chennai-0-to-1-years-050826028017",
+    "company": "Prochant",
+    "title": "Hiring Non - Voice Fresher's (Medical Billing",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "Not Disclosed",
+    "id": "2b78619855",
+    "fit": 70,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/human-resources-intern-at-meril-4451660210",
+    "company": "Meril",
+    "title": "Human Resources Intern",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-11T00:00:00.000Z",
+    "exp": "Internship",
+    "id": "dba95a2dad",
+    "fit": 70,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/graduate-engineer-trainee-purchase-ptm-at-valeo-4443519069",
+    "company": "Valeo",
+    "title": "Graduate Engineer Trainee - Purchase PTM",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-12T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "84282125ed",
+    "fit": 70,
+    "firstSeen": "2026-08-17",
     "isNew": true
   },
   {
@@ -2701,7 +2904,7 @@
     "id": "7d03d16426",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-placement-coordinator-softlogic-chennai-sholinganallur-0-to-2-years-190626017062",
@@ -2713,7 +2916,7 @@
     "id": "981c3b7405",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-technical-support-customer-support-sal-up-to-4-5-lpa-creative-hands-hr-hyderabad-chennai-bengaluru-0-to-5-years-130826008636",
@@ -2725,7 +2928,7 @@
     "id": "fb6f7aa985",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-production-assembly-ciel-hr-chennai-coimbatore-0-to-0-years-100826018023",
@@ -2737,7 +2940,7 @@
     "id": "6a1543d9da",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-voice-process-work-from-home-malayalam-immediate-offer-joining-tech-mahindra-chennai-0-to-1-years-280426018655",
@@ -2749,7 +2952,7 @@
     "id": "c284be6e91",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-voice-process-work-from-home-tamil-immediate-offer-joining-tech-mahindra-chennai-0-to-1-years-280326011495",
@@ -2761,7 +2964,7 @@
     "id": "843c17ad20",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-teacher-tutor-work-from-home-flexible-working-hours-planetspark-chennai-bengaluru-delhi-ncr-0-to-5-years-260525012879",
@@ -2773,7 +2976,7 @@
     "id": "41645636ff",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-for-english-teacher-tutor-work-from-home-part-time-planetspark-chennai-gurugram-bengaluru-0-to-5-years-130125003369",
@@ -2785,7 +2988,7 @@
     "id": "c68ca43b68",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-tutor-teacher-part-time-work-from-home-planetspark-lucknow-chennai-bengaluru-0-to-5-years-110125004471",
@@ -2797,7 +3000,7 @@
     "id": "d0d1a66c9a",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-teacher-tutor-work-from-home-ctc-4-5-lpa-planetspark-mumbai-chennai-gurugram-0-to-5-years-090724004889",
@@ -2809,7 +3012,7 @@
     "id": "a50f35fe2c",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-sw-engineer-applied-materials-india-private-limited-chennai-0-to-5-years-140826930954",
@@ -2821,7 +3024,7 @@
     "id": "38fd308a3e",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-work-from-home-tutor-ctc-4-5-lpa-planetspark-chennai-0-to-5-years-110125004527",
@@ -2833,7 +3036,7 @@
     "id": "e753eaf61e",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-online-teacher-part-time-immediate-joining-planetspark-mumbai-hyderabad-chennai-0-to-5-years-180925022455",
@@ -2845,7 +3048,7 @@
     "id": "a65ffe65d9",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-walk-in-non-it-non-voice-e-publishing-tnqtech-chennai-0-to-1-years-150726028798",
@@ -2857,7 +3060,7 @@
     "id": "10535163ab",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-jobs-for-biomedical-engineering-biotechnology-engineering-graduates-achievers-spot-peraiyur-chennai-vellore-0-to-0-years-140826009074",
@@ -2869,7 +3072,7 @@
     "id": "461aeb8cd0",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-wfh-data-entry-non-voice-back-office-creative-hands-hr-hyderabad-chennai-tiruchirappalli-0-to-5-years-100826001477",
@@ -2881,7 +3084,7 @@
     "id": "b85deb8e3d",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-tele-caller-hogist-chennai-0-to-1-years-270726007645",
@@ -2893,7 +3096,7 @@
     "id": "5cfab75e4e",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-great-opportunity-for-ev-iv-prior-auth-callers-chennai-location-blue-chip-hr-solutions-chennai-0-to-2-years-150826001389",
@@ -2905,7 +3108,7 @@
     "id": "972d2e758e",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-ar-caller-in-denials-iv-ev-prior-auth-min-6-months-exp-blue-chip-hr-solutions-chennai-0-to-1-years-130826014987",
@@ -2917,7 +3120,7 @@
     "id": "0ff44323b9",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-wanted-bds-mds-dentist-for-medical-coding-achievers-spot-kumbakonam-thanjavur-chennai-0-to-0-years-120826017749",
@@ -2929,7 +3132,7 @@
     "id": "56960fa287",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-medical-coding-for-biomedical-engineering-biotech-engineering-grad-achievers-spot-dharmapuri-chennai-thoothukudi-0-to-0-years-110826011856",
@@ -2941,7 +3144,7 @@
     "id": "5af039d6ef",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-wanted-bds-mds-bams-bhms-bnys-bums-bsms-for-medical-coding-achievers-spot-kumbakonam-thanjavur-chennai-0-to-0-years-100826016115",
@@ -2953,7 +3156,7 @@
     "id": "1e4c916460",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-associate-client-order-coordinator-chennai-csc-csc-chennai-0-to-2-years-100826007712",
@@ -2965,7 +3168,7 @@
     "id": "63437e9b0a",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-hindi-voice-process-sutherland-chennai-0-to-0-years-310326018996",
@@ -2977,7 +3180,7 @@
     "id": "050502f612",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-uk-voice-process-sutherland-chennai-0-to-1-years-300925013963",
@@ -2989,7 +3192,7 @@
     "id": "27cbd0296b",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-immediate-hiring-for-uk-voice-process-sutherland-chennai-0-to-2-years-140826019150",
@@ -3001,7 +3204,7 @@
     "id": "8447ba883f",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-analyst-accounts-payable-flex-chennai-0-to-3-years-130826500619",
@@ -3013,7 +3216,7 @@
     "id": "00c77d22e5",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-hiring-for-process-associate-chat-support-sutherland-chennai-0-to-1-years-120826037773",
@@ -3025,7 +3228,7 @@
     "id": "424c23c225",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-for-l1-technical-voice-process-sutherland-chennai-0-to-2-years-300726021365",
@@ -3037,7 +3240,7 @@
     "id": "c1500d5ac2",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-customer-support-associate-sutherland-chennai-0-to-2-years-110826035187",
@@ -3049,7 +3252,7 @@
     "id": "9863a1b361",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-hiring-for-non-voice-chat-support-associate-sutherland-chennai-0-to-1-years-090826001996",
@@ -3061,7 +3264,7 @@
     "id": "e2dbfaa4a2",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hiring-voice-support-associate-sutherland-global-service-sutherland-chennai-0-to-3-years-280526030976",
@@ -3073,7 +3276,7 @@
     "id": "423da986a2",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mega-hiring-for-experienced-customer-service-blended-process-creative-hands-hr-hyderabad-chennai-bengaluru-0-to-4-years-130826008612",
@@ -3085,7 +3288,7 @@
     "id": "5a8daaa244",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-mnc-giant-hiring-for-voice-non-voice-data-med-billing-creative-hands-hr-hyderabad-chennai-bengaluru-0-to-5-years-130826008545",
@@ -3097,7 +3300,7 @@
     "id": "50876c8274",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-union-bank-of-india-local-bank-officer-we-shine-academic-chennai-0-to-2-years-120826501446",
@@ -3109,7 +3312,7 @@
     "id": "12e6aeadfd",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-resources-business-partner-at-icici-lombard-4454019127",
@@ -3123,7 +3326,7 @@
     "id": "cfc316cc04",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-resources-co-ordinator-at-gradiant-4443334019",
@@ -3136,7 +3339,7 @@
     "id": "46f5969145",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hris-analyst-at-fueling-brains-academies-4445986134",
@@ -3149,7 +3352,7 @@
     "id": "c72ee1e3fc",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/payroll-specialist-at-kbr-inc-4453116247",
@@ -3162,7 +3365,7 @@
     "id": "bb982f26f4",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/talent-consultant-at-u-s-bank-4454090421",
@@ -3175,7 +3378,7 @@
     "id": "2fd73abecd",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/deloitte-usi-human-capital-%E2%80%93-workday-hcm-consultant-at-deloitte-4453703329",
@@ -3188,7 +3391,7 @@
     "id": "e416e6c6fa",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-benefits-specialist-at-atos-4421177212",
@@ -3201,7 +3404,7 @@
     "id": "100aa45302",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-resources-associate-at-four-points-by-sheraton-4453323622",
@@ -3214,7 +3417,7 @@
     "id": "77d57fb802",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-specialist-at-zalaris-4440042450",
@@ -3227,7 +3430,7 @@
     "id": "a2fa2c8bf3",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/data-analyst-at-petrofac-4451128436",
@@ -3240,7 +3443,7 @@
     "id": "c5e6b3646a",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/total-rewards-specialist-at-visteon-corporation-4397224470",
@@ -3253,7 +3456,7 @@
     "id": "0c06a3e615",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/immigration-specialist-europe-middle-east-apac-at-talentstra-4453203587",
@@ -3266,7 +3469,7 @@
     "id": "f855b7fcad",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hrbp-at-stats-perform-4441804004",
@@ -3279,7 +3482,7 @@
     "id": "c50d89273a",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/assistant-manager-human-resources-at-amadora-gourmet-ice-cream-sorbet-4450887263",
@@ -3293,7 +3496,7 @@
     "id": "37f8c11193",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-associate-p-c-operations-at-cohnreznick-professional-services-pvt-ltd-4453751072",
@@ -3306,7 +3509,7 @@
     "id": "b6da6e1958",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-capital-sap-sf-functional-implementation-consultant-at-deloitte-4452710457",
@@ -3319,7 +3522,7 @@
     "id": "2ea16c969d",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/learning-manager-at-park-hyatt-4452423348",
@@ -3332,7 +3535,7 @@
     "id": "8a44c0bbdf",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/assistant-manager-talent-management-at-kumaran-systems-4454518196",
@@ -3345,7 +3548,7 @@
     "id": "58c9dd39d3",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/training-coordinator-at-vestas-4442712445",
@@ -3358,7 +3561,7 @@
     "id": "373a7b6035",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/manager-compensation-at-ventra-health-4449170822",
@@ -3371,7 +3574,7 @@
     "id": "e68ee84d67",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-payroll-specialist-sap-hcm-successfactors-at-zalaris-4454534316",
@@ -3384,7 +3587,7 @@
     "id": "e9129a8895",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/workday-hcm-recruiting-at-cognizant-4453717688",
@@ -3397,7 +3600,7 @@
     "id": "3556951ea9",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/leaning-and-development-specialist-husky-india-chennai-at-husky-technologies-4453920503",
@@ -3410,7 +3613,7 @@
     "id": "97dca62fea",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/lead-hrbp-at-ingram-micro-4444275575",
@@ -3423,7 +3626,7 @@
     "id": "0ddd890350",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-specialist-payroll-at-esab-corporation-4451397471",
@@ -3436,7 +3639,7 @@
     "id": "49658871e1",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/workday-user-access-review-analyst-at-wpp-4441036213",
@@ -3449,7 +3652,7 @@
     "id": "16511aed34",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/associate-consultant-l3-at-wipro-4453012675",
@@ -3462,7 +3665,7 @@
     "id": "cc33c51ffb",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-director-of-human-resources-at-lexitas-4444346019",
@@ -3475,7 +3678,7 @@
     "id": "6110890402",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hris-analyst-technical-consultant-workday-at-zuora-4382969298",
@@ -3488,7 +3691,7 @@
     "id": "68f04bebcd",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/workforce-planning-specialist-at-visteon-corporation-4425254156",
@@ -3501,7 +3704,7 @@
     "id": "4b848710af",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/ta-team-lead-at-tata-consultancy-services-4452344744",
@@ -3514,7 +3717,7 @@
     "id": "84cad38fa5",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/director-hro-service-excellence-at-sutherland-4453526485",
@@ -3527,7 +3730,7 @@
     "id": "95a3533328",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/global-compensation-analyst-sr-2030-at-sagent-4404444505",
@@ -3540,7 +3743,7 @@
     "id": "9d984350c4",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/talent-sourcer-%E2%80%93-us-staffing-at-connect-tech%2Btalent-4453522801",
@@ -3553,7 +3756,7 @@
     "id": "b3df5d81d3",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/relocation-consultant-at-ios-relocations-4450480742",
@@ -3566,7 +3769,7 @@
     "id": "de94055177",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/learning-business-partner-at-ncr-atleos-4450812304",
@@ -3579,7 +3782,7 @@
     "id": "4ddc0145a1",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/servicenow-hrsd-%E2%80%93-business-analyst-at-vmc-soft-technologies-inc-4454374153",
@@ -3592,7 +3795,7 @@
     "id": "e1fbd08f0b",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/payroll-accountant-at-kbr-inc-4453099401",
@@ -3605,7 +3808,7 @@
     "id": "76e02f4567",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-support-coordinator-analyst-at-maersk-training-4453567024",
@@ -3618,7 +3821,7 @@
     "id": "1493c955bc",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/admin-executive-at-ens-group-4453500951",
@@ -3631,7 +3834,7 @@
     "id": "9cac1d5663",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/corporate-trainer-at-arigo-hr-solutions-4454507978",
@@ -3644,7 +3847,7 @@
     "id": "26784cc9b0",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/workday-senior-specialist-at-strada-4413667847",
@@ -3657,7 +3860,7 @@
     "id": "a551579370",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/manager-senior-manager-employee-relations-at-kone-4442538027",
@@ -3670,7 +3873,7 @@
     "id": "7b89716257",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/procurement-executive-at-ens-group-4452924819",
@@ -3683,7 +3886,7 @@
     "id": "78673dfdb7",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-manager-hrbp-at-alight-solutions-4451277131",
@@ -3696,7 +3899,7 @@
     "id": "e76bfad42c",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/placement-coordinator-at-quest-alliance-4453299618",
@@ -3709,7 +3912,7 @@
     "id": "948e303601",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/hiring-for-otc-collection-chennai-at-hcltech-4439073327",
@@ -3722,7 +3925,7 @@
     "id": "eb13dcdc39",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/content-specialist-at-larsen-toubro-4451536317",
@@ -3735,7 +3938,7 @@
     "id": "01df497d66",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/project-scm-at-hitachi-energy-4454386677",
@@ -3748,7 +3951,7 @@
     "id": "11a43e6e41",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/test-job-at-cdw-4102095806",
@@ -3761,7 +3964,7 @@
     "id": "8fbb8c3d71",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/purchasing-specialist-at-flsmidth-4451210868",
@@ -3774,7 +3977,7 @@
     "id": "b2b0d97cc6",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/academic-advisor-at-artium-academy-4452425780",
@@ -3788,7 +3991,7 @@
     "id": "40cd5ce3d2",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/process-associate-at-harris-computer-4453108493",
@@ -3801,7 +4004,7 @@
     "id": "0728693f8c",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/paid-search-specialist-at-hireflexperts-4454516412",
@@ -3814,7 +4017,7 @@
     "id": "3fa52d4fd4",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/training-specialist-in-lm-training-at-amazon-4451080814",
@@ -3827,7 +4030,7 @@
     "id": "5a0e71ce49",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/client-onboard-analyst-1-at-citi-4452707801",
@@ -3840,7 +4043,7 @@
     "id": "5dab8e08b2",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/deloitte-usi-human-capital-%E2%80%93-instructional-design-ocm-manager-at-deloitte-4452723344",
@@ -3853,7 +4056,7 @@
     "id": "70b98efbde",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/procurement-excellence-associate-at-capgemini-4454316506",
@@ -3866,7 +4069,7 @@
     "id": "43a65e05f1",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/immigration-documentation-operations-at-greentree-immigration-4453522752",
@@ -3879,7 +4082,7 @@
     "id": "e9bcd079c0",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/lms-admin-at-cognizant-4444328208",
@@ -3892,7 +4095,7 @@
     "id": "6f3210d43e",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/health-operations-new-associate-at-accenture-in-india-4454088736",
@@ -3905,7 +4108,7 @@
     "id": "5e9db1b2c1",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/production-workforce-at-emerson-4454500768",
@@ -3918,7 +4121,7 @@
     "id": "71e03be903",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/voice-process-at-tp-4452394855",
@@ -3931,7 +4134,7 @@
     "id": "03e75e92c0",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/indirect-procurement-buyer-entry-level-%E2%80%93-machines-tools-at-visteon-corporation-4451176897",
@@ -3944,7 +4147,7 @@
     "id": "46d2176845",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-advisory-new-associate-at-accenture-in-india-4452656034",
@@ -3957,7 +4160,7 @@
     "id": "dc329dfb90",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/information-technology-it-help-desk-apprentice-at-mizuho-4452387521",
@@ -3970,7 +4173,7 @@
     "id": "f59c10a691",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/author-relationship-manager-at-notion-press-4451220182",
@@ -3983,7 +4186,7 @@
     "id": "02104e3a45",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/kbs-junior-process-associate-at-kone-4453063967",
@@ -3996,7 +4199,7 @@
     "id": "9fe3e074fa",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/podcaster-at-fynro-4451663746",
@@ -4009,7 +4212,7 @@
     "id": "92e4a1fba1",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/associate-c2c-collections-process-expert-at-capgemini-4450641941",
@@ -4022,7 +4225,7 @@
     "id": "be75130ced",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/growth-marketing-associate-at-tacheon-4453906627",
@@ -4035,7 +4238,7 @@
     "id": "c5829347b1",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/academic-counsellor-at-crux-4452442190",
@@ -4048,7 +4251,7 @@
     "id": "d707f1635b",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/process-expert-at-a-p-moller-maersk-4443501858",
@@ -4061,7 +4264,7 @@
     "id": "e142a0c7c3",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/article-assistant-at-saaas-co-llp-4452928036",
@@ -4074,7 +4277,7 @@
     "id": "e3c642549c",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/customer-support-specialist-at-tp-4453121050",
@@ -4088,7 +4291,7 @@
     "id": "daac6cf6b9",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/digital-content-associate-prime-video-sports-at-prime-video-amazon-mgm-studios-4454326898",
@@ -4101,7 +4304,7 @@
     "id": "1c7b8ca710",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/performing-ops-support-associate-at-u-s-bank-4451538686",
@@ -4114,7 +4317,7 @@
     "id": "0f1611cc32",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/caller-at-amet-university-chennai-4453910449",
@@ -4127,7 +4330,7 @@
     "id": "1ab37262e7",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/housekeeping-associate-at-courtyard-by-marriott-4454578548",
@@ -4140,7 +4343,7 @@
     "id": "32d3074f31",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/customer-service-associate-in-chennai-at-pickyourtrail-4452083869",
@@ -4153,7 +4356,7 @@
     "id": "e38e200b45",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/cargo-operations-agent-chennai-india-at-qatar-airways-4452929972",
@@ -4166,7 +4369,7 @@
     "id": "b8472aa936",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/customer-support-representative-at-policybazaar-com-4451655591",
@@ -4179,7 +4382,7 @@
     "id": "34012a62ef",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/back-office-operations-rep-i-at-transunion-4453205459",
@@ -4192,7 +4395,7 @@
     "id": "96e0ab2ddf",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/inspector-at-qima-4194733383",
@@ -4205,7 +4408,7 @@
     "id": "eeadb38164",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/studio-coordinator-at-the-open-room-4453915119",
@@ -4218,7 +4421,7 @@
     "id": "aadfb53e07",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/manager-talent-management-at-kumaran-systems-4453565846",
@@ -4231,7 +4434,7 @@
     "id": "a931d8afb0",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-specialist-us-payroll-at-zalaris-4441655487",
@@ -4244,7 +4447,7 @@
     "id": "b938c38c88",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/specialist-appeals-appeals-at-amazon-4444441183",
@@ -4257,7 +4460,7 @@
     "id": "90736cc5ef",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/manager-talent-partner-at-cognizant-4434159657",
@@ -4270,7 +4473,7 @@
     "id": "c76923f5ad",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/human-capital-sap-sf-technical-implementation-consultant-at-deloitte-4452721427",
@@ -4283,7 +4486,7 @@
     "id": "42bc5f871c",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/trainer-gsf-learning-and-development-gsf-learning-and-development-at-amazon-4443039233",
@@ -4296,7 +4499,7 @@
     "id": "c92cddc2ad",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-manager-%E2%80%93-human-resources-at-golden-opportunities-4452404955",
@@ -4309,7 +4512,7 @@
     "id": "36988fd000",
     "fit": 62,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/senior-human-resources-manager-at-talentiser-4453565410",
@@ -4322,6 +4525,172 @@
     "id": "60e1a8b09d",
     "fit": 62,
     "firstSeen": "2026-08-15",
+    "isNew": false
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-wfh-data-entry-non-voice-back-office-creative-hands-hr-hyderabad-chennai-tiruchirappalli-0-to-5-years-160826001520",
+    "company": "Creative Hands HR",
+    "title": "WFH - Data Entry/ non voice / back office",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "Not Disclosed",
+    "id": "00e1b5851d",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-hiring-for-senior-malayalam-customer-care-achievin-solutions-indore-chennai-bengaluru-0-to-5-years-100826000707",
+    "company": "Achievin Solutions",
+    "title": "Hiring For Senior Malayalam Customer Care",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "1-3 Lacs",
+    "id": "e7f945f1f9",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-hiring-for-senior-hindi-with-english-customer-support-profiles-achievin-solutions-chennai-bengaluru-0-to-5-years-100826000705",
+    "company": "Achievin Solutions",
+    "title": "Hiring For Senior Hindi With English Customer Support Profiles",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "1-3 Lacs",
+    "id": "2e049a7579",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/onboarding-coordinator-at-u-s-bank-4455210851",
+    "company": "U.S. Bank",
+    "title": "Onboarding Coordinator",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-17T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "d5f69cba7c",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/leaning-and-development-specialist-husky-india-chennai-at-husky-technologies-4454216090",
+    "company": "Husky Technologies",
+    "title": "Leaning and Development Specialist- Husky (India) Chennai",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "0593e5cdfa",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/manager-senior-manager-hris-lead-%E2%80%93-chennai-at-golden-opportunities-4452427034",
+    "company": "Golden Opportunities",
+    "title": "Manager/Senior Manager - HRIS lead – Chennai",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-11T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "675407e4fe",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/quickspecs-publication-administrator-at-hewlett-packard-enterprise-4455175268",
+    "company": "Hewlett Packard Enterprise",
+    "title": "QuickSpecs Publication Administrator",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "e2fd1a8a36",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/apprentice-at-state-street-4455221422",
+    "company": "State Street",
+    "title": "Apprentice",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "1ae94a56f9",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/associate-professional-vendor-management-at-ingram-micro-4453216411",
+    "company": "Ingram Micro",
+    "title": "Associate Professional - Vendor Management",
+    "location": "Greater Chennai Area",
+    "src": "linkedin",
+    "posted": "2026-08-13T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "937d630b2a",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/ocean-customer-experience-specialist-at-a-p-moller-maersk-4444933894",
+    "company": "A.P. Moller - Maersk",
+    "title": "Ocean Customer Experience Specialist",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-15T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "27dfd023fd",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/ops-sup-analyst-2-at-citi-4330401013",
+    "company": "Citi",
+    "title": "Ops Sup Analyst 2",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-16T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "dae1ae6654",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/client-relations-specialist-night-shift-at-amura-health-4451140193",
+    "company": "Amura Health",
+    "title": "Client Relations Specialist - Night shift",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-10T00:00:00.000Z",
+    "exp": "Entry level",
+    "id": "553fafb4d8",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
+    "url": "https://in.linkedin.com/jobs/view/health-operations-new-associate-at-accenture-in-india-4454310361",
+    "company": "Accenture in India",
+    "title": "Health Operations New Associate",
+    "location": "Chennai, Tamil Nadu, India",
+    "src": "linkedin",
+    "posted": "2026-08-13T00:00:00.000Z",
+    "exp": "Not Applicable",
+    "id": "a152f4aa25",
+    "fit": 62,
+    "firstSeen": "2026-08-17",
     "isNew": true
   },
   {
@@ -4335,7 +4704,7 @@
     "id": "55e02781b1",
     "fit": 60,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "cc021f294e",
@@ -4463,6 +4832,18 @@
     "isNew": false
   },
   {
+    "url": "https://www.naukri.com/job-listings-urgent-hiring-field-sales-executive-fresher-male-only-takecare-manpower-services-chennai-0-to-0-years-120826917976",
+    "company": "Takecare Manpower Services",
+    "title": "Urgent Hiring // Field Sales Executive // Fresher | Male Only",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "Not Disclosed",
+    "id": "01a701181a",
+    "fit": 55,
+    "firstSeen": "2026-08-17",
+    "isNew": true
+  },
+  {
     "url": "https://in.linkedin.com/jobs/view/employee-benefits-at-beltrami-county-4451326547",
     "company": "Beltrami County",
     "title": "Employee Benefits",
@@ -4473,7 +4854,7 @@
     "id": "f047728a07",
     "fit": 52,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/buyer-at-ge-vernova-4454558499",
@@ -4486,7 +4867,7 @@
     "id": "b2f10494f3",
     "fit": 52,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-sales-and-marketing-executive-revolution-games-chennai-0-to-0-years-090826002737",
@@ -4498,7 +4879,7 @@
     "id": "471d3fb547",
     "fit": 47,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-sales-executive-kalyan-jewellers-puducherry-chennai-coimbatore-0-to-5-years-220626026268",
@@ -4510,7 +4891,7 @@
     "id": "8c757fa9ec",
     "fit": 47,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-urgent-hiring-for-retail-sales-executive-chennai-ample-technologies-chennai-0-to-5-years-120826038953",
@@ -4522,7 +4903,7 @@
     "id": "e36323cdd3",
     "fit": 47,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-development-executive-smb-market-india-market-at-keka-hr-4449825220",
@@ -4535,7 +4916,7 @@
     "id": "9106eb95af",
     "fit": 47,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-development-executive-at-intuitive-apps-inc-4451368620",
@@ -4548,6 +4929,18 @@
     "id": "85eb422988",
     "fit": 47,
     "firstSeen": "2026-08-15",
+    "isNew": false
+  },
+  {
+    "url": "https://www.naukri.com/job-listings-hiring-startup-sales-delivery-customer-experience-executive-female-homesuperfoods-online-chennai-0-to-3-years-120826027432",
+    "company": "Homesuperfoods Online",
+    "title": "Hiring Startup Sales, Delivery & Customer Experience Executive Female",
+    "location": "Chennai",
+    "src": "naukri",
+    "salary": "60,000-2.4 Lacs",
+    "id": "7ef86a8267",
+    "fit": 47,
+    "firstSeen": "2026-08-17",
     "isNew": true
   },
   {
@@ -4561,7 +4954,7 @@
     "id": "d9d0036ba7",
     "fit": 45,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "id": "734f1ccc19",
@@ -4601,7 +4994,7 @@
     "id": "700c3f6673",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-telugu-female-telecaller-openings-in-chennai-talentio-technologies-tambaram-chennai-andhra-0-to-5-years-110826017661",
@@ -4613,7 +5006,7 @@
     "id": "252b2a8986",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://www.naukri.com/job-listings-hindi-female-telecaller-openings-in-chennai-talentio-technologies-tambaram-chennai-0-to-5-years-110826017710",
@@ -4625,7 +5018,7 @@
     "id": "b5faa7f3ab",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-development-associate-at-recruitable-4452779082",
@@ -4638,7 +5031,7 @@
     "id": "829d41eba2",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/business-development-representative-at-super-humans-4453661366",
@@ -4651,7 +5044,7 @@
     "id": "5c94d9abbf",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/sales-representative-%E2%80%93-staffing-sales-lead-generation-at-trident-consulting-4451822249",
@@ -4664,7 +5057,7 @@
     "id": "ec4100763f",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/sales-development-representative-chennai-based-at-kambaa-inc-4452360928",
@@ -4677,7 +5070,7 @@
     "id": "472eb85246",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/inside-sales-representative-isr-uk-market-at-ladera-technology-4451204496",
@@ -4690,7 +5083,7 @@
     "id": "0339511a9e",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   },
   {
     "url": "https://in.linkedin.com/jobs/view/telecaller-at-lords-and-kings-group-4450478618",
@@ -4703,6 +5096,6 @@
     "id": "4393b4f9d1",
     "fit": 37,
     "firstSeen": "2026-08-15",
-    "isNew": true
+    "isNew": false
   }
 ]
