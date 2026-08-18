@@ -10,6 +10,10 @@ import { copy } from '../lib/copy';
 type ListKey = 'recent' | 'earlier' | 'saved' | 'applied' | 'notme';
 const NEW_CAP = 10;
 
+function fmtShortDate(d: string): string {
+  return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { day: 'numeric', month: 'short' });
+}
+
 // Five lists: Recent · Earlier · Saved · Applied · Not me.
 // Recent = isNew (capped at newCap). "Not for me" is a real list, never a delete.
 export default function Jobs() {
@@ -19,6 +23,8 @@ export default function Jobs() {
   const navigate = useNavigate();
 
   const list = (params.get('list') as ListKey) || 'recent';
+
+  const lastUpdated = jobs.reduce((max, j) => (!max || j.firstSeen > max ? j.firstSeen : max), '');
 
   const fresh = jobs.filter((j) => j.isNew && !progress.jobs[j.id]?.notMe && !progress.jobs[j.id]?.applied).sort((a, b) => b.fit - a.fit);
   const recent = fresh.slice(0, NEW_CAP);
@@ -53,6 +59,9 @@ export default function Jobs() {
             <h1 style={{ fontSize: 28 }}>HR openings in Chennai</h1>
             <p style={{ margin: '8px 0 0', font: '400 13px/1.6 var(--font-ui)', color: 'var(--muted)' }}>
               Fresher roles only · the word is the fit, the number is just support
+              {lastUpdated && (
+                <span style={{ display: 'block', marginTop: 4 }}>{copy.jobs.lastUpdated(fmtShortDate(lastUpdated))}</span>
+              )}
             </p>
           </div>
           <p className="hand" style={{ fontSize: 18, display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap', margin: 0 }}>

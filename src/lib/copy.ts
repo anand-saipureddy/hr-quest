@@ -75,6 +75,9 @@ export const copy = {
     sortingNote:
       'Strong, Good and Worth a look are rough groupings from the words in the posting — location, fresher wording, pay. The percentage under it is only there if you want it. "Not for me" moves a role to its own list; nothing is ever deleted.',
     followUp: (days: number) => `It's been ${days} days — a short follow-up is normal.`,
+    newThisWeek: 'New this week',
+    firstSeen: (date: string) => `First seen ${date}`,
+    lastUpdated: (date: string) => `Last updated ${date}`,
   },
   undo: 'Undo',
 };

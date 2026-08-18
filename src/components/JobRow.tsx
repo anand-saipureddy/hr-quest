@@ -14,6 +14,11 @@ function daysSince(d?: string): number {
   return Math.floor((Date.now() - new Date(d + 'T00:00:00').getTime()) / 86400000);
 }
 
+function fmtShortDate(d?: string): string {
+  if (!d) return '';
+  return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { day: 'numeric', month: 'short' });
+}
+
 export default function JobRow({ job }: { job: Job }) {
   const { progress, set } = useProgress();
   const st = progress.jobs[job.id] ?? {};
@@ -40,7 +45,11 @@ export default function JobRow({ job }: { job: Job }) {
         <div style={{ display: 'flex', gap: 6, marginTop: 10, flexWrap: 'wrap' }}>
           <span className="pill">{BOARD[job.src]}</span>
           {job.exp && <span className="pill">{job.exp}</span>}
-          {job.isNew && <span className="pill">New this week</span>}
+          {job.isNew ? (
+            <span className="pill">{copy.jobs.newThisWeek}</span>
+          ) : job.firstSeen ? (
+            <span style={{ font: '400 11px/1.3 var(--font-ui)', color: 'var(--muted)' }}>{copy.jobs.firstSeen(fmtShortDate(job.firstSeen))}</span>
+          ) : null}
         </div>
         {followUpDays >= 7 && (
           <p style={{ margin: '12px 0 0', font: '400 13px/1.5 var(--font-ui)', color: 'var(--muted)', borderLeft: '2px solid var(--sky-300)', paddingLeft: 12 }}>{copy.jobs.followUp(followUpDays)}</p>
