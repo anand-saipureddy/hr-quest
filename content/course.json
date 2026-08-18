@@ -144,6 +144,173 @@
               "back": "An HR executive's metaphor: you peel it back a layer at a time, because everything is more complicated than it looks and you have to dig to the root cause."
             }
           ]
+        },
+        {
+          "id": "l2",
+          "title": "Different ways of managing people",
+          "videos": [
+            {
+              "n": 1,
+              "title": "The key functions of HR"
+            },
+            {
+              "n": 2,
+              "title": "How managing people has changed"
+            },
+            {
+              "n": 3,
+              "title": "The low road and the high road"
+            },
+            {
+              "n": 4,
+              "title": "Six ways to manage"
+            }
+          ],
+          "mcqs": [
+            {
+              "q": "A founder has a product idea and a little money, but no employees yet. The course says HR's first task — before any hiring — is to…",
+              "teach": "HR does not start with job posts or policies. It starts by working out what work the organisation needs done (a workflow analysis of the business processes), then breaking that work into sensible jobs (job analysis). Only then does recruitment and selection become possible.",
+              "options": [
+                "Work out what work needs doing and break it into jobs (workflow and job analysis)",
+                "Post the vacancies so applicants can start arriving",
+                "Write the employee handbook and policies first",
+                "Set up payroll and benefits so salaries can be paid"
+              ],
+              "answer": 0,
+              "why": "Work first, jobs second, hiring third. The other three are all real HR tasks, but they come after the work has been divided into jobs — you cannot advertise, govern or pay a job that does not exist yet.",
+              "source": "Module 1 · Lesson 2 · video 1"
+            },
+            {
+              "q": "The course warns managers to 'not limit your thinking to rewards only being monetary.' An employee's motivation is low. How should a new HR executive read that?",
+              "teach": "Pay matters, but the course is explicit that rewards and recognition are wider than money: recognition programs, meaningful work, development and good management all shape motivation. Treating every motivation problem as a salary problem misses most of the actual levers.",
+              "options": [
+                "As a signal to look at recognition, meaningful work and development too — not just pay",
+                "As proof the salary is too low and must be raised immediately",
+                "As an attitude problem that belongs to the employee, not HR",
+                "As a reason to move the person to a different team"
+              ],
+              "answer": 0,
+              "why": "Money is one lever, not the only one. A fresher who can name recognition and development as alternatives to a pay rise sounds like someone who understands motivation, not just compensation.",
+              "source": "Module 1 · Lesson 2 · video 1"
+            },
+            {
+              "q": "A manager times every task to the second and dictates one exact way to do it, because 'they're just hands.' Which historical school of management does this echo?",
+              "teach": "Taylorism (scientific management) looked for 'the one best way' to do every job: break it into small, standardised, repetitive tasks any unskilled worker could do, with managers — not workers — holding all the knowledge. Workers were treated as interchangeable hands.",
+              "options": [
+                "Taylorism / scientific management",
+                "The psychology and human relations movement",
+                "Industrial relations as a 'middle way'",
+                "The high road approach"
+              ],
+              "answer": 0,
+              "why": "Taylorism. The other three all push in the opposite direction — they credit workers with skill, needs and judgement, where Taylorism assumed the manager knew best and the worker was a pair of hands.",
+              "source": "Module 1 · Lesson 2 · video 2"
+            },
+            {
+              "q": "The course says the history of HRM is an evolution of ideas, not just practices. What is the practical lesson for someone managing people today?",
+              "teach": "Every era's practices were rooted in assumptions — that elites were superior, that industrialists deserved their place, that workers were motivated only by money and managers knew best. The course's closing point: keep track of the assumptions behind your own practices, and ask whether they are still true.",
+              "options": [
+                "Notice the assumptions behind your own practices and check whether they are still up to date",
+                "Follow whichever practices are newest, because newest means best",
+                "Pick one historical school and apply it consistently",
+                "Accept that how people are managed is basically fixed and cannot change"
+              ],
+              "answer": 0,
+              "why": "Check your assumptions. The course's point is that ideas matter as much as practices — a practice you inherited may be running on an assumption that no longer holds, and you are allowed to question it.",
+              "source": "Module 1 · Lesson 2 · video 2"
+            },
+            {
+              "q": "Two warehouses keep wages low, offer minimal benefits and training, and supervise closely. A third pays above-market, trains, and gives employees more say. What is the single biggest difference between the two approaches?",
+              "teach": "The low road treats labour as a cost to minimise — keep wages, benefits and training as low as possible, and keep tight supervisory control. The high road treats labour as a source of value to engage — above-average pay and benefits, training, and more autonomy.",
+              "options": [
+                "The low road's number-one goal is minimising labour cost; the high road's is engaging employees",
+                "The low road is only for manufacturing and the high road only for services",
+                "The low road is illegal and the high road is legally required",
+                "The two approaches produce the same results, just with different branding"
+              ],
+              "answer": 0,
+              "why": "Cost-minimising versus engaging. It is a choice about what labour is for — a cost to drive down, or a resource to develop. Neither is illegal; both are common, which is exactly why the distinction matters.",
+              "source": "Module 1 · Lesson 2 · video 3"
+            },
+            {
+              "q": "Costco pays its store employees more and gives more benefits than Sam's Club, yet it performs better. What does the course take from this?",
+              "teach": "Costco pays roughly 40% more than Sam's Club and its sales per employee are nearly double. The course quotes Zeynep Ton (Harvard Business Review): even in the lowest-priced segment of retail, bad jobs are not a cost-driven necessity — they are a choice.",
+              "options": [
+                "Bad jobs are a choice, not a competitive necessity — you can invest in people and still win",
+                "Higher pay automatically makes any company more profitable",
+                "Retail is the one industry where labour cost does not matter",
+                "Sam's Club's approach is the only way to keep prices low"
+              ],
+              "answer": 0,
+              "why": "A choice, not a necessity. Costco breaks the assumed trade-off between low prices and good jobs — the lesson is that the 'we can't afford to pay more' argument is usually a decision, not a law of the market.",
+              "source": "Module 1 · Lesson 2 · video 3"
+            },
+            {
+              "q": "A genuine crisis hits: there is no time to discuss, and everyone needs to know exactly what to do right now. Which managerial style is the course's fit for this moment?",
+              "teach": "The coercive style — 'do it this way', motivated by threats — is normally resented as micromanaging. But the course is explicit that it is beneficial in a crisis, when the cost of failure or deviation is high and people need clear, immediate direction.",
+              "options": [
+                "Coercive — clear, immediate direction when the cost of getting it wrong is high",
+                "Democratic — gather everyone's ideas first so they feel included",
+                "Affiliative — focus on relationships and keeping people happy",
+                "Coaching — use the moment to develop each person's long-term strengths"
+              ],
+              "answer": 0,
+              "why": "Coercive fits a crisis. The other three are valuable styles, but each prioritises something — participation, harmony, development — that a crisis does not have time for. The whole point of the video is matching the style to the situation.",
+              "source": "Module 1 · Lesson 2 · video 4"
+            },
+            {
+              "q": "The course says research shows one of the six styles is the single most effective overall — but the takeaway is not 'always use that one.' What is the actual takeaway?",
+              "teach": "Research indicates the authoritative style (confident, competent, with a strong vision — 'come with me') is the single most effective. But even it is not perfect everywhere: it can tip into arrogance, especially with peers or more-experienced people. So the lesson is to mix and match styles for the situation.",
+              "options": [
+                "Mix and match styles — even the best one fits some situations and misfits others",
+                "Always lead with the authoritative style, since it is the most effective",
+                "The coaching style is the only one worth using",
+                "Pick one style early in your career and stay consistent with it"
+              ],
+              "answer": 0,
+              "why": "Mix and match. The video's whole frame is 'no one best style' — the research finding is a tie-breaker when you are unsure where to start, not a reason to stop choosing per situation.",
+              "source": "Module 1 · Lesson 2 · video 4"
+            }
+          ],
+          "scenario": {
+            "prompt": "In an HR Executive interview, the interviewer describes their company: \"We keep wages tight and supervise closely. Labour is our biggest cost, and paying more would just eat into our margins — we can't afford it.\"\n\nWrite how you would respond, in four to six sentences, the way you would actually say it out loud.",
+            "model": "A strong answer does three things.\n\nFirst, it does not dismiss cost discipline — keeping an eye on labour cost is a real part of running a business, and you can say so. The interviewer is not describing something imaginary.\n\nSecond, it reframes the premise with evidence. 'Labour is a cost to minimise' is a choice, not a law. Costco pays its store employees roughly 40% more than Sam's Club and gets nearly double the sales per employee — investment in people and strong performance are not opposites. The Harvard Business Review line (Zeynep Ton) is exactly this: even in the lowest-priced retail segment, bad jobs are a choice, not a cost-driven necessity.\n\nThird, it lands the HR point: when people are paid and trained well and given some autonomy, they engage — turnover drops, service improves, and those savings show up elsewhere on the P&L. You would want to understand where the company's real costs come from before assuming wages are the lever to pull.\n\nWhat this answer avoids: arguing that pay should go up unconditionally, calling the interviewer's company 'low road' to their face, or reciting theory without the Costco/Sam's Club evidence to make it concrete.",
+            "source": "Module 1 · Lesson 2 · video 3"
+          },
+          "cards": [
+            {
+              "front": "The core HR cycle, in order",
+              "back": "Workflow analysis → job analysis → recruit & select → onboard → manage performance → train & develop → reward. Then specialized areas (health & safety, diversity, labour relations, HRIS) and organisational development keep reassessing the whole thing."
+            },
+            {
+              "front": "Foreman's Empire",
+              "back": "Early industrial era: the supervisor held unquestioned authority to hire, fire, discipline and assign work. Motivation was the 'drive system' — threats, cajoling, profanity, pointing to the factory gate."
+            },
+            {
+              "front": "Taylorism / scientific management",
+              "back": "Find 'the one best way'; break jobs into small, standardised, repetitive tasks. Managers hold the knowledge; workers are just 'hands' (the 21-pound shovel)."
+            },
+            {
+              "front": "What the psychology movement added",
+              "back": "Workers are not only motivated by money — they have psychological differences, needs, social relationships, and group dynamics that shape engagement and productivity."
+            },
+            {
+              "front": "Low road vs high road",
+              "back": "Low road: labour cost is the #1 goal — low pay, few benefits, minimal training, tight supervision, union-busting ('if you don't like it, quit'). High road: engage employees — above-average pay and benefits, training, autonomy, union substitution ('let's talk')."
+            },
+            {
+              "front": "Union suppression vs union substitution",
+              "back": "Low road fights unions aggressively (suppression/busting). High road makes unions feel unnecessary by improving pay and conditions (substitution)."
+            },
+            {
+              "front": "Costco vs Sam's Club — the lesson",
+              "back": "Costco pays ~40% more and gets nearly double Sam's Club's sales per employee. Bad jobs are a choice, not a cost-driven necessity (Zeynep Ton)."
+            },
+            {
+              "front": "The six managerial styles",
+              "back": "Coercive, authoritative, affiliative, democratic, pacesetting, coaching. No one best style — authoritative is most effective overall, but you mix and match for the situation."
+            }
+          ]
         }
       ]
     }
